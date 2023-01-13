@@ -1,0 +1,106 @@
+.main {
+    font-family: var(--fontFamily);
+    background-color: #E4E9F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    flex-direction: column;
+
+}
+
+.main--top {
+    display: flex;
+    flex-direction: column;
+}
+
+.main--header {
+    text-align: center;
+    font-size: 32px;
+    line-height: 39px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--textDark);
+}
+
+.main--top-inner {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.main--bottom {
+    display: flex;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+}
+
+.main--top-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* INPUT BOX */
+.inputBox {
+    margin-top: 1rem;
+    width: 400px;
+    height: 54px;
+} 
+
+/* SELECT BOX */
+.selectOption {
+    width: 245px;
+    height: 54px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 0 1rem;
+    }
+
+
+.main--header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main--top-inner {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    gap: 5%;
+}
+
+.selectOption {
+    height:54px;
+    width: 65%;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.proceedBtn {
+    width: 30%;
+}
+.inputBox {
+    max-width: 100%;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 10px;
+    margin-top: 1rem;
+}
+
+.main--top {
+    padding-top: 173px;
+}
+
+.main--bottom {
+    flex-direction: column;
+}
+}

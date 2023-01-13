@@ -1,0 +1,39 @@
+.lgBtn {
+   background-color: #20A352;
+   color: #ffff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 15px 30px;
+   border: none;
+   border-radius: 10px;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 24.2px;
+   cursor: pointer;
+}
+
+.mdBtn {
+    background-color: #20A352;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    cursor: pointer;
+}
+
+.nakedBtn {
+    color: #20A352;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    border: none;
+    margin: auto 1rem;
+    background: transparent;
+}
