@@ -1,0 +1,82 @@
+.bigBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: var(--green);
+}
+
+.bigBox--text {
+    margin-top: 10px;
+}
+
+/* Document.js */
+.circle--icon {
+    height: 50px;
+    width: 50px;
+}
+
+
+/* COURT BOX */
+.smallBox {
+    display: flex;
+    gap: 10px;
+}
+
+.sBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 85px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.iconions {
+    height: 50px;
+    width: 50px;
+    color: var(--green);
+}
+
+.sBox2{
+ display: flex;
+ align-items: center;
+}
+
+@media screen and            (max-width: 768px) {
+    .bigBox {
+        width: 188px;
+        height: 136px;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circle--icon {
+        width: 30px;
+        height: 30px;    
+    }
+
+    .bigBox--text{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.36px;
+    }
+}

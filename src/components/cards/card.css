@@ -1,0 +1,51 @@
+.card {
+   display: flex;
+   width: 376px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 236px;
+   font-family: var(--fontFamily);
+   padding: 1rem;
+   background-color: #ffffff;
+   border-radius: 10px;
+   margin : 0.5rem 0.5rem;
+}
+
+.card--title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    color: var(--green);
+}
+
+.card--content {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 236px;
+        font-family: var(--fontFamily);
+        margin: 1rem 0;
+     }
+     
+     .card--title {
+         font-size: 28px;
+         font-weight: 500;
+         line-height: 34px;
+         color: var(--green);
+     }
+     
+     .card--content {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--textDark);
+     }
+
+}
