@@ -9,6 +9,7 @@
       "sidebar main main"
       "sidebar main main";
       background-color: #F7F7F7;
+    
   }
   
   .sidebar { 
@@ -25,7 +26,7 @@
     padding-top: 32px;
     width: max-content;
     background-color: var(--light);
-    margin: 30px 50px
+    margin: 30px 50px;
 }
 .dashboard-header {
     display: flex;
@@ -161,13 +162,86 @@
 .initial-display {
     display: none;
 }
+/***********
+ * Media Query just for the dashboard DON'T TOUCH */
+@media screen and (max-width: 1200px) {
+    .main-container {
+        overflow: auto;
+    }
+    .main { 
+     border: 1px solid blue;
+    overflow: visible;
+     margin-left: 20%;
+    }
+    .sidebar {
+        position: absolute;
+    }
+ }
+ 
+/* Medium Screens */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+   .main { 
+
+}
+}
+
 /* Mobile Screen */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    .main {
+    .sidebar {
+        display: none;
     }
+
+    .main-container {  display: grid;
+        grid-template-columns: 0.8fr 1.3fr 0.9fr;
+        grid-template-rows: 1.1fr 1.1fr 1.1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "main main main"
+          "main main main"
+          "main main main";
+      }
+      
+      .main { 
+        display: flex;
+        align-self: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+        grid-area: main;    
+        padding-top: 32px;
+        background-color: var(--light);
+        margin: 0;
+        border: 1px solid red;
+        width: 100%;
+        padding: 0;
+          margin: 0;
+        
+    }
+    .overviews {
+        border: 1px solid green;
+        width: 100vw;
+        justify-self: flex-end;
+    }
+      
     .dashboard-header {
+        justify-self: flex-start;
         flex-direction: column;
-        align-items: center;
+        border: 1px solid  black;
+        align-items: flex-start;
+        width: 100vw;
+        border: 1px solid  blue;
+        
+    }
+    
+    .dashboard-details {
+        border:1px solid purple;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        
     }
     .overviews > div {
         flex-direction: column;
