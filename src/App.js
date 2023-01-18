@@ -7,6 +7,8 @@ import Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
 import Layout from "./pages/Layout"
 import Errorpage from './pages/Errorpage';
+import DashBoard from './pages/dashboard/Dashboard';
+import Settings from './pages/dashboard/settings/Settings';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Route path="Signin" element={<Signin />} />
       <Route path="Signup" element={<Signup />} />
       <Route path="*" element={<Errorpage />} />
+      <Route path="dashboard" element={<DashBoard/>} />
+      <Route path="settings" element={<Settings/>} />
       </Route>
     </Routes>
     </BrowserRouter>
