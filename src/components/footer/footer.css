@@ -1,0 +1,128 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgDark);
+    font-family: var(--fontFamily);
+    color: #ffffff;
+}
+
+.footer--content1 {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 4rem 2rem;
+    justify-content: space-evenly;
+}
+
+.footer--content2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.footer--about {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer--link {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer--term {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+}
+
+.horizontal--line {
+    color: #ffff;
+}
+
+/* TEXT STYLING */
+
+.logo {
+    margin-bottom: 31px;
+}
+.footer--content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+    margin-bottom: 31px;
+}
+
+#lnks {
+    font: var(--fontFamily);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.78px;
+    color: #ffffff;
+    padding: 0.6rem 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .footer--content1 {
+        flex-direction: column;
+    }
+
+    .footer--about {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .logo {
+        margin: 0 auto;
+        width: 131px;
+        height: 50px;
+    }
+
+
+    .footer--content {
+        padding: 0.5rem 0;
+    }
+
+    .footer--link {
+        flex-direction: column;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .footer--term {
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .footer-conten2 {
+        padding: 1rem 0;
+    }
+
+    /* TEXT STYLING */
+
+}
+

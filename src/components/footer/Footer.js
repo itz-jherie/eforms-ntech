@@ -1,10 +1,55 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./footer.css"
 
-const Footer = () => {
+
+
+const Footer = ({logo, name, link1, link2, link3, link4, term1, term2, term3, term4, contact1, contact2, copyright}) => {
   return (
-    <div>Footer</div>
+    <div className="footer">
+
+     <div className='footer--content1'>
+
+     <div className='footer--about'>
+        <img src={logo} className="logo" alt="logo"/>
+
+            <span className='footer--content'>{name}</span>
+    
+      </div>
+
+      <div className='footer--link'>
+          <h3 className='header'>Permalinks</h3>
+          <Link to="Home" id="lnks">{link1}</Link>
+          <Link to="Personal" id="lnks">{link2}</Link>
+          <Link to="Business" id="lnks">{link3}</Link>
+          <Link to="Official" id="lnks">{link4}</Link>
+      </div>
+
+      <div className='footer--term'>
+        <h3 className='header'>Privacy</h3>
+          <Link to="Terms" id="lnks">{term1}</Link>
+          <Link to="Terms" id="lnks">{term2}</Link>
+          <Link to="Terms" id="lnks">{term3}</Link>
+          <Link to="Terms" id="lnks">{term4}</Link>
+      </div>
+
+      <div className='footer--contact'>
+        <h3 className='header'>Contact Us</h3>
+        <p id="lnks">{contact1}</p>
+        <p id="lnks">{contact2}</p>
+        <div className='contact--icons'>
+
+        </div>
+      </div>
+     </div>
+    <hr className="horizontal_line"/>
+    <div className='footer--content2'>
+    
+    <p>{copyright}</p>
+    </div>
+
+    </div>
   )
 }
 
-export default Footer
+export default Footer;

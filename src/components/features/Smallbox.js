@@ -4,7 +4,7 @@ import data from '../../assets/dataFiles/courts'
 const Smallbox = () => {
 
   const dataElement = data.map((item, i) => (
-    <div className='smallBox'>
+    <div className='smallBox' key={i}>
       <div className='sBox'>{item.icon}</div> 
       <div className='sBox2'>
         <span>{item.num}</span>

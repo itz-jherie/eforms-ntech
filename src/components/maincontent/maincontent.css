@@ -92,8 +92,7 @@
     display: grid;
     grid-template-columns: auto auto auto; 
     justify-content: center;
-    gap: 151px;
-
+    row-gap: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -135,6 +134,16 @@
 
     .featureBox--content {
         grid-template-columns: auto auto;
+    }
+
+    /* COURT SECTION */
+    .court--content2 {
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    .sBox2{
+        width: 137px;
     }
 
 }

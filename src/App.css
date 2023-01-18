@@ -3,7 +3,12 @@
     --green: #20A352;  
     --fontFamily: 'Inter', sans-serif;
     --textDark: #1111111;
+<<<<<<< HEAD
     --light: #F7F7F7;
     --gold: #B5B500;
     --red: #EE4D1D;
+=======
+    --bgDark: #263238;
+
+>>>>>>> ea36324 (Made changes on the ui)
 }
