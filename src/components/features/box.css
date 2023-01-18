@@ -35,7 +35,8 @@
 /* COURT BOX */
 .smallBox {
     display: flex;
-    gap: 10px;
+    width: 296px;
+    gap: 20px;
 }
 
 .sBox {
@@ -53,12 +54,18 @@
     color: var(--green);
 }
 
+.iconions2 {
+    height: 50px;
+    width: 50px;
+    color: var(--green);
+}
+
 .sBox2{
  display: flex;
  align-items: center;
 }
 
-@media screen and            (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .bigBox {
         width: 188px;
         height: 136px;
@@ -78,5 +85,19 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 19.36px;
+    }
+
+    .sBox {
+        height: 50px;
+        width: 50px;
+    }
+
+    .iconions2 {
+        width: 25px;
+        height: 25px;
+    }
+    .sBox2 > span, .sBox2 > p {
+        font-size: 14px;
+        font-weight: 500;
     }
 }
