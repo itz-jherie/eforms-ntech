@@ -18,11 +18,11 @@ const NewSidebar = ({ isActive }) => {
                     <span>E-Form ng</span>
                     <img src={doubleArrowClose} className='double-arrow' alt="double backward arrow"/>
                 </div>
-                <NavLink to="/the-dashboard" className="nav-links">
+                <NavLink to="/dashboard" className="nav-links">
                     <div className="icon-container">
                         <img src={dashboard} alt='dashboard icon'/>
                     </div>
-                    <span>DashBoard</span>
+                    <span>Dashboard</span>
                 </NavLink>
                 <NavLink to="/account" className="nav-links">
                     <div className="icon-container">
@@ -34,7 +34,7 @@ const NewSidebar = ({ isActive }) => {
                     <div className="icon-container">
                         <img src={document} alt='dashboard icon'/>
                     </div>
-                    <span>Account</span>
+                    <span>Documents</span>
                 </NavLink>
                 <NavLink to="/payment" className="nav-links">
                     <div className="icon-container">
