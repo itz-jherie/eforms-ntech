@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../components/cta/Button'
-import logo from "../assets/images/Logo_black.png"
+import Button from '../../components/cta/Button'
+import logo from "../../assets/images/Logo_black.png"
 import "./signup.css"
 
 const Signup = () => {

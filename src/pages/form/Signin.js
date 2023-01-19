@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {FcGoogle} from 'react-icons/fc'
-import logo from '../assets/images/Logo_black.png'
-import Button from "../components/cta/Button"
-import ButtonIcon from "../components/cta/ButtonIcon"
+import logo from '../../assets/images/Logo_black.png'
+import Button from "../../components/cta/Button"
+import ButtonIcon from "../../components/cta/ButtonIcon"
 import "./signin.css"
 import { FaFacebook } from 'react-icons/fa'
 
