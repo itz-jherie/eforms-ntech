@@ -59,6 +59,7 @@ nav {
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 1rem;
+        width: 100%;
     }
 
     .navbar-rhs1{
