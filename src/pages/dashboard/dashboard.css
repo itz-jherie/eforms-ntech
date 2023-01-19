@@ -59,7 +59,11 @@
 .dashboard-details {
     width: 100%;
     margin-top: 50px;
+    scrollbar-width: none;
 }
+::-webkit-scrollbar {
+    display: none;
+  } 
 .overviews {
     width: 100%;
     display: flex;
@@ -143,7 +147,6 @@
     padding: 7px;
     border-radius: 0px 10px 10px 0px;
     background-color: white;
-    
 }
 
 .dashboard-items > li >span {
@@ -162,14 +165,14 @@
 .initial-display {
     display: none;
 }
-/***********
+
+    /***********
  * Media Query just for the dashboard DON'T TOUCH */
 @media screen and (max-width: 1200px) {
     .main-container {
         overflow: auto;
     }
     .main { 
-     border: 1px solid blue;
     overflow: visible;
      margin-left: 20%;
     }
@@ -177,7 +180,7 @@
         position: absolute;
     }
  }
- 
+
 /* Medium Screens */
 @media screen and (min-width: 481px) and (max-width: 768px) {
    .main { 
@@ -186,7 +189,7 @@
 }
 
 /* Mobile Screen */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen  and (max-width: 480px) {
     .sidebar {
         display: none;
     }
@@ -212,40 +215,57 @@
         padding-top: 32px;
         background-color: var(--light);
         margin: 0;
-        border: 1px solid red;
         width: 100%;
         padding: 0;
-          margin: 0;
+        margin: 0;
         
     }
     .overviews {
-        border: 1px solid green;
         width: 100vw;
-        justify-self: flex-end;
-    }
-      
-    .dashboard-header {
-        justify-self: flex-start;
-        flex-direction: column;
-        border: 1px solid  black;
-        align-items: flex-start;
-        width: 100vw;
-        border: 1px solid  blue;
-        
-    }
-    
-    .dashboard-details {
-        border:1px solid purple;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        overflow: hidden;
-        
+        align-items: center;
     }
     .overviews > div {
         flex-direction: column;
+        
         width: max-content;
-
     }
+    .dashboard-header {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .dashboard-header > * {
+        width: 60%;
+        margin-top: 10px;
+    }
+    .dashboard-header > button {
+        margin-right: 0;
+    }
+    
+    .dashboard-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: scroll;
+    }
+
+    .total-documents-details {
+        margin: 20px;
+        word-wrap: normal;
+        flex-wrap: nowrap;
+        width: max-content;
+    }
+    .total-documents-details >  span {
+        width: 300%;
+    }
+    .total-documents-details >  ul {
+        width: 300%;
+    }
+    .dashboard-items {
+        flex-wrap: nowrap;
+        width: max-content;
+        overflow-x: scroll;
+    }
+    
 }
