@@ -28,7 +28,7 @@
     width: max-content;
     background-color: var(--light);
     margin: 30px 50px;
-}
+
 .dashboard {
     /* float: right */
 }
@@ -173,7 +173,9 @@
 
     /***********
  * Media Query just for the dashboard DON'T TOUCH */
+
 @media screen and (min-width: 768px) {
+
     .main-container {
         overflow: auto;
     }
