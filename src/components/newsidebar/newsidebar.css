@@ -110,7 +110,7 @@
 }
 
 @media screen and  (max-width: 768px){ 
-    .nsidebar {
+    .sidebar {
         display: none;
     }
     
