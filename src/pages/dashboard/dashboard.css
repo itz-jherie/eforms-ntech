@@ -1,22 +1,23 @@
-.main-container {  display: grid;
+.main-container {  
+    display: grid;
     grid-template-columns: 0.6fr 1.3fr 0.9fr;
     grid-template-rows: 1.1fr 1.1fr 1.1fr;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "sidebar main main"
-      "sidebar main main"
-      "sidebar main main";
+      "main main main"
+      "main main main"
+      "main main main";
       background-color: #F7F7F7;
     
   }
   
-  .sidebar { 
+  /* .sidebar { 
     grid-area: sidebar; 
     background-color: var(--dark);
     height: 100vh;
-}
+} */
   
   .main { 
     display: flex;
@@ -27,6 +28,9 @@
     width: max-content;
     background-color: var(--light);
     margin: 30px 50px;
+
+.dashboard {
+    /* float: right */
 }
 .dashboard-header {
     display: flex;
@@ -48,7 +52,8 @@
     padding: 10px 30px;
     font-weight: 400;
     font-size: 16px;
-    margin-right: 20px
+    margin-right: 20px;
+    border: none;
 }
 
 .dashboard-header >input {
@@ -168,28 +173,27 @@
 
     /***********
  * Media Query just for the dashboard DON'T TOUCH */
-@media screen and (max-width: 1200px) {
+
+@media screen and (min-width: 768px) {
+
     .main-container {
         overflow: auto;
     }
     .main { 
     overflow: visible;
-     margin-left: 20%;
+     margin-left: 30%;
     }
-    .sidebar {
+    
+    /* .sidebar {
         position: absolute;
-    }
+    } */
  }
 
 /* Medium Screens */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-   .main { 
 
-}
-}
 
 /* Mobile Screen */
-@media screen  and (max-width: 480px) {
+@media screen  and (max-width: 768px) {
     .sidebar {
         display: none;
     }

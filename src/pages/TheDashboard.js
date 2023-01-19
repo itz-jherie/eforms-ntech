@@ -1,11 +1,11 @@
-import Sidebar from "../../components/sidebar/Sidebar";
-import './dashboard.css'
-import total from '../../assets/svglogos/total-documents-logo.svg'
-import pending from '../../assets/svglogos/pending-logo.svg'
-import completed from '../../assets/svglogos/completed-logo.svg'
-import rejected from '../../assets/svglogos/rejected-logo.svg'
+import './dashboard/dashboard.css'
+import total from '../assets/svglogos/total-documents-logo.svg'
+import pending from '../assets/svglogos/pending-logo.svg'
+import completed from '../assets/svglogos/completed-logo.svg'
+import rejected from '../assets/svglogos/rejected-logo.svg'
+import { details } from '../data/dashboardData'
 
-const DashBoard = () => {
+const TheDashboard = () => {
     const handleViewDocumentDetails = () => {
         document.getElementById("total-documents").style.display = 'flex'
         document.getElementById("pending").style.display = 'none'
@@ -55,9 +55,16 @@ const DashBoard = () => {
          
     }
     return (
-        <div>
+        <div className="dashboard">
+            <div className="mobile-dashboard">
+                {/* <header>
+                    <div>DashBoard</div>
+                    <><button>Create Document</button></>
+                    <><input type='search' placeholder="Search" /></>
+                </header> */}
+            </div>
+
             <div class="main-container">
-                <div class="sidebar"><Sidebar/></div>
                 <div class="main">
                     <div class='dashboard-header'>
                         <span>Dashboard</span>
@@ -164,12 +171,12 @@ const DashBoard = () => {
                                     <span>View</span>
                                 </li>
                             </ul>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
-      );
+    )
 }
- 
-export default DashBoard;
+export default TheDashboard

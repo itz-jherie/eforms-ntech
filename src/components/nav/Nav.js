@@ -19,8 +19,8 @@ const Nav = () => {
         <Link to="Business" className="lnks">Business</Link>
         <Link to="Official" className="lnks">Official</Link>
       </nav>
-      <Button className="nakedBtn" content="Sign in"/>
-      <Button className="lgBtn" content="Create Account"/>
+      <Link to="signin" className="nakedBtn">Sign in</Link>
+      <Link to="signup" className="lgBtn">Create Account</Link>
       </div>
       <RxHamburgerMenu className='menu'/> 
 
