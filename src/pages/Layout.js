@@ -7,13 +7,13 @@ import Nav from '../components/nav/Nav'
 const Layout = () => {
   return (
     <>
-    <Nav />
+    {/* <Nav /> */}
 
     <section>
       <Outlet />
     </section>
 
-    <Footer
+    {/* <Footer
       logo={data.logo}
       name={data.name}
       link1={data.link1}
@@ -27,7 +27,7 @@ const Layout = () => {
       contact1={data.contact1}
       contact2={data.contact2}
       copyright={data.copyright}
-    />
+    /> */}
     </>
   )
 }
