@@ -1,15 +1,15 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 // import Sidebar from "./components/sidebar/Sidebar"
 import NewSidebar from "./components/newsidebar/NewSidebar";
-import Layout from "./pages/Layout"
-import Home from "./pages/Home"
-import Business from './pages/Business'
-import Personal from './pages/Personal'
-import Signin from "./pages/Signin"
-import Signup from "./pages/Signup"
-import Errorpage from "./pages/Errorpage"
-// import DashBoard from "./pages/dashboard/Dashboard"
-import Settings from "./pages/dashboard/settings/Settings"
+import Layout from "././pages/layout/Layout"
+import Home from "././pages/home/Home"
+import Business from '././pages/business/Business'
+import Personal from '././pages/personal/Personal'
+import Signin from "././pages/form/Signin"
+import Signup from "././pages/form/Signup"
+import Errorpage from "././pages/errorpage/Errorpage"
+// import DashBoard from "././pages/dashboard/Dashboard"
+import Settings from "././pages/dashboard/settings/Settings"
 import TheDashboard from "./pages/TheDashboard"
 import NewSettings from "./pages/NewSettings";
 import Account from "./pages/Account"
