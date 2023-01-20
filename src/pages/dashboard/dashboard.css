@@ -29,9 +29,7 @@
     background-color: var(--light);
     margin: 30px 50px;
 }
-.dashboard {
-    /* float: right */
-}
+
 .dashboard-header {
     display: flex;
     align-items: center;
