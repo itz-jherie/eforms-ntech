@@ -2,7 +2,7 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: var(--bgDark);
+    background-color: var(--dark);
     font-family: var(--fontFamily);
     color: #ffffff;
 }
