@@ -9,11 +9,11 @@ import Signin from "././pages/form/Signin"
 import Signup from "././pages/form/Signup"
 import Errorpage from "././pages/errorpage/Errorpage"
 // import DashBoard from "././pages/dashboard/Dashboard"
-import Settings from "././pages/dashboard/settings/Settings"
-import TheDashboard from "./pages/TheDashboard"
-import NewSettings from "./pages/NewSettings";
-import Account from "./pages/Account"
-import Payment from "./pages/Payment"
+import Settings from "./pages/dashboard/Settings"
+import TheDashboard from "./pages/dashboard/TheDashboard";
+import NewSettings from "./pages/dashboard/NewSettings";
+import Account from "./pages/dashboard/Account"
+import Payment from "./pages/dashboard/Payment"
 import { useState } from "react";
 
 const DashboardRoutes = () => {

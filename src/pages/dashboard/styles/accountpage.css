@@ -1,0 +1,156 @@
+.rer {
+    background-color: var(--lightgrey);
+    min-height: 100vh;
+
+}
+.account-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 64px;
+    /* text-align: center; */
+}
+.account-page-container > p {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.username-pic-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.img-container {
+    background-color: grey;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    position: relative;
+}
+.img-container > img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.img-container > button {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 50%;
+}
+.username-container {
+    margin-left: 22px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.form-item >  * {
+    margin-bottom: 10px;
+    
+    width: 100%;
+}
+.form-item > label {
+    width: 100%;
+}
+.form-item > input  {
+    padding: 20px 10px;
+    background: #FFFFFF;
+    border: 1px solid #1111115e;
+    border-radius: 10px;
+    
+    outline-color: var(--green);
+}
+.form-item select  {
+    padding: 15px 10px;
+    background: #FFFFFF;
+    border: 1px solid #1111115e;
+    border-radius: 10px;
+    
+}
+.account-page-container > form > button  {
+    padding: 15px 10px;
+    background: var(--green);
+    width: 100%;
+    border: 1px solid #1111115e;
+    border-radius: 10px;
+    
+}
+.form-item > input::placeholder {
+    text-align: center;
+}
+.email { 
+    pointer-events: none;
+}
+.email > input {
+    background-color: var(--lightgrey)
+}
+@media screen  and (min-width: 768px) {
+    .rer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .account-page-container {
+        margin-left: 40%;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: yellow; */
+    }
+    .account-page-container > form {
+        /* display: flex;
+        padding: 15px;
+        background-color: green;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap; */
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1.0fr 1.0fr 1.0fr; 
+        grid-template-rows: 1.0fr 1.0fr 1.0fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "firstname lastname middlename"
+        "email phone state"
+        "lga zipcode contact"
+        ". savebtn ."; 
+
+    }
+    .firstname { grid-area: firstname; }
+    .lastname { grid-area: lastname; }
+    .middlename { grid-area: middlename; }
+    .email { 
+        grid-area: email;
+        pointer-events: none;
+    }
+    .phone { grid-area: phone; }
+    .state { grid-area: state; }
+    .lga { grid-area: lga; }
+    .zipcode { grid-area: zipcode; }
+    .contact { grid-area: contact; }
+    .savebtn { grid-area: savebtn; }
+    .account-page-container > form > div {
+        align-items: center;
+        margin: 10px;
+    }
+    .account-page-container > form > button {
+        height: max-content;
+    }
+     
+    /* ****** To make the page contaainer responsive on larger screens */
+    @media screen  and (min-width: 1000px) {
+        .account-page-container {
+            margin-left: 30%;
+        }
+    }
+    @media screen  and (min-width: 1400px) {
+        .account-page-container {
+            margin-left: 30%;
+        }
+    }
+}
