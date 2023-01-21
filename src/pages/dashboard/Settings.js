@@ -1,6 +1,6 @@
 const Settings = () => {
     return ( 
-        <div>dfgdg</div>
+        <div></div>
      );
 }
  

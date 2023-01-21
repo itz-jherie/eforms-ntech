@@ -8,3 +8,6 @@
     --red: #EE4D1D;
     --lightgrey: #D7D7D7;
 }
+body{
+    font-family: var(--fontFamily);
+}
