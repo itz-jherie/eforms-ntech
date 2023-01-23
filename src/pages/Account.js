@@ -1,6 +1,6 @@
 const Account = () => {
     return (
-        <div></div>
+        <div>hgv</div>
     )
 }
 export default Account

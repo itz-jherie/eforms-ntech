@@ -1,6 +1,6 @@
 const NewSettings = () => {
     return (
-        <div></div>
+        <div>jjj</div>
     )
 }
 export default NewSettings
