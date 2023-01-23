@@ -21,6 +21,7 @@
   
   .main { 
     display: flex;
+    flex-direction: column;
     align-self: flex-start;
     justify-content: flex-start;
     grid-area: main;    
