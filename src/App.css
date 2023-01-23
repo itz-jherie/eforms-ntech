@@ -11,3 +11,18 @@
 body{
     font-family: var(--fontFamily);
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}

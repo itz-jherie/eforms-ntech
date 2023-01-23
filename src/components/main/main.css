@@ -1,4 +1,4 @@
-.main {
+.main1 {
     font-family: var(--fontFamily);
     background-color: #E4E9F7;
     display: flex;
@@ -6,14 +6,7 @@
     align-items: center;
     padding: 3rem 1rem;
     flex-direction: column;
-
-}
-
-.main--top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    row-gap: 1rem; 
 }
 
 .main--top-first {
@@ -22,7 +15,7 @@
     align-items: center;
 }
 .main--header {
-    max-width: 707px;
+    max-width: 907px;
     text-align: center;
     font-size: 32px;
     line-height: 39px;
@@ -35,13 +28,13 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 1rem;
 }
 
 .main--bottom {
     display: flex;
-    padding: 1rem 1rem;
+    padding: 1rem 54px;
     margin-top: 2rem;
+    column-gap: 3rem;
 }
 
 .main--top-first {
@@ -49,11 +42,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    row-gap: 2rem;
 }
 
 /* INPUT BOX */
 .inputBox {
-    margin-top: 1rem;
     width: 400px;
     height: 54px;
 } 
@@ -69,28 +62,31 @@
 
 
 @media screen and (max-width: 768px) {
-    .main {
-        padding: 0 1rem;
+    .main1 {
+        gap: 1rem;
     }
 
 
 .main--header {
-    width: 390px;
+    width: 100%;
     text-align: center;
     font-size: 24px;
     font-weight: 700;
 }
 
+.main--top-first {
+    width: 100%;
+}
+
 .main--top-inner {
     display: flex;
+    width: 100%;
     justify-content: center;
-    padding-top: 1rem;
-    gap: 5%;
 }
 
 .selectOption {
     height:54px;
-    width: 65%;
+    width: 70%;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -98,22 +94,18 @@
     width: 30%;
 }
 .inputBox {
-    max-width: 100%;
+    width: 100%;
     height: 54px;
     border-radius: 10px;
     border: none;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 0 10px;
-    margin-top: 1rem;
-}
-
-.main--top {
-    width: 100%;
-    padding-top: 173px;
 }
 
 .main--bottom {
     flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem 0;
 }
 
 }
