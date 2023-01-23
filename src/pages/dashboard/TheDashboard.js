@@ -1,10 +1,9 @@
-import './dashboard/dashboard.css'
-import total from '../assets/svglogos/total-documents-logo.svg'
-import pending from '../assets/svglogos/pending-logo.svg'
-import completed from '../assets/svglogos/completed-logo.svg'
-import rejected from '../assets/svglogos/rejected-logo.svg'
-import { details } from '../data/dashboardData'
-import { Outlet } from 'react-router'
+import './styles/dashboard.css'
+import total from '../../assets/svglogos/total-documents-logo.svg'
+import pending from '../../assets/svglogos/pending-logo.svg'
+import completed from '../../assets/svglogos/completed-logo.svg'
+import rejected from '../../assets/svglogos/rejected-logo.svg'
+import { details } from '../../data/dashboardData'
 
 const TheDashboard = () => {
     const handleViewDocumentDetails = () => {
@@ -65,9 +64,9 @@ const TheDashboard = () => {
                 </header> */}
             </div>
 
-            <div className="main-container">
-                <div className="main">
-                    <div className='dashboard-header'>
+            <div class="main-container">
+                <div class="main">
+                    <div class='dashboard-header'>
                         <span>Dashboard</span>
                         <button>Create Document</button>
                         <input  
@@ -176,7 +175,7 @@ const TheDashboard = () => {
                     </div>
                 </div>
             </div>
-            <Outlet />
+            
         </div>
     )
 }

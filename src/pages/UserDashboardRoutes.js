@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
 import NewSidebar from '../components/newsidebar/NewSidebar'
-import TheDashboard from './TheDashboard'
-import NewSettings from './NewSettings'
-import Account from './Account'
-import Payment from './Payment'
+import TheDashboard from './dashboard/TheDashboard'
+import NewSettings from './dashboard/NewSettings'
+import Account from './dashboard/Account'
+import Payment from './dashboard/Payment'
 
 const UserDashboardRoutes = () => {
     const [isActive, setIsActive] = useState(true)

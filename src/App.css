@@ -6,4 +6,8 @@
     --light: #F7F7F7;
     --gold: #B5B500;
     --red: #EE4D1D;
+    --lightgrey: #D7D7D7;
+}
+body{
+    font-family: var(--fontFamily);
 }
