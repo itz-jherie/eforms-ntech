@@ -2,7 +2,7 @@
     --dark: #263238;
     --green: #20A352;  
     --fontFamily: 'Inter', sans-serif;
-    --textDark: #1111111;
+    --textDark: #111111;
     --light: #F7F7F7;
     --gold: #B5B500;
     --red: #EE4D1D;
@@ -10,4 +10,19 @@
 }
 body{
     font-family: var(--fontFamily);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
 }

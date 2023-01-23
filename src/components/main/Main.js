@@ -23,9 +23,8 @@ const Main = () => {
     <Card key={i} title={card.title} content={card.content}/>
   ))
   return (
-    <div className="main">
+    <div className="main1">
 
-      <div className="main--top">
         <div className='main--top-first'>
         <h3 className='main--header'>Create Your Legal Documents In Few Minutes</h3>
         <input type="text" className='inputBox' placeholder='Enter the name of your document' />
@@ -40,7 +39,7 @@ const Main = () => {
 
         <Button className="mdBtn proceedBtn" content="Proceed"/>
         </div>
-      </div>
+      
 
       <div className="main--bottom">
         {cardElements}

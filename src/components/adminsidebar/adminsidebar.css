@@ -1,0 +1,121 @@
+.sidebar__container {
+    display: none;
+}
+.sidebar__container--active {
+    width: 100px;
+}
+.admin-sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--dark);  
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+    font-family: var(--fontFamily);
+    /* > * {
+        margin-bottom: 40px;
+    } */
+}
+.admin-sidebar-title .eform-logo {
+    height: 30px;
+    width: 38px;
+}
+.admin-sidebar-title span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: justify;
+    vertical-align: top;
+}
+.admin-sidebar-title .double-arrow {
+    margin-left: 50px;
+}
+.admin-sidebar-title {
+    padding-bottom: 50px;
+}
+.admin-sidebar > * {
+    margin-bottom: 20px;
+}
+.nav-links {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+.nav-links > span {
+    color: rgb(202, 201, 201);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    /* margin-top: 5px; */
+}
+.icon-container {
+    background-color: #61436A !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in;
+}
+.nav-links--active {
+    color: var(--primary-color);
+}
+.nav-links--active > span {
+    color: white;
+}
+.nav-links--active .icon-container {
+    background-color: white !important;
+}
+.sidebar-logout-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 20px;
+    padding-top: 40px;
+}
+.user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.user-profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.user-profile > span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+.logout-button button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 236px;
+    padding: 8px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and  (max-width: 768px){ 
+    .admin-sidebar {
+        display: none;
+    }
+    
+}
