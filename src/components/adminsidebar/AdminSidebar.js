@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import './newsidebar.css'
+import './adminsidebar.css'
 import eformLogo from '../../assets/svglogos/eform-logo-white.svg'
 import doubleArrowClose from '../../assets/svglogos/doubleArrowClose.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,45 +8,65 @@ import  dashboard  from '../../assets/svglogos/dashboard.svg'
 import  document  from '../../assets/svglogos/document.svg'
 import  payment  from '../../assets/svglogos/payment.svg'
 import  settings  from '../../assets/svglogos/settings.svg'
+import state from '../../assets/svglogos/state-logo.svg'
+import lock from '../../assets/svglogos/lock.svg'
 
-const NewSidebar = ({ isActive }) => {
+const AdminSidebar = ({ isActive }) => {
     return (
         <div className={isActive ? 'sidebar__container--active' : 'sidebar__container'}>
-            <div className="sidebar">
-                <div className="sidebar-title">
+            <div className="admin-sidebar">
+                <div className="admin-sidebar-title">
                     <img src={eformLogo} alt="logo" className="eform-logo"/>
                     <span>E-Form ng</span>
-                    <img src={doubleArrowClose} className='double-arrow' alt="double backward arrow"/>
+                    {/* <img src={doubleArrowClose} className='double-arrow' alt="double backward arrow"/> */}
                 </div>
-                <NavLink to="/user-dashboard" className="nav-links">
+                <NavLink to="/admin" className="nav-links">
                     <div className="icon-container">
                         <img src={dashboard} alt='dashboard icon'/>
                     </div>
                     <span>Dashboard</span>
                 </NavLink>
-                <NavLink to="account" className="nav-links">
+                <NavLink to="state-management" className="nav-links">
                     <div className="icon-container">
-                        <img src={user} alt='user icon'/>
+                        <img src={state} alt='user icon'/>
                     </div>
-                    <span>Account</span>
+                    <span>State Management</span>
                 </NavLink>
-                <NavLink to="documents" className="nav-links">
+                <NavLink to="lga-management" className="nav-links">
                     <div className="icon-container">
-                        <img src={document} alt='dashboard icon'/>
+                        <img src={state} alt='dashboard icon'/>
                     </div>
-                    <span>Documents</span>
+                    <span>LGA Management</span>
                 </NavLink>
-                <NavLink to="payment" className="nav-links">
+                <NavLink to="change-password" className="nav-links">
                     <div className="icon-container">
-                        <img src={payment} alt='payment icon'/>
+                        <img src={lock} alt='payment icon'/>
                     </div>
-                    <span>Payments</span>
+                    <span>Manage Admin</span>
                 </NavLink>
-                <NavLink to="settings" className="nav-links">
+                <NavLink to="manage-court" className="nav-links">
                     <div className="icon-container">
                         <img src={settings} alt='settings icon'/>
                     </div>
                     <span>Settings</span>
+                </NavLink>
+                <NavLink to="manage-affidavit" className="nav-links">
+                    <div className="icon-container">
+                        <img src={settings} alt='settings icon'/>
+                    </div>
+                    <span>Manage Affidavit</span>
+                </NavLink>
+                <NavLink to="payment-history" className="nav-links">
+                    <div className="icon-container">
+                        <img src={payment} alt='settings icon'/>
+                    </div>
+                    <span>Payment History</span>
+                </NavLink>
+                <NavLink to="all-users" className="nav-links">
+                    <div className="icon-container">
+                        <img src={user} alt='settings icon'/>
+                    </div>
+                    <span>All Users</span>
                 </NavLink>
                 <div className="sidebar-logout-section">
                     <div className="user-profile">
@@ -61,4 +81,4 @@ const NewSidebar = ({ isActive }) => {
         </div>
     )
 }
-export default NewSidebar
+export default AdminSidebar

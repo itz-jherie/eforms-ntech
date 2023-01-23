@@ -1,6 +1,4 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-// import Sidebar from "./components/sidebar/Sidebar"
-import NewSidebar from "./components/newsidebar/NewSidebar";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "././pages/layout/Layout"
 import Home from "././pages/home/Home"
 import Business from '././pages/business/Business'
@@ -8,47 +6,25 @@ import Personal from '././pages/personal/Personal'
 import Signin from "././pages/form/Signin"
 import Signup from "././pages/form/Signup"
 import Errorpage from "././pages/errorpage/Errorpage"
-// import DashBoard from "././pages/dashboard/Dashboard"
-import Settings from "./pages/dashboard/Settings"
-import TheDashboard from "./pages/dashboard/TheDashboard";
-import NewSettings from "./pages/dashboard/NewSettings";
-import Account from "./pages/dashboard/Account"
-import Payment from "./pages/dashboard/Payment"
-import { useState } from "react";
-
-const DashboardRoutes = () => {
-    const [isActive, setIsActive] = useState(true)
-
-    return (
-        <div className="app-routes">
-            <NewSidebar isActive={isActive} />
-            <Routes>
-                <Route path="dashboard" element={<TheDashboard />} />
-                <Route path="new-settings" element={<NewSettings />} />
-                <Route path="account" element={<Account />} />
-                <Route path="payment" element={<Payment />} />
-            </Routes>
-        </div>
-    )
-}
-
+import UserDashboardRoutes from "./pages/UserDashboardRoutes";
+import AdminDashboardRoutes from "./pages/admin/AdminDashboardRoutes";
 
 const AppRoutes = () => {
-    const [loggedIn, setLoggedIn] = useState(true)
     return (
         <BrowserRouter> 
           <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="Business" element={<Business />} />
-                <Route path="Personal" element={<Personal />} />
-                <Route path="Signin" element={<Signin />} />
-                <Route path="Signup" element={<Signup />} />
-                {/* <Route path="*" element={<Errorpage />} /> */}
-                <Route path="settings" element={<Settings/>} />
+                <Route path="business" element={<Business />} />
+                <Route path="personal" element={<Personal />} />
+                <Route path="signin" element={<Signin />} />
+                <Route path="signup" element={<Signup />} />
+                <Route path="*" element={<Errorpage />} />
+                <Route path="user-dashboard/*" element={<UserDashboardRoutes />} />
+                {/* <Route path="admin-dashboard/*" element={<AdminDashboardRoutes />} /> */}
+                <Route path="admin/*" element={<AdminDashboardRoutes />} />
             </Route>
           </Routes>
-          {loggedIn ? <DashboardRoutes /> : null}
         </BrowserRouter>
     )
 }
