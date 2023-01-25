@@ -134,5 +134,10 @@
 
     /* TEXT STYLING */
 
+    .horizontal--line {
+        width: 100%;
+        height: 6px;
+    }
+
 }
 
