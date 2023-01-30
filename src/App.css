@@ -7,8 +7,10 @@
     --gold: #B5B500;
     --red: #EE4D1D;
     --lightgrey: #D7D7D7;
+    --orange: #EE4D1D;
+    --deepdarkgrey: #757575;
 }
-body{
+*{
     font-family: var(--fontFamily);
 }
 

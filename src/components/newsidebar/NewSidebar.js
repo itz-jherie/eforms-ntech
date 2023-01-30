@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import { useState } from "react"
 import './newsidebar.css'
 import eformLogo from '../../assets/svglogos/eform-logo-white.svg'
 import doubleArrowClose from '../../assets/svglogos/doubleArrowClose.svg'
@@ -10,6 +11,17 @@ import  payment  from '../../assets/svglogos/payment.svg'
 import  settings  from '../../assets/svglogos/settings.svg'
 
 const NewSidebar = ({ isActive }) => {
+    // const documentNumber = 2
+    // const [route, setRoute] = useState()
+    // const renderPage = () => {
+    //     if (documentNumber > 0) {
+    //         setRoute('documents')
+    //     } else {
+    //         setRoute('documents/create')
+    //     }
+    // }
+    
+    // console.log(route)
     return (
         <div className={isActive ? 'sidebar__container--active' : 'sidebar__container'}>
             <div className="sidebar">

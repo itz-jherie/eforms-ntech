@@ -1,0 +1,87 @@
+.fillform-page-container {
+    background-color: var(--lightgrey);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fillform-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    justify-content: center;
+    box-shadow: 1px 1px 4px 2px rgba(17, 17, 17, 0.25);
+    border-radius: 10px;
+    padding:  40px 30px;
+}
+.fillform-page-container > p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    display: block;
+    width: 100vw;
+    margin-bottom: 30px;
+    padding-left: 15rem;
+}
+.fill-form-item {
+    
+}
+.fill-form-item > label {
+    margin-top: 20px;
+    display: block;
+}
+.fill-form-item  > select{
+        padding: 20px 10px;
+        border: 1px solid #1111115e;
+        border-radius: 10px;
+        width: 100%;
+        outline-color: var(--green);
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+.form-container > form {
+    width: 100%;
+}
+.create-form-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.create-form-btn > button {
+    background-color: var(--green);
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+    color: white;
+    padding: 15px 20px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+@media screen  and (max-width: 768px) {
+    .fillform-page-container > p {
+        padding-left: 0;
+    }
+}
+@media screen  and (min-width: 768px) {
+    
+    .fillform-container {
+        margin-left: 40%;
+        width: 50%;
+    }
+    @media screen  and (min-width: 1000px) {
+        .fillform-container {
+            margin-left: 20%;
+            width: 30%;
+        }
+    }
+    @media screen  and (min-width: 1400px) {
+        .fillform-container {
+            margin-left: 10%;
+        }
+    }
+}
