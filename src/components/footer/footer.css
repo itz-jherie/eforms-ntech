@@ -80,6 +80,7 @@
     .footer {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
 
     }
@@ -88,10 +89,19 @@
         flex-direction: column;
     }
 
+    .footer--content2 {
+        justify-content: center;
+        align-items: center;
+    }
+
     .footer--about {
         flex-direction: column;
         text-align: center;
         padding: 1rem 0;
+        width: 100%;
+    }
+
+    .footer--contact {
         width: 100%;
     }
 
@@ -123,6 +133,11 @@
     }
 
     /* TEXT STYLING */
+
+    .horizontal--line {
+        width: 100%;
+        height: 6px;
+    }
 
 }
 

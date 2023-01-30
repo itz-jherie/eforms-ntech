@@ -25,6 +25,7 @@
 }
 
 .main--top-inner {
+    width: 400px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -51,14 +52,20 @@
     height: 54px;
 } 
 
+input.placeholder {
+    text-align: center;
+}
 /* SELECT BOX */
 .selectOption {
-    width: 245px;
+    width: 70%;
     height: 54px;
 }
 
 
-
+.proceedBtn {
+    
+    width: 30%;
+}
 
 
 @media screen and (max-width: 768px) {
