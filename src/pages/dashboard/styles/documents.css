@@ -14,6 +14,8 @@
     margin-left: 12px;
     font-size: 28px;
     font-weight: 600px;
+    visibility: hidden;
+
 }
 .document-page-content-container {
     overflow: scroll;
@@ -85,6 +87,9 @@
     .document-page-content-container > ul {
         width: 150%;
     } 
+    .document-page-container > p {
+        visibility: visible
+    }
     /* .document-page-content-container {
         margin-left: 40%;
         width: 70%;

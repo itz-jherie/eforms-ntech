@@ -1,6 +1,10 @@
 import './styles/settings.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav'
+
 const NewSettings = () => {
     return (
+        <>
+        <MobileNav title="Password Reset"/>
         <div className="settings-page-container">
             <p>Password Reset</p>
             <div className="password-container">
@@ -25,6 +29,7 @@ const NewSettings = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 export default NewSettings

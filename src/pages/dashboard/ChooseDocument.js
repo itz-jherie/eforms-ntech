@@ -1,6 +1,9 @@
 import './styles/chooseDocument.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav';
 const ChooseDocument = () => {
     return ( 
+        <>
+        <MobileNav title="My Documents"/>
         <div className="choose-document-page-container">
             <p>My Documents</p>
             <div className="choose-document-page-content-container">
@@ -24,6 +27,7 @@ const ChooseDocument = () => {
                 </ul>
             </div>
         </div>
+        </>
      );
 }
  

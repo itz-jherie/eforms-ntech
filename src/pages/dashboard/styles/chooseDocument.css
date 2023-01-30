@@ -14,6 +14,7 @@
     margin-left: 12px;
     font-size: 28px;
     font-weight: 600px;
+    visibility: hidden;
 }
 .choose-document-page-content-container {
     overflow: scroll;
@@ -104,6 +105,9 @@
     .choose-document-table-headers > li {
         width: 70%; 
     }*/
+    .choose-document-page-container > p {
+        visibility: visible;
+    }
     @media screen  and (min-width: 1000px) {
         .choose-document-page-container {
             padding-left: 30em;

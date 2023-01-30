@@ -14,6 +14,7 @@
     margin-left: 12px;
     font-size: 28px;
     font-weight: 600px;
+    visibility: hidden;
 }
 .payment-page-content-container {
     overflow: scroll;
@@ -78,6 +79,9 @@
     }
     .payment-table-headers > li {
         width: 70%;
+    }
+    .payment-page-container > p {
+        visibility: visible;
     }
     @media screen  and (min-width: 1000px) {
         .payment-page-content-container {

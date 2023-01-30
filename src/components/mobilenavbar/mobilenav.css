@@ -1,0 +1,28 @@
+.mobile-nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 90px;
+    z-index: 2;
+    background-color: var(--dark);
+    display: none;
+    align-items: center;
+}
+.hamburger {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+}
+.navbar-title {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and  (max-width: 768px){ 
+    .mobile-nav-container {
+        display: flex;
+    }
+}

@@ -24,9 +24,7 @@
     width: 100vw;
     margin-bottom: 30px;
     padding-left: 15rem;
-}
-.fill-form-item {
-    
+    visibility: hidden;
 }
 .fill-form-item > label {
     margin-top: 20px;
@@ -65,13 +63,18 @@
 @media screen  and (max-width: 768px) {
     .fillform-page-container > p {
         padding-left: 0;
+        visibility: hidden;
     }
 }
+
 @media screen  and (min-width: 768px) {
     
     .fillform-container {
         margin-left: 40%;
         width: 50%;
+    }
+    .fillform-page-container > p {
+        visibility: visible;
     }
     @media screen  and (min-width: 1000px) {
         .fillform-container {

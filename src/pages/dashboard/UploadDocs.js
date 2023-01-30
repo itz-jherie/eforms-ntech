@@ -1,6 +1,9 @@
 import './styles/uploaddocs.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav';
 const UploadDocs = () => {
     return ( 
+        <>
+        <MobileNav title="Upload Signature & Passport"/>
         <div className="upload-page-container">
             <div className='upload-page-content'>
                 <p className='upload-title'>Fill Form - Affidavit as to Next of Kin</p>
@@ -25,6 +28,7 @@ const UploadDocs = () => {
                 <button>Save & Preview</button>
             </div>
         </div>
+        </>
      );
 }
  

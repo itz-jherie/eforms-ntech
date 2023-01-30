@@ -1,6 +1,9 @@
 import './styles/editform.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav';
 const EditForm = () => {
     return ( 
+        <>
+        <MobileNav title="Edit Template"/>
         <div className="edit-form-page-container">
             <div className='edit-page-content'>
                 <p className='editform-title'>Fill Form - Affidavit as to Next of Kin</p>
@@ -23,6 +26,7 @@ const EditForm = () => {
                 <button>Save & Continue</button>
             </div>
         </div>
+        </>
      );
 }
  
