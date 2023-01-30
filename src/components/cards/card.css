@@ -1,16 +1,16 @@
 .card {
    display: flex;
-   width: 376px;
+   width: auto;
+   column-gap: 2rem;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
    height: 236px;
+   padding: 2rem;
    font-family: var(--fontFamily);
-   padding: 1rem;
    background-color: #ffffff;
    border-radius: 10px;
-   margin : 0.5rem 0.5rem;
 }
 
 .card--title {
@@ -27,11 +27,11 @@
 @media screen and (max-width: 768px) {
     
     .card {
-        display: flex;
+        width: 100%;
+        margin: 0;
         flex-direction: column;
         height: 236px;
         font-family: var(--fontFamily);
-        margin: 1rem 0;
      }
      
      .card--title {

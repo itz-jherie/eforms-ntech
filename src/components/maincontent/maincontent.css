@@ -1,11 +1,16 @@
 .mainContent {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--fontFamily);
     padding: 3rem 54px;
     flex-direction: column;
+    background-color: #fff;
+    gap: 3rem;
 }
 
 .mainContent--title {
+    max-width: 821px;
     text-align: center;
     font-size: 32px;
     line-height: 39px;
@@ -13,10 +18,10 @@
 }
 
 .mainContent--1 {
+    width: 741px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 2rem;
 }
 
 .icon--circle {
@@ -35,6 +40,7 @@
 }
 
 .inner--icon {
+    display: flex;
     color: #ffff;
     width: 50px;
     height: 50px;
@@ -54,23 +60,25 @@
 /* FEATURE BOX */
 
 .featureBox {
-    display: flex;
+    width: 100%;
+    padding: 2rem 54px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
 }
 .featureBox--content {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 1rem 0;
-    column-gap: 20px;
-    row-gap: 20px;
+    gap: 20px;
+}
+
+.featureBox--title {
+    text-align: center;
+    margin: 1rem 0;
 }
 
 /* Court Section */
 .court {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -78,29 +86,42 @@
 }
 
 .court--title {
+    max-width: 550px; 
     font-weight: 700;
     font-size: 32px;
     line-height: 39px; 
 }
                           
 .court--content1 {
+     width: 391px;
     display: flex;
     gap: 1rem;
 }
 
 .court--content2 {
-    display: grid;
-    grid-template-columns: auto auto auto; 
+    display: flex;
+    width: 100%;
+    align-items: center; 
     justify-content: center;
-    row-gap: 15px;
+}
+
+.selectButt {
+    width: 70%;
+}
+
+.proceedBtn {
+    width: 30%;
 }
 
 @media screen and (max-width: 768px) {
 
     .mainContent {
-        padding-top: 173px;
+        padding: 3rem 1rem;
+        gap: 2rem;
     }
+
     .mainContent--title {
+
         font-size: 24px;
         font-weight: 700;
         line-height: 29px;
@@ -109,18 +130,30 @@
     }
 
     .mainContent--1 {
+        width: 100%;
         flex-direction: column;
+        height: 500px;
         align-items: center;
-        gap: 100px;
+        justify-content: center;
+        gap: 50px;
     }
 
     .icon--cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
         gap: 10px;
     }
 
+    .icon--circle {
+        width: 100px;
+        height: 100px;
+        
+    }
     .icon--text {
-        display: flex;
+        display:flex;
+        width: 50%;
         align-items: center;
     }
 
@@ -132,18 +165,42 @@
         justify-content: flex-start;
     }
 
+    .featureBox {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
     .featureBox--content {
         grid-template-columns: auto auto;
     }
 
-    /* COURT SECTION */
-    .court--content2 {
-        grid-template-columns: auto auto;
-        gap: 10px;
+    .featureBox--content {
+        width: 100%;
     }
 
-    .sBox2{
-        width: 137px;
+    /* COURT SECTION */
+
+    .court--title {
+        width: 100%;
+        min-width: 330px;
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
     }
+
+    .court--content1 {
+        width: 100%;
+    }
+
+    .selectButt {
+        width: 70%;
+    }
+
+    .proceedBtn {
+        width: 30%;
+    }
+    .court--content2 {
+        width: 100%;
+    }
+
 
 }

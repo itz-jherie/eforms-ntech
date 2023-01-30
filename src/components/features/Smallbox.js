@@ -1,5 +1,6 @@
 import React from 'react'
 import data from '../../assets/dataFiles/courts'
+import "./box.css"
 
 const Smallbox = () => {
 
@@ -14,9 +15,9 @@ const Smallbox = () => {
     </div>
   ))
   return (
-    <>
+    <div className='smalle'>
       {dataElement}
-    </>
+    </div>
   )
 }
 

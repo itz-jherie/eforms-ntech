@@ -1,3 +1,7 @@
+.dashboard {
+    background-color: var(--lightgrey);
+    min-height: 100vh;
+}
 .main-container {  
     display: grid;
     grid-template-columns: 0.6fr 1.3fr 0.9fr;
@@ -9,8 +13,7 @@
       "main main main"
       "main main main"
       "main main main";
-      background-color: #F7F7F7;
-    
+        
   }
   
   /* .sidebar { 
@@ -21,12 +24,13 @@
   
   .main { 
     display: flex;
+    flex-direction: column;
     align-self: flex-start;
     justify-content: flex-start;
     grid-area: main;    
     padding-top: 32px;
     width: max-content;
-    background-color: var(--light);
+    background-color: var(--lightgrey);
     margin: 30px 50px;
 }
 
@@ -214,7 +218,7 @@
         justify-content: flex-start;
         grid-area: main;    
         padding-top: 32px;
-        background-color: var(--light);
+        background-color: var(--lightgrey);
         margin: 0;
         width: 100%;
         padding: 0;
