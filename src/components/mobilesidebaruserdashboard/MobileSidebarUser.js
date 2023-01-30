@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
-import './newsidebar.css'
+import './mobilesidebaruser.css'
 import eformLogo from '../../assets/svglogos/eform-logo-white.svg'
 import doubleArrowClose from '../../assets/svglogos/doubleArrowClose.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,24 +10,17 @@ import  document  from '../../assets/svglogos/document.svg'
 import  payment  from '../../assets/svglogos/payment.svg'
 import  settings  from '../../assets/svglogos/settings.svg'
 
-const NewSidebar = ({ isActive }) => {
-    // const documentNumber = 2
-    // const [route, setRoute] = useState()
-    // const renderPage = () => {
-    //     if (documentNumber > 0) {
-    //         setRoute('documents')
-    //     } else {
-    //         setRoute('documents/create')
-    //     }
-    // }
-    
-    // console.log(route)
+const MobileSidebarUser = (props) => {
+   if (!props.show) {
+    return null;
+   }
     return (
-        <div className={isActive ? 'sidebar__container--active' : 'sidebar__container'}>
-            <div className="sidebar">
-                <div className="sidebar-title">
+        <div className="mobile-sidebar-container" onClick={ props.onClose}>
+            <div className="mobile-sidebar" onClick={e => e.stopPropagation()}>
+                <div className="mobile-sidebar-title">
                     <img src={eformLogo} alt="logo" className="eform-logo"/>
                     <span>E-Form ng</span>
+                    <img src={doubleArrowClose} onClick={ props.onClose} className='double-arrow' alt="double backward arrow"/>
                 </div>
                 <NavLink to="/user-dashboard" className="nav-links">
                     <div className="icon-container">
@@ -59,7 +52,7 @@ const NewSidebar = ({ isActive }) => {
                     </div>
                     <span>Settings</span>
                 </NavLink>
-                <div className="sidebar-logout-section">
+                <div className="mobile-sidebar-logout-section">
                     <div className="user-profile">
                         <><img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" alt="profile-photo" /></>
                         <span>Emmanuel</span>
@@ -72,4 +65,4 @@ const NewSidebar = ({ isActive }) => {
         </div>
     )
 }
-export default NewSidebar
+export default MobileSidebarUser

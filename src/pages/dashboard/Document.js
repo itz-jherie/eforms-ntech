@@ -1,5 +1,6 @@
 import './styles/documents.css'
 import { NavLink, useNavigate } from 'react-router-dom';
+import MobileNav from '../../components/mobilenavbar/MobileNav';
 
 const Document = () => {
     const navigate = useNavigate()
@@ -8,6 +9,9 @@ const Document = () => {
         navigate('create')
     }
     return ( 
+
+        <>
+        <MobileNav title='My Documents'/>
         <div className="document-page-container">
             <p>My Documents</p>
             <div className="document-page-content-container">
@@ -34,6 +38,7 @@ const Document = () => {
             </div>
             <button onClick={handleButton} className="create-document-btn">Create Document</button>
         </div>
+        </>
      );
 }
  

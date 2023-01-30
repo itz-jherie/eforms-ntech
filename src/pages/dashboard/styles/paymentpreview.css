@@ -7,12 +7,14 @@
 .payment-preview-page-content {
     justify-self: center;
     width: 80%;
+    margin-top: 80px;
 }
 .payment-title {
     font-weight: 700;
     font-size: 20px;
     text-align: center;
-    margin-top:30px;
+    margin-top: 30px;
+    visibility: hidden;
 }
 .payment-note {
     margin-top: 30px;
@@ -71,6 +73,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .payment-title {
+        visibility: visible;
     }
     @media screen  and (min-width: 1000px) {
         .payment-preview-page-container {

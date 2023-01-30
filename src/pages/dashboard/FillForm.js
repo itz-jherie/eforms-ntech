@@ -1,6 +1,9 @@
 import './styles/fillform.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav';
 const FillForm = () => {
     return (
+        <>
+        <MobileNav title="Fill Form"/>
         <div className="fillform-page-container">
             <p>
                 Fill Form - Affidavit as to loss of Vehicles Particulars <br/>
@@ -40,6 +43,7 @@ const FillForm = () => {
                 </div>
             </div>
         </div>
+        </>
       );
 }
  

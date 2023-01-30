@@ -61,6 +61,7 @@
         margin-left: 40%;
         width: 50%;
     }
+    
     @media screen  and (min-width: 1000px) {
         .password-container {
             margin-left: 20%;

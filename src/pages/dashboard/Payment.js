@@ -1,6 +1,10 @@
 import './styles/payment.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav'
+
 const Payment = () => {
     return (
+        <>
+        <MobileNav/>
         <div className="payment-page-container">
             <p>Payment History</p>
             <div className="payment-page-content-container">
@@ -24,6 +28,8 @@ const Payment = () => {
                 </ul>
             </div>
         </div>
+        
+        </>
     )
 }
 export default Payment

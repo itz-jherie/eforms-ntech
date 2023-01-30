@@ -32,13 +32,17 @@
     width: max-content;
     background-color: var(--lightgrey);
     margin: 30px 50px;
+    
 }
 
 .dashboard-header {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 100px;
+    
 }
 
 .dashboard-header > span {
@@ -46,6 +50,7 @@
     font-size: 28px;
     color: #111111;
     width: 50%;
+    visibility: hidden;
 }
 .dashboard-header > button {
     background-color: var(--green);
@@ -183,6 +188,9 @@
     .main { 
     overflow: visible;
      margin-left: 30%;
+    }
+    .dashboard-header > span {
+        visibility: visible;
     }
     
     /* .sidebar {

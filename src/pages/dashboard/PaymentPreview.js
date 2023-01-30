@@ -1,6 +1,9 @@
 import './styles/paymentpreview.css'
+import MobileNav from '../../components/mobilenavbar/MobileNav';
 const PaymentPreview = () => {
     return (
+        <>
+        <MobileNav title="Payment Preview"/>
         <div className="payment-preview-page-container">
             <div className='payment-preview-page-content'>
                 <p className='payment-title'>Payment Preview</p>
@@ -19,6 +22,7 @@ const PaymentPreview = () => {
                 <button className="proceed-btn">Proceed to Payment</button>
             </div>
         </div>
+        </>
       );
 }
  
