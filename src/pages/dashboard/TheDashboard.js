@@ -4,6 +4,7 @@ import pending from '../../assets/svglogos/pending-logo.svg'
 import completed from '../../assets/svglogos/completed-logo.svg'
 import rejected from '../../assets/svglogos/rejected-logo.svg'
 import { details } from '../../data/dashboardData'
+import MobileNav from '../../components/mobilenavbar/MobileNav'
 
 const TheDashboard = () => {
     const handleViewDocumentDetails = () => {
@@ -55,6 +56,8 @@ const TheDashboard = () => {
          
     }
     return (
+        <>
+        <MobileNav title="Dashboard"/>
         <div className="dashboard">
             <div className="mobile-dashboard">
                 {/* <header>
@@ -176,7 +179,7 @@ const TheDashboard = () => {
                 </div>
             </div>
             
-        </div>
+        </div></>
     )
 }
 export default TheDashboard

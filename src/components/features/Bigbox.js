@@ -15,9 +15,9 @@ const Bigbox = ({icon, name}) => {
         </div>
     ))
   return (
-    <>
+    <div className='biggerBox'>
         {dataElement}
-    </>
+    </div>
 
   )
 }

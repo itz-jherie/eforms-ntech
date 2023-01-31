@@ -1,0 +1,82 @@
+.edit-form-page-container {
+    background-color: var(--lightgrey);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.edit-page-content {
+    justify-self: center;
+    width: 80%;
+    margin-top: 100px;
+}
+.editform-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-top:30px;
+    visibility: hidden;
+}
+.edit-form-alert {
+    margin-top: 20px;
+    padding: 14px;
+    background: #D5F7D9;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    border-left: 7px solid var(--green);
+}
+.edit-note {
+    margin-top: 10px;
+    background: #B5E7EF;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 7px 11px;
+    margin-bottom: 20px;
+}
+.editable-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
+    width: 100%;
+}
+
+.rule {
+    margin-top: 50px;
+    border: 1px solid black;
+}
+.editable-content-container > p {
+    padding: 30px;
+}
+.edit-page-content > button {
+    padding: 15px 30px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+@media screen  and (min-width: 769px) {
+    .edit-form-page-container {
+        overflow: scroll;
+        padding-left: 20em;
+    }
+    .editform-title {
+        visibility: visible;
+    }
+    @media screen  and (min-width: 1000px) {
+        .edit-form-page-container {
+            padding-left: 20em;
+        }
+        
+    }
+    @media screen  and (min-width: 1400px) {
+        .edit-form-page-container {
+            padding-left: 20em;
+        }
+        
+    }
+}

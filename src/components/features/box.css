@@ -1,13 +1,19 @@
+.biggerBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .bigBox {
+    flex: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
     height: 250px;
     background-color: #ffffff;
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 
 .circle {
@@ -35,7 +41,6 @@
 /* COURT BOX */
 .smallBox {
     display: flex;
-    width: 296px;
     gap: 20px;
 }
 
@@ -65,9 +70,32 @@
  align-items: center;
 }
 
+.smalle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.smallBox {
+    flex: 0 0 45%;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
 @media screen and (max-width: 768px) {
+    .biggerBox {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
     .bigBox {
-        width: 188px;
+        flex: 50%;
         height: 136px;
     }
 
@@ -89,7 +117,12 @@
 
     .sBox {
         height: 50px;
-        width: 50px;
+        width: 40%;
+    }
+
+    .sBox2 {
+        width: 60%;
+        height: inherit;
     }
 
     .iconions2 {
@@ -99,5 +132,22 @@
     .sBox2 > span, .sBox2 > p {
         font-size: 14px;
         font-weight: 500;
+    }
+
+    .smalle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .smallBox {
+        flex: 0 0 45%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 }

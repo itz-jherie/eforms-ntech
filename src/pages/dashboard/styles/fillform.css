@@ -1,12 +1,12 @@
-.settings-page-container {
+.fillform-page-container {
     background-color: var(--lightgrey);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.password-container {
+.fillform-container {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -16,59 +16,74 @@
     border-radius: 10px;
     padding:  40px 30px;
 }
-.settings-page-container > p {
-    display: none;
+.fillform-page-container > p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    display: block;
+    width: 100vw;
+    margin-bottom: 30px;
+    padding-left: 15rem;
+    visibility: hidden;
 }
-.password-form-item {
-    
-}
-.password-form-item > label {
+.fill-form-item > label {
     margin-top: 20px;
     display: block;
 }
-.password-form-item  > input{
+.fill-form-item  > select{
         padding: 20px 10px;
-        background: var(--lightgrey);
         border: 1px solid #1111115e;
         border-radius: 10px;
         width: 100%;
         outline-color: var(--green);
 }
-.reset-container {
+.form-container {
     display: flex;
     flex-direction: column;
 }
-.reset-container > form {
+.form-container > form {
     width: 100%;
 }
-.reset-btn {
+.create-form-btn {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.reset-btn > button {
+.create-form-btn > button {
     background-color: var(--green);
+    width: 100%;
     border: none;
     margin-top: 30px;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 }
 
+@media screen  and (max-width: 768px) {
+    .fillform-page-container > p {
+        padding-left: 0;
+        visibility: hidden;
+    }
+}
+
 @media screen  and (min-width: 768px) {
-    .password-container {
+    
+    .fillform-container {
         margin-left: 40%;
         width: 50%;
     }
-    
+    .fillform-page-container > p {
+        visibility: visible;
+    }
     @media screen  and (min-width: 1000px) {
-        .password-container {
+        .fillform-container {
             margin-left: 20%;
+            width: 30%;
         }
     }
     @media screen  and (min-width: 1400px) {
-        .password-container {
+        .fillform-container {
             margin-left: 10%;
         }
     }

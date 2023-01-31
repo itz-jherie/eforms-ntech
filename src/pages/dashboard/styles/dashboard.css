@@ -1,3 +1,7 @@
+.dashboard {
+    background-color: var(--lightgrey);
+    min-height: 100vh;
+}
 .main-container {  
     display: grid;
     grid-template-columns: 0.6fr 1.3fr 0.9fr;
@@ -9,8 +13,7 @@
       "main main main"
       "main main main"
       "main main main";
-      background-color: #F7F7F7;
-    
+        
   }
   
   /* .sidebar { 
@@ -21,20 +24,25 @@
   
   .main { 
     display: flex;
+    flex-direction: column;
     align-self: flex-start;
     justify-content: flex-start;
     grid-area: main;    
     padding-top: 32px;
     width: max-content;
-    background-color: var(--light);
+    background-color: var(--lightgrey);
     margin: 30px 50px;
+    
 }
 
 .dashboard-header {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 100px;
+    
 }
 
 .dashboard-header > span {
@@ -42,6 +50,7 @@
     font-size: 28px;
     color: #111111;
     width: 50%;
+    visibility: hidden;
 }
 .dashboard-header > button {
     background-color: var(--green);
@@ -180,6 +189,9 @@
     overflow: visible;
      margin-left: 30%;
     }
+    .dashboard-header > span {
+        visibility: visible;
+    }
     
     /* .sidebar {
         position: absolute;
@@ -214,7 +226,7 @@
         justify-content: flex-start;
         grid-area: main;    
         padding-top: 32px;
-        background-color: var(--light);
+        background-color: var(--lightgrey);
         margin: 0;
         width: 100%;
         padding: 0;

@@ -1,0 +1,111 @@
+.payment-page-container {
+    background-color: var(--lightgrey);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 12px;
+    align-items: center;
+}
+.payment-page-container > p {
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 12px;
+    font-size: 28px;
+    font-weight: 600px;
+    visibility: hidden;
+}
+.payment-page-content-container {
+    overflow: scroll;
+    width: 90vw;
+    margin-top: 45px;
+}
+.payment-table-headers {
+    display: flex;
+    width: 150vw;
+    list-style-type: none;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.payment-table-headers > li {
+    width: 100%;
+    text-align: center;
+}
+.payment-items {
+    width: 150vw;
+}
+.payment-items > li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    
+    /* background-color: red; */
+}
+.payment-items > li > span {
+    width: 100%;
+    text-align: center;
+}
+
+/* @media screen  and (max-width: 768px) {
+    .payment-container {
+        margin: 20px;
+        word-wrap: normal;
+        flex-wrap: nowrap;
+        width: max-content;
+    }
+    .payment-container >  span {
+        width: 300%;
+    }
+    .payment-container >  ul {
+        width: 300%;
+    }
+} */
+
+@media screen  and (min-width: 768px) {
+    .payment-page-container {
+        overflow: scroll;
+        width: 100%;
+    }
+    .payment-page-content-container {
+        margin-left: 40%;
+        width: 70%;
+        overflow: scroll;
+    }
+    .payment-table-headers > li {
+        width: 70%;
+    }
+    .payment-page-container > p {
+        visibility: visible;
+    }
+    @media screen  and (min-width: 1000px) {
+        .payment-page-content-container {
+            margin-left: 30%;
+            overflow: scroll;
+            overflow: auto;
+            
+        }
+        .payment-page-content-container > ul {
+            width: 100%;
+        }
+    }
+    @media screen  and (min-width: 1400px) {
+        .payment-page-content-container {
+            margin-left: 20%;
+        }
+        .payment-page-content-container > ul {
+            width: 100%;
+        }
+        /* .payment-table-headers  {
+            width: 100%;
+        }
+        .payment-items {
+            width: 100%;
+        } */
+    }
+}

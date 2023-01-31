@@ -1,10 +1,14 @@
 import './styles/accountpage.css'
 import img from '../../assets/images/guy_working.png'
 import editProfilePicbtn from '../../assets/svglogos/change-profile-img.svg'
+import MobileNav from '../../components/mobilenavbar/MobileNav'
 
 const Account = () => {
     return (
+        <>
+        <MobileNav title="Account Info"/>
         <div className='rer'>
+            
             <div className="account-page-container">
                 <p>Account Info</p>
                 <div className='username-pic-container'>
@@ -82,6 +86,7 @@ const Account = () => {
                 
             </div>
         </div>
+        </>
     )
 }
 export default Account

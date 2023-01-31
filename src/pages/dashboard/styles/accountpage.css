@@ -89,6 +89,10 @@
 .email > input {
     background-color: var(--lightgrey)
 }
+.savebtn {
+    margin-bottom: 30px;
+    color: white;
+}
 @media screen  and (min-width: 768px) {
     .rer {
         width: 100%;
@@ -133,7 +137,7 @@
     .lga { grid-area: lga; }
     .zipcode { grid-area: zipcode; }
     .contact { grid-area: contact; }
-    .savebtn { grid-area: savebtn; }
+    .savebtn { grid-area: savebtn;}
     .account-page-container > form > div {
         align-items: center;
         margin: 10px;
