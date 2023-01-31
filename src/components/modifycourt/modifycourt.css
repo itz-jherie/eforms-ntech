@@ -1,0 +1,110 @@
+.modify-court {
+    width: 100%;
+    padding: 40px 60px 40px 23rem;
+    background-color: var(--lightgrey);
+}
+.mobile-modify-court {
+    width: 100%;
+}
+.desktop-modify-court {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-modify-court {
+        display: none;
+    }
+    .desktop-modify-court {
+        display: block;
+        width: 100%;
+    }
+    .desktop-modify-court header > div {
+        color: var(--textDark);
+        font-family: var(--fontFamily);
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .desktop-modify-court-form {
+        margin-top: 50px;
+    }
+    .desktop-modify-court-form form {
+        display: flex;
+        flex-direction: column;
+    }
+    .desktop-modify-court-form form > label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .desktop-modify-court-form form > label > input, .desktop-modify-court-form form > label > select {
+        min-width: 100%;
+        height: 54px;
+        padding: 16px;
+        margin-bottom: 30px;
+        /* background: #E4E9F7; */
+        border: 1px solid rgba(17, 17, 17, 0.3);
+        border-radius: 10px;
+        outline: none;
+    }
+    .desktop-modify-court-form form > label > div {
+        min-width: 100%;
+        height: 54px;
+        background: #FFFFFF;
+        border: 1px solid rgba(17, 17, 17, 0.3);
+        border-radius: 10px;
+    }
+    .desktop-modify-court-form form > label > div > button {
+        width: 149px;
+        height: 30px;
+        margin: 10px 16px;
+        background: linear-gradient(278.73deg, #EE4D1D 77.01%, rgba(238, 77, 29, 0) 113.82%);
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+        color: #FFFFFF;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    .desktop-modify-court-form form > label > b {
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--textDark);
+    }
+    .desktop-modify-court-button {
+        margin-top: 30px;
+        width: 182px;
+        height: 44px;
+        background: linear-gradient(292.34deg, #20A352 66.13%, rgba(238, 249, 242, 0) 133.7%);
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    .desktop-court-background-removal {
+        margin-top: 50px;
+        height: 54px;
+        min-width: 100%;
+        background-color: #FFFFFF;
+        border: 1px solid rgba(17, 17, 17, 0.3);
+        border-radius: 10px;
+    }
+    .desktop-court-background-removal p {
+        margin: 15px 20px;
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--textDark);
+    }
+}

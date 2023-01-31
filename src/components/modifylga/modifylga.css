@@ -1,0 +1,75 @@
+.modify-lga {
+    width: 100%;
+    padding: 40px 60px 40px 23rem;
+    background-color: var(--lightgrey);
+    height: 100vh;
+}
+.mobile-modify-lga {
+    width: 100%;
+}
+.desktop-modify-lga {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-modify-lga {
+        display: none;
+    }
+    .desktop-modify-lga {
+        display: block;
+        width: 100%;
+    }
+    .desktop-modify-lga header > div {
+        color: var(--textDark);
+        font-family: var(--fontFamily);
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .desktop-rename-form {
+        margin-top: 50px;
+    }
+    .desktop-rename-form form {
+        display: flex;
+        flex-direction: column;
+    }
+    .desktop-rename-form form > label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .desktop-rename-form form > label > input, .desktop-rename-form form > label > select {
+        min-width: 100%;
+        height: 54px;
+        padding: 16px;
+        margin-bottom: 30px;
+        /* background: #E4E9F7; */
+        border: 1px solid rgba(17, 17, 17, 0.3);
+        border-radius: 10px;
+        outline: none;
+    }
+    .desktop-rename-form form > label > b {
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--textDark);
+    }
+    .desktop-lga-submit-button {
+        margin-top: 30px;
+        width: 182px;
+        height: 44px;
+        background: linear-gradient(292.34deg, #20A352 66.13%, rgba(238, 249, 242, 0) 133.7%);
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-family: var(--fontFamily);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+}

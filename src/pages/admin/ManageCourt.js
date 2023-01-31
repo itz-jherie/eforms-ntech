@@ -1,52 +1,57 @@
-import './styles/lgamanagement.css'
+import './styles/managecourt.css'
 import edit from '../../assets/svglogos/edit.svg'
 import minus from '../../assets/svglogos/minus.svg'
-import { lgaData } from '../../data/lgaData'
-import NewLGA from '../../components/newlga/NewLGA'
+import courtLogo from '../../assets/images/courtLogo.png'
+import seal from '../../assets/images/seal.png'
+import { courts } from '../../data/court'
+import { useNavigate } from 'react-router'
 
-import { useNavigate } from 'react-router-dom'
-
-const LGAManagement = () => {
+const ManageCourt = () => {
     const navigate = useNavigate()
-
-    const handleButtonClick = () => {
-        navigate('create-lga')
+    
+    const handleAddCourtButton = () => {
+        navigate("new-court")
     }
 
-    const handleEditButtonClick = () => {
-        navigate('modify-lga')
+    const handleModifyCourtButton = () => {
+        navigate("modify-court")
     }
 
     return (
-        <div className="lga-management">
-            <div className="mobile-lga-management"></div>
-            <div className="desktop-lga-management">
+        <div className="manage-court">
+            <div className="mobile-manage-court"></div>
+            <div className="desktop-manage-court">
                 <header>
-                    <h2>LGA Management</h2>
+                    <h2>Manage Court</h2>
                 </header>
-                <section className="desktop-lga-add-button">
-                    <button onClick={handleButtonClick}>&#43;</button>
+                <section className="desktop-court-button">
+                    <button onClick={handleAddCourtButton}>&#43;</button>
                 </section>
-                <section className='desktop-lga-details'>
+                <section className="desktop-court-details">
                     <table>
                         <tr>
                             <th>S/N</th>
-                            <th>LGA</th>
+                            <th>Court Name</th>
                             <th>State</th>
+                            <th>LGA</th>
                             <th>Action</th>
                         </tr>
-                        {lgaData?.map(lga => (
+                        {courts?.map(court => (
                             <tr className='state'>
-                                <td>{lga.id}</td>
-                                <td>{lga.lgaName}</td>
-                                <td>{lga.stateName}</td>
+                                <td>{court.id}</td>
+                                <td>
+                                    <img src={courtLogo} alt="court logo"  style={{verticalAlign: 'middle', marginRight: '8px'}} />
+                                    <img src={seal} style={{verticalAlign: 'middle', marginRight: '8px'}} alt='court logo'  />
+                                    {court.courtName}
+                                </td>
+                                <td>{court.stateName}</td>
+                                <td>{court.lgaName}</td>
                                 <td style={{
                                     display: 'flex',
                                     alignItems: 'flex-start',
                                     gap: '15px',
                                 }}>
-                                    <button 
-                                    style={{
+                                    <button style={{
                                         width: '52px',
                                         height: '36px',
                                         borderRadius: '10px',
@@ -55,7 +60,7 @@ const LGAManagement = () => {
                                         outline: 'none',
                                         cursor: 'pointer',
                                     }}
-                                    onClick={handleEditButtonClick}
+                                    onClick={handleModifyCourtButton}
                                     ><img src={edit} alt="edit icon" /></button>
                                     <button style={{
                                         width: '52px',
@@ -75,4 +80,4 @@ const LGAManagement = () => {
         </div>
     )
 }
-export default LGAManagement
+export default ManageCourt

@@ -1,45 +1,45 @@
-import './styles/lgamanagement.css'
+import './styles/manageadmin.css'
 import edit from '../../assets/svglogos/edit.svg'
 import minus from '../../assets/svglogos/minus.svg'
-import { lgaData } from '../../data/lgaData'
-import NewLGA from '../../components/newlga/NewLGA'
-
+import { admin } from '../../data/admin'
 import { useNavigate } from 'react-router-dom'
 
-const LGAManagement = () => {
+const ManageAdmin = () => {
     const navigate = useNavigate()
 
-    const handleButtonClick = () => {
-        navigate('create-lga')
+    const handleNewAdminButton = () => {
+        navigate('new-admin')
     }
 
-    const handleEditButtonClick = () => {
-        navigate('modify-lga')
+    const handleModifyAdminButton = () => {
+        navigate('modify-admin')
     }
-
     return (
-        <div className="lga-management">
-            <div className="mobile-lga-management"></div>
-            <div className="desktop-lga-management">
+        <div className="manage-admin">
+            <div className="mobile-manage-admin"></div>
+            <div className="desktop-manage-admin">
                 <header>
-                    <h2>LGA Management</h2>
+                    <h2>Manage Admin</h2>
                 </header>
-                <section className="desktop-lga-add-button">
-                    <button onClick={handleButtonClick}>&#43;</button>
+                <section className="desktop-ma-add-button">
+                    <button onClick={handleNewAdminButton}>&#43;</button>
                 </section>
-                <section className='desktop-lga-details'>
+                <section className='desktop-admin-details'>
                     <table>
                         <tr>
                             <th>S/N</th>
-                            <th>LGA</th>
-                            <th>State</th>
+                            <th>Full Name</th>
+                            <th>Username</th>
                             <th>Action</th>
                         </tr>
-                        {lgaData?.map(lga => (
+                        {admin?.map(data => (
                             <tr className='state'>
-                                <td>{lga.id}</td>
-                                <td>{lga.lgaName}</td>
-                                <td>{lga.stateName}</td>
+                                <td>{data.id}</td>
+                                <td>{data.fullName}</td>
+                                <td>
+                                    <p>{data.userName}</p><br/>
+                                    <p style={{color: '#20A352'}}>Role: {data.role}</p>
+                                </td>
                                 <td style={{
                                     display: 'flex',
                                     alignItems: 'flex-start',
@@ -55,7 +55,7 @@ const LGAManagement = () => {
                                         outline: 'none',
                                         cursor: 'pointer',
                                     }}
-                                    onClick={handleEditButtonClick}
+                                    onClick={handleModifyAdminButton}
                                     ><img src={edit} alt="edit icon" /></button>
                                     <button style={{
                                         width: '52px',
@@ -75,4 +75,4 @@ const LGAManagement = () => {
         </div>
     )
 }
-export default LGAManagement
+export default ManageAdmin
