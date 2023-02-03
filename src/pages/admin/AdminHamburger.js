@@ -12,7 +12,6 @@ import  settings  from '../../assets/svglogos/settings.svg'
 import state from '../../assets/svglogos/state-logo.svg'
 import lock from '../../assets/svglogos/lock.svg'
 import folder from '../../assets/svglogos/folder.svg'
-import { propNames } from "@chakra-ui/react"
 
 const AdminHamburger = (props) => {
     const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
