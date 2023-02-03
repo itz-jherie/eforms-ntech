@@ -1,11 +1,141 @@
 .new-state {
     width: 100%;
-    padding: 40px 60px 40px 23rem;
     background-color: var(--lightgrey);
     height: 100vh;
 }
 .mobile-new-state {
     width: 100%;
+}
+.new-state-content {
+    position: absolute;
+    top: 7em;
+    /* left: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+.new-state-form {
+    margin-top: 20px;
+}
+.-new-state-form form {
+    display: flex;
+    flex-direction: column;
+}
+.new-state-form form > label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.new-state-form form > label > input {
+    min-width: 100%;
+    height: 54px;
+    padding: 16px;
+    margin-bottom: 20px;
+    /* background: #E4E9F7; */
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 10px;
+    outline: none;
+}
+.new-state-form form > label > div {
+    min-width: 100%;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 10px;
+}
+.new-state-form form > label > div > button {
+    width: 149px;
+    height: 30px;
+    margin: 10px 16px;
+    background: linear-gradient(278.73deg, #EE4D1D 77.01%, rgba(238, 77, 29, 0) 113.82%);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    color: #FFFFFF;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+.new-state-form form > label > b {
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--textDark);
+}
+.mobile-file-button {
+    height: 54px;
+    min-width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 10px;
+}
+.mobile-file-button button {
+    margin: 10px 20px;
+    width: 149px;
+    height: 30px;
+    background: linear-gradient(278.73deg, #EE4D1D 77.01%, rgba(238, 77, 29, 0) 113.82%);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.mobile-file-button span {
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--textDark);
+}
+.mobile-background-removal {
+    margin-top: 20px;
+    height: 54px;
+    min-width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 10px;
+}
+.mobile-background-removal p {
+    margin: 15px 20px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--textDark);
+}
+.mobile-submit-button {
+    margin-top: 30px;
+    width: 182px;
+    height: 44px;
+    background: linear-gradient(292.34deg, #20A352 66.13%, rgba(238, 249, 242, 0) 133.7%);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 .desktop-new-state {
     display: none;
@@ -17,6 +147,7 @@
     .desktop-new-state {
         display: block;
         width: 100%;
+        padding: 40px 60px 40px 23rem;
     }
     .desktop-new-state header {
         display: flex;

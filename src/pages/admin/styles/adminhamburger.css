@@ -5,12 +5,16 @@
 
 /* ---------------- Navbar and burger menu ------------------ */
 nav {
-    width: 100%;
+    width: 100vw;
     height: 5em;
-    background-color: var(--dark);
+    background: var(--dark);
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 40px; */
     padding: 1em;
+    overflow: hidden;
 }
 
 .burger-menu {
@@ -21,6 +25,16 @@ nav {
     align-items: flex-start;
     justify-content: space-between;
     cursor: pointer;
+}
+.hamburger-title {
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
 }
 
 .burger-bar {
@@ -36,7 +50,7 @@ nav {
     /* height: 100vh; */
     background-color: var(--dark);
     position: fixed;
-    top: 5em;
+    top: 4.5em;
     left: 0;
     z-index: 9999;
     display: flex;
@@ -53,10 +67,10 @@ nav {
     color: #fff;
     font-family: var(--fontFamily);
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 24px;
     text-align: justify;
-    vertical-align: top;
+    vertical-align: super;
 }
 .admin-hamburger-title .double-arrow {
     margin-left: 50px;
@@ -82,7 +96,7 @@ nav {
     /* margin-top: 5px; */
 }
 .hamburger-icon-container {
-    background-color: #61436A !important;
+    background-color: var(--green) !important;
     width: 30px;
     height: 30px;
     display: flex;

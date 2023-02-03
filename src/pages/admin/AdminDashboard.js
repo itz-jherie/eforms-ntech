@@ -48,7 +48,27 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     </section>
-                    <section className='mobile-recent-applications'></section>
+                    <section className='mobile-recent-applications'>
+                        <h3>Recent Applications</h3>
+                        <table className='mobile-table'>
+                            <tr>
+                                <th>Username</th>
+                                <th>Doc Name</th>
+                                <th>Date Created</th>
+                                <th>Tracking ID</th>
+                                <th>Status</th>
+                            </tr>
+                            {details?.map(detail => (
+                                    <tr className='mobile-details-row'>
+                                        <th>{detail.userName}</th>
+                                        <th>{detail.docName}</th>
+                                        <th>{detail.dateCreated}</th>
+                                        <th>{detail.trackingID}</th>
+                                        <th>{detail.status}</th>
+                                    </tr>
+                                ))}
+                        </table>
+                    </section>
                 </section>
             </div>
             <div className="desktop-admin-dashboard">

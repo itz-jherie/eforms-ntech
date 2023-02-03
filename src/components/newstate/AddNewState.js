@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import AdminHamburger from "../../pages/admin/AdminHamburger";
 import './addnewstate.css'
 
 const AddNewState = () => {
@@ -23,22 +24,37 @@ const AddNewState = () => {
     return (
         <div className="new-state">
             <div className="mobile-new-state">
-                {/* <header>
-                    <div>Add New State</div>
-                    <><button>Go Back</button></>
+                <header className="hamburger">
+                    <AdminHamburger title="Add New State" />
                 </header>
-                <section className="new-state-form">
-                    <form>
-                        <label htmlFor="enter state name">
-                            <b>Enter State Name</b>
-                            <input type="text" placeholder="Enter state name" />
-                        </label>
-                        <label htmlFor="state logo">
+                <section className="new-state-content">
+                    <section className="new-state-form">
+                        <form>
+                            <label htmlFor="enter state name">
+                                <b>Enter State Name</b>
+                                <input type="text" placeholder="Enter state name" />
+                            </label>
+                            <label htmlFor="state logo">
                             <b>State Logo</b>
-                            <input type="text" placeholder="state logo" />
+                            <div className='mobile-file-button'>
+                                <button ref={uploadedFile}>Choose file</button>
+                                <span>No file choosen</span>
+                                <input 
+                                    type="file" 
+                                    multiple={false}
+                                    placeholder="Choose File" 
+                                    style={{display: 'none'}}
+                                    onChange={handleFileChange}
+                                />
+                            </div>
                         </label>
-                    </form>
-                </section> */}
+                        <div className='mobile-background-removal'>
+                            <p>Please use <b style={{color: '#FF0000'}}>Remove Background</b> to remove any unwanted background</p>
+                        </div>
+                        <button className='mobile-submit-button'>Create State</button>
+                        </form>
+                    </section>
+                </section>
             </div>
             <div className="desktop-new-state">
                 <header>

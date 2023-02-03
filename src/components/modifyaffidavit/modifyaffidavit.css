@@ -1,11 +1,93 @@
 .modify-affidavit {
     width: 100%;
-    padding: 40px 60px 40px 23rem;
     background-color: var(--lightgrey);
     height: 100vh;
 }
 .mobile-modify-affidavit {
     width: 100%;
+}
+.mobile-modify-affidavit-content {
+    position: absolute;
+    top: 7em;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--lightgrey);
+}
+.mobile-modify-affidavit-form {
+    margin-top: 20px;
+}
+.mobile-modify-affidavit-form form {
+    display: flex;
+    flex-direction: column;
+}
+.mobile-modify-affidavit-form form > label {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 5px;
+}
+.mobile-modify-affidavit-form form > label > input[type="text"] {
+    min-width: 100%;
+    height: 54px;
+    padding: 16px;
+    margin-bottom: 30px;
+    /* background: #E4E9F7; */
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 10px;
+    outline: none;
+}
+.mobile-modify-affidavit-form form > label > textarea {
+    height: 254px;
+    min-width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    outline: none;
+    padding: 16px;
+    font-family: var(--fontFamily);
+}
+.mobile-modify-affidavit-form form > label > div {
+    min-width: 100%;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 10px;
+}
+.mobile-modify-affidavit-form form > label > div > button {
+    width: 149px;
+    height: 30px;
+    margin: 10px 16px;
+    background: linear-gradient(278.73deg, #EE4D1D 77.01%, rgba(238, 77, 29, 0) 113.82%);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    color: #FFFFFF;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.mobile-modify-affidavit-form form > label > b {
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--textDark);
+}
+.mobile-modify-affidavit-button {
+    margin-top: 30px;
+    width: 182px;
+    height: 44px;
+    background: linear-gradient(292.34deg, #20A352 66.13%, rgba(238, 249, 242, 0) 133.7%);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 .desktop-modify-affidavit {
     display: none;
@@ -17,6 +99,7 @@
     }
     .desktop-modify-affidavit {
         display: block;
+        padding: 40px 60px 40px 23rem;
     }
     .desktop-modify-affidavit header > div {
         color: var(--textDark);

@@ -38,8 +38,8 @@ const AdminHamburger = (props) => {
                     <div className={burger_class} ></div>
                     <div className={burger_class} ></div>
                     <div className={burger_class} ></div>
-                    <div>{props.title}</div>
                 </div>
+                <div className="hamburger-title">{props.title}</div>
             </nav>
 
             <div className={menu_class}>
@@ -47,7 +47,7 @@ const AdminHamburger = (props) => {
                     <img src={eformLogo} alt="logo" className="eform-logo"/>
                     <span>E-Form ng</span>
                 </div>
-                <NavLink to="/admin" className="hamburger-nav-links">
+                <NavLink to="admin" className="hamburger-nav-links">
                     <div className="hamburger-icon-container">
                         <img src={dashboard} alt='dashboard icon'/>
                     </div>
@@ -104,7 +104,7 @@ const AdminHamburger = (props) => {
                 <div className="hamburger-logout-section">
                     <div className="hamburger-user-profile">
                         <><img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" alt="profile-photo" /></>
-                        <span>Emmanuel</span>
+                        <span>Admin</span>
                     </div>
                     <div className="hamburger-logout-button">
                         <button><i className="fas fa-sign-out-alt"></i>Logout</button>

@@ -1,11 +1,65 @@
 .lga-management {
     width: 100%;
     height: 100vh;
-    padding: 40px 60px 40px 23rem;
     background-color: var(--lightgrey);
 }
 .mobile-lga-management {
     width: 100%;
+}
+.mobile-lga-content {
+    position: absolute;
+    top: 7em;
+    /* left: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.mobile-lga-details button {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(315deg, #20A352 68.18%, rgba(32, 163, 82, 0) 113.64%);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 20px;
+    font-family: var(--fontFamily);
+    cursor: pointer;
+}
+.mobile-lga-details table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.mobile-lga-details > table th {
+    text-align: center;
+    padding: 10px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(17, 17, 17, 0.7);
+}
+.mobile-lga-details > table td {
+    text-align: center;
+    padding: 10px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--textDark);
+}
+.mobile-lga-details > table .state {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border-bottom: 10px solid var(--lightgrey);
+    margin-bottom: 10px;
+    border-left: 3px solid var(--green);
 }
 .desktop-lga-management {
     display: none;
@@ -18,6 +72,7 @@
     .desktop-lga-management {
         display: block;
         width: 100%;
+        padding: 40px 60px 40px 23rem;
     }
     .desktop-lga-add-button {
         margin-top: 50px;

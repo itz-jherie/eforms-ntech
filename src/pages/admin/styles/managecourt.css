@@ -1,11 +1,66 @@
 .manage-court {
     width: 100%;
     height: 100vh;
-    padding: 40px 60px 40px 23rem;
     background-color: var(--lightgrey);
 }
 .mobile-manage-court {
     width: 100%;
+}
+.mobile-court-content {
+    position: absolute;
+    top: 7em;
+    /* left: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+.mobile-court-details button {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(315deg, #20A352 68.18%, rgba(32, 163, 82, 0) 113.64%);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 20px;
+    font-family: var(--fontFamily);
+    cursor: pointer;
+}
+.mobile-court-details table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.mobile-court-details > table th {
+    text-align: left;
+    padding: 10px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(17, 17, 17, 0.7);
+}
+.mobile-court-details > table td {
+    text-align: left;
+    padding: 10px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--textDark);
+}
+.mobile-court-details > table .state {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border-bottom: 10px solid var(--lightgrey);
+    margin-bottom: 10px;
+    border-left: 3px solid var(--green);
 }
 .desktop-manage-court {
     display: none;
@@ -18,6 +73,7 @@
     .desktop-manage-court {
         display: block;
         width: 100%;
+        padding: 40px 60px 40px 23rem;
     }
     .desktop-court-button {
         margin-top: 50px;

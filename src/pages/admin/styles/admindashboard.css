@@ -1,6 +1,5 @@
 .admin-dashboard {
     width: 100%;
-    /* height: 100vh; */
     font-family: var(--fontFamily);
 }
 .mobile-admin-dashboard {
@@ -41,15 +40,66 @@ input::placeholder {
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 10px;
+    text-align: left;
 }
 .mobile-card {
     width: 245px;
     height: 100px;
     background: #FFFFFF;
     border-radius: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.mobile-card > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 7px;
+    font-family: var(--fontFamily);
+    color: var(--textDark);
+
+}
+.mobile-recent-applications {
+    margin: auto;
+    padding: 0 20px;
+    background: var(--lightgrey);
+}
+.mobile-recent-applications > h3 {
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    margin: 80px 0 20px;
+}
+.mobile-table th, .mobile-table td {
+    text-align: center;
+    padding: 0.50em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--textDark);
+}
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+table .mobile-details-row:nth-child(even), table .mobile-details-row:nth-child(odd) {
+    border-bottom: 10px solid var(--lightgrey);
+    border-left: 3px solid var(--green);
+    background: #FFFFFF;
+}
+tr {
+    border-radius: 10px;
 }
 .desktop-admin-dashboard {
     display: none;

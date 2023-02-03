@@ -2,6 +2,7 @@ import { useRef } from "react";
 import './modifystate.css'
 import abuja from '../../assets/images/abuja.png'
 import { useNavigate } from 'react-router'
+import AdminHamburger from "../../pages/admin/AdminHamburger";
 
 const ModifyState = () => {
     const uploadedFile = useRef(null)
@@ -25,7 +26,40 @@ const ModifyState = () => {
 
     return (
         <div className="modify-state">
-            <div className="mobile-modify-state"></div>
+            <div className="mobile-modify-state">
+                <header>
+                    <AdminHamburger title="Modify State" />
+                </header>
+                <section className="mobile-modify-state-content">
+                    <section className="mobile-modify-form">
+                        <form>
+                            <label htmlFor="state name">
+                                <b>State Name</b>
+                                <input type="text" placeholder="Lagos" />
+                            </label>
+                            <label htmlFor="State Logo (Leave empty if you are not changing this logo)">
+                                <b>State Logo <i>(Leave empty if you are not changing this logo)</i></b>
+                                <div><button>Choose File</button></div>
+                                <input 
+                                    type="file" 
+                                    placeholder="Choose File" 
+                                    style={{
+                                        display: 'none'
+                                    }}
+                                    onChange={handleFileChange}
+                                />
+                            </label>
+                            <div className='mobile-current-logo'>
+                                <p>Current Logo</p>
+                                <img src={abuja} alt="state logo" />
+                            </div>
+                            <div className='mobile-modify-button'>
+                                <button>Modify State</button>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+            </div>
             <div className="desktop-modify-state">
                 <header>
                     <div>Modify State</div>

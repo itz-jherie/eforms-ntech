@@ -1,11 +1,53 @@
 .payment-history {
     width: 100%;
     height: 100vh;
-    padding: 40px 60px 40px 23rem;
     background-color: var(--lightgrey);
 }
 .mobile-payment-history {
     width: 100%;
+}
+.mobile-history-content {
+    position: absolute;
+    top: 7em;
+    /* left: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+.mobile-history-details table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.mobile-history-details > table th {
+    text-align: center;
+    padding: 1px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(17, 17, 17, 0.7);
+}
+.mobile-history-details > table td {
+    text-align: left;
+    padding: 1px;
+    font-family: var(--fontFamily);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--textDark);
+}
+.mobile-history-details > table .state {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border-bottom: 10px solid var(--lightgrey);
+    margin-bottom: 10px;
+    border-left: 3px solid var(--green);
 }
 .desktop-payment-history {
     display: none;
@@ -18,6 +60,7 @@
     .desktop-payment-history {
         display: block;
         width: 100%;
+        padding: 40px 60px 40px 23rem;
     }
     .desktop-history-details table {
         margin-top: 30px;
