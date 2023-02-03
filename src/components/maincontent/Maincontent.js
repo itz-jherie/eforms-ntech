@@ -1,6 +1,7 @@
 import React from 'react'
 import Bigbox from "../features/Bigbox"
-import Selectinput from "../cta/Selectinput"
+import Selectinput from "../cta/Selectinput";
+import { Link } from 'react-router-dom';
 import "./maincontent.css"
 import Button from "../cta/Button"
 import {BsFillCheckSquareFill, BsFillPersonPlusFill} from "react-icons/bs"
@@ -16,27 +17,35 @@ const Maincontent = () => {
         <div className='mainContent--1'>
 
           <div className='icon--cont'>
-          <div className='icon--circle'>
+            
+            <div className='icon--circle'>
           <BsFillCheckSquareFill className='inner--icon'/>
           </div>
           <p className='icon--text'>Selelct Form</p>
+          
           </div>
 
         
 
          <div className='icon--cont'>
-         <div className='icon--circle'>
-          <AiFillFileText className='inner--icon'/>         
+         
+      
+          <div className='icon--circle'>
+          <AiFillFileText className='inner--icon'/>       
           </div>
           <p className='icon--text'>File Details</p>
+         
+          
          </div>
             
 
          <div className='icon--cont'>
-         <div className='icon--circle'>
+          
+          <div className='icon--circle'>
           <AiFillPrinter className='inner--icon'/>
           </div>
-          <p className='icon--text'>Print or Delivery</p>
+          <p className='icon--text'>Print</p>
+          
          </div>
 
         </div>
@@ -55,8 +64,15 @@ const Maincontent = () => {
           <div className="court--content1">
             
             <Selectinput className="selectButt"/>
+
+            <button className='proceedBtn'> 
+        <Link to="signin" style={{color: "var(--white)"}}>Proceed</Link>  
+       </button>
+
+       {/*
             <Button className="mdBtn proceedBtn" content="Proceed"/>
-          </div>
+  */}
+            </div>
           <div className="court--content2">
             <Smallbox />
           </div>

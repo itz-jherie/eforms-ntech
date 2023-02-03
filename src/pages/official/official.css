@@ -9,6 +9,10 @@
     width: 50%;
 }
 
+.hero--lhs {
+    gap: 1rem;
+}
+
 .hero--title {
     font-family: var(--fontFamily);
     color: var(--green);
@@ -23,7 +27,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24.2px;
-    color: var(--dark);
 }
 
 .hero--image {
@@ -54,7 +57,7 @@
         font-size: 16px;
         line-height: 25px;
         padding-top: 1rem;
-        color: var(--dark);
+
     }
 
     .hero--image {

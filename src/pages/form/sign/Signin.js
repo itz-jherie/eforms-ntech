@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {FcGoogle} from 'react-icons/fc'
-import logo from '../../assets/images/Logo_black.png'
-import Button from "../../components/cta/Button"
-import ButtonIcon from "../../components/cta/ButtonIcon"
+
+import logo from '../../../assets/images/Logo_black.png'
+import Button from "../../../components/cta/Button"
+import ButtonIcon from "../../../components/cta/ButtonIcon"
+
+
+
+
 import "./signin.css"
 import { FaFacebook } from 'react-icons/fa'
 
@@ -67,13 +72,19 @@ const Signin = () => {
             <label htmlFor="forgot password" className='lbs-rhs'>FORGOT PASSWORD?</label>
             </div>
 
+              <div className="btn__group">
+              <button className='btn__sign-in'> Sign in</button>
+              <button className='btn__social'> <FcGoogle /> Sign in with Google</button>
+              <button className='btn__social'> <FaFacebook className='facebk'/> Sign in with Facebook</button>
 
+              </div>
+            {/*
             <Button className="lgBtn sBtn" content="Sign in" />
 
             <ButtonIcon className="lgtransparent sBtn" content="Sign in with Google" icon={<FcGoogle />} />
 
             <ButtonIcon className="lgtransparent sBtn" content="Sign in with Facebook" icon={<FaFacebook className='facebk'/>}/>
-
+  */}
             <span className='acct'>Don't have an account? <Link to="Signup">Sign up</Link></span>
           </form>
         </div>

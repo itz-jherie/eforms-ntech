@@ -1,3 +1,51 @@
+.btn {
+    max-width: 100px;
+    padding: 4px 25px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: normal;
+}
+
+.btn--success {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+}
+
+.btn--outline {
+    background-color: blue;
+    color: var(--green);
+    padding: 8px 20px;
+    transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+    padding: 2px 8px;
+}
+
+.btn--mobile {
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 0.3s ease-out;
+}
+
+.green {
+    background-color: var(--green);
+    color: #ffff;
+    border: none;
+}
+
+.transparent {
+    background-color: var(--transparent);
+    color: green;
+    border: none;
+}
+/*
 .lgBtn {
    background-color: #20A352;
    color: #ffff;
@@ -54,3 +102,4 @@
     margin: auto 1rem;
     background: transparent;
 }
+*/

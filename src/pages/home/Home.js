@@ -3,16 +3,18 @@ import Footer from '../../components/footer/Footer';
 import Hero from "../../components/hero/Hero"
 import Main from "../../components/main/Main"
 import Maincontent from '../../components/maincontent/Maincontent';
-import data from '../../assets/dataFiles/footerData'
+import data from '../../assets/dataFiles/footerData';
 import Nav from '../../components/nav/Nav';
+import "./home.css"
 
 const Home = () => {
   return (
     <>
-     <Nav /> 
+    <Nav /> 
     <Hero />
     <Main />
     <Maincontent />
+    
     <Footer
       logo={data.logo}
       name={data.name}

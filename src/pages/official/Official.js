@@ -5,16 +5,16 @@ import Maincontent from '../../components/maincontent/Maincontent';
 import data from '../../assets/dataFiles/footerData';
 import Nav from '../../components/nav/Nav';
 import img from "../../assets/images/guy_working.png";
-import "./personal.css";
+import "./official.css"
 
-const Personal = () => {
+const Official = () => {
   return (
     <>
     <Nav />
     <div className='hero'>
 
       <div className='hero--lhs'>
-      <h1 className="hero--title">Personal Document</h1>
+      <h1 className="hero--title">Official Document</h1>
       <p className="hero--text">Users could submit their personal information.These forms typically include fields for the individual's name, address, phone number, email, and other personal information.</p>
       </div>
 
@@ -43,4 +43,4 @@ const Personal = () => {
   )
 }
 
-export default Personal
+export default Official
