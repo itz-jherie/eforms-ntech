@@ -1,34 +1,37 @@
-import React from 'react'
+import React from 'react';
+import {useRef, useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../../../components/cta/Button'
+
 import logo from "../../../assets/images/Logo_black.png"
 import "./signup.css"
 
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { registerSchema } from '../../../schema/formSchema';
+
+import { useNavigate } from 'react-router-dom';
+
 const Signup = () => {
 
-  const [formData, setFormData] = React.useState(
-    {
-      firstName: "",
-      middleName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      checkBOx: ""
-    }
-  )
+  let navigate = useNavigate();
 
-  function handleChange(event) {
-    event.preventDefault();
+  // REACT HOOK FORM
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(registerSchema),
+  })
 
-    console.log(formData);
-    setFormData(prevFormData => {
-      return {
-        ...prevFormData,
-        [event.target.name]: event.target.value
-      }
-    })
-  }
+  const formSubmitHandler = (data) => {
+    console.log(data);
+    navigate("/MultiStepForm");
+  }  
+  
+  
+  
 
   return (
     <div className='bdy'>
@@ -49,97 +52,146 @@ const Signup = () => {
 
   <div className='sign--up-content2'>
 
-    <form className='form--body' onSubmit={handleChange}>
+    <form className='form--body' onSubmit={handleSubmit(formSubmitHandler)} autoComplete="off">
 
       {/* FIRST NAME */}
       <div className='Box'>
       <label htmlFor="firstName" className="lbs">First Name</label>
-      <input 
+      
+      <input
+        {...register("firstName")} 
         className='inBox'
         type="text"
-        onChange={handleChange}
         name="firstName" 
-        value={formData.firstName}
+        
       />
+      {errors.firstName ? (
+        <span className='redText'>{errors.firstName.message}</span>
+      ) : (
+        <></>
+      )
+      }
       </div>
 
       {/* MIDDLE NAME */}
       <div className='Box'>
       <label htmlFor="middleName" className="lbs">Middle Name</label>
-      <input 
+      
+      <input
+        {...register("middleName")} 
         className='inBox'
         type="text"
-        onChange={handleChange}
-        name="middleName" 
-        value={formData.middleName}
+        name="middleName"
+        
       />
+      {errors.middleName ? (
+        <span className='redText'>{errors.middleName.message}</span>
+      ) : (
+        <></>
+      )
+      }
       </div>
 
       {/* LAST NAME */}
       <div className='Box'>
       <label htmlFor="lastName" className="lbs">Last Name</label>
-      <input 
+      
+      <input
+        {...register("lastName")} 
         className='inBox'
         type="text"
-        onChange={handleChange}
-        name="lastName" 
-        value={formData.lastName}
+        name="lastName"
       />
+      {errors.lastName ? (
+        <span className='redText'>{errors.lastName.message}</span>
+      ) : (
+        <></>
+      )
+      }
       </div>
 
+        {/* EMail */}
       <div className='Box'>
       <label htmlFor="email" className="lbs">Email Address</label>
-      <input 
+      
+      <input
+        {...register("email")} 
         className='inBox'
         type="email"
-        onChange={handleChange}
-        name="email" 
-        value={formData.email}
+        name="email"
+        
       />
+      {errors.email ? (
+        <span className="redText">{errors.email.message}</span>
+      ): (
+        <></>
+      )}
       </div>
 
-
+        {/* PASSWORD */}
       <div className='Box'>
       <label htmlFor="password" className='lbs'>Password</label>
       <input 
+        {...register("password")}
         className='inBox inBox2'
         type="password"
-        onChange={handleChange}
         name="password"
-        value={formData.password}
+        
       />
+      {errors.password ? (
+            <span className="redText">{errors.password.message}</span>
+          ) : (
+            <></>
+          )}
      
       </div>
 
+        {/* CONFIRM PASSWORD */}
       <div className='Box'>
         <label htmlFor="confirm password" className='lbs'>Confirm Password</label>
 
-        <input 
+        <input
+          {...register("confirmPassword")} 
           className='inBox inBox3'
           type="password"
-          onChange={handleChange}
           name="confirmPassword"
-          value={formData.confirmPassword}
+        
         />
+        {errors.confirmPassword ? (
+            <span className="redText">{errors.confirmPassword.message}</span>
+          ) : (
+            <></>
+          )}
       </div>
 
+        {/* CHECKBOX */}
       <div className='BoxCheck'>
-        <input 
+        <div className="mvTop">
+        <input
+          {...register("remember")} 
           className='inBox4'
           type="checkbox"
-          onChange={handleChange}
-          name="checkBox"
-          value={formData.checkBox}
+          name="remember"
+          value=""
+          
         />
         <label>I agree to the terms of <Link to="Term">terms of use &#38; privacy policy</Link></label>
+        </div>
+        <div className="mvUnder">
+        {errors.remember ? (
+              <div className="redText">{errors.remember.message}</div>
+            ) : (
+              <></>
+            )}
+        </div>
       </div>
 
 
-      <Button className="lgBtn sBtn" content="Sign up" />
+      <button type="submit" className='btn__sign--up'> Sign Up</button>
 
       
 
-      <span className='acct'>Already had an account? <Link to="Signin">Sign in</Link></span>
+      <span className='acct'>Already had an account? <Link to="/signin">Sign in</Link></span>
     </form>
   </div>
 
@@ -150,4 +202,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Signup;

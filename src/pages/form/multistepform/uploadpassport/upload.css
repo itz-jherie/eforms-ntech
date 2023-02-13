@@ -4,7 +4,6 @@
     display: flex;
     border-radius: 10px;
     gap: 2rem; 
-    padding: 3rem;
     margin: 0;
     flex-direction: column;
     align-items: center;
@@ -28,7 +27,40 @@
 }
 
 .buttons {
-    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.btn__red {
+    width: 50%;
+     background: linear-gradient(288.9deg, #EE4D1D 70.75%, rgba(238, 77, 29, 0) 108.11%);
+    color: var(--white);
+    height: 54px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.btn__gray {
+    width: 50%;
+    background: linear-gradient(288.9deg, #757575 70.75%, rgba(117, 117, 117, 0) 108.11%);
+    color: var(--white);
+    height: 54px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.btn__submit {
+    background: var(--green);
+    height: 54px;
+    width: 100%;
+    color: var(--white);
+    border-radius: 10px;
+    outline: none;
+}
+
+.btn__mini {
     display: flex;
     gap: 2rem;
 }

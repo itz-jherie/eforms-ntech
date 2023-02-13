@@ -14,6 +14,7 @@ import Signup from "././pages/form/sign/Signup";
 import Upload from "./pages/form/multistepform/Upload";
 import Verifyemail from "./pages/form/multistepform/Verifyemail";
 import Basicinfo from "./pages/form/multistepform/Basicinfo";
+import Success from "./pages/form/multistepform/Success";
 /* end */
 
 import Errorpage from "././pages/errorpage/Errorpage"
@@ -35,9 +36,12 @@ const AppRoutes = () => {
                 <Route path="multistepform" element={<MultiStepForm />} />
                 <Route path="signup" element={<Signup />} />
 
+
                 <Route path="upload" element={<Upload />} />
                 <Route path="verifyemail" element={<Verifyemail />} />
                 <Route path="basicinfo" element={<Basicinfo />} />
+                <Route path="success" element={<Success />} />
+
 
                 <Route path="*" element={<Errorpage />} />
                 <Route path="user-dashboard/*" element={<UserDashboardRoutes />} />

@@ -22,6 +22,18 @@ input {
     width: 100%;
 }
 
+.btn__save {
+    background: var(--green);
+    color: var(--white);
+    height: 54px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .box {
     width: 100%;
     display: flex;

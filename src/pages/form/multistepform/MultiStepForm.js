@@ -14,6 +14,8 @@ const MultiStepForm = () => {
 
   const [index, setIndex] = useState(1);
 
+  const  headers = ["Basic Information", "Upload Passport", "Confirm Account sent to your Email Address"];
+
   const [formData, setFormData] = useState({
     phoneNumber: "",
     contactAddress: "",
@@ -116,7 +118,7 @@ const MultiStepForm = () => {
 
 <div className="createAccount__header">
   <img src="" alt="logo" />
-  <h1>Create Account</h1>
+  <h1>{}</h1>
   <p> Basic Information</p>
 </div>
 

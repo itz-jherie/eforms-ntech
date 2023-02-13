@@ -81,13 +81,12 @@ const Basicinfo = ({values, saveAndContinue, handleFormData}) => {
   />
 </div>
 
-<div className="button">
-  <button type="submit"> Save and Continue</button>
+
+  <button type="submit" className='btn__save'> Save and Continue</button>
 
   {/*
   <Button content="Save and Continue" className="btn" />
   */}
-  </div>
 </form>
   )
 }

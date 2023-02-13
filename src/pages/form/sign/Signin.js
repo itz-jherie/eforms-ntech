@@ -2,33 +2,29 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {FcGoogle} from 'react-icons/fc'
 
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import logo from '../../../assets/images/Logo_black.png'
-import Button from "../../../components/cta/Button"
-import ButtonIcon from "../../../components/cta/ButtonIcon"
-
-
-
+import { registerSchema } from '../../../schema/formSchema';
 
 import "./signin.css"
 import { FaFacebook } from 'react-icons/fa'
 
 const Signin = () => {
 
-  const [formData, setFormData] = React.useState(
-    {
-      email: "",
-      password: ""
-    }
-  )
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(registerSchema),
+  });
 
-  function handleChange(event) {
-    setFormData(prevFormData => {
-      return {
-        ...prevFormData,
-        [event.target.name]: event.target.value
-      }
-    })
+  const formSubmitHandler = (data) => {
+    console.log(data);
   }
+
   return (
 
     <div className='sign--in'>
@@ -46,46 +42,58 @@ const Signin = () => {
 
         <div className='sign--in-content2'>
 
-          <form className='form--body'>
+          <form className='form--body' onSubmit={handleSubmit(formSubmitHandler)}>
 
             <div className='Box'>
+
             <label htmlFor="email" className="lbs">Email Address</label>
+         
             <input 
+              {...register("email")}
               className='inBox'
               type="email"
-              onChange={handleChange}
               name="email" 
-              value={formData.email}
             />
+            {errors.email ? (
+            <span className="text-red-900">{errors.email.message}</span>
+          ) : (
+            <></>
+          )}
+
             </div>
 
 
             <div className='Box'>
             <label htmlFor="password" className='lbs'>Password</label>
+            
             <input 
+              {...register("password")}
               className='inBox inBox2'
               type="password"
-              onChange={handleChange}
               name="password"
-              value={formData.password}
             />
             <label htmlFor="forgot password" className='lbs-rhs'>FORGOT PASSWORD?</label>
+            <div>
+            {errors.password ? (
+            <span className="text-red-900">{errors.password.message}</span>
+          ) : (
+            <></>
+          )}
+            </div>
             </div>
 
               <div className="btn__group">
-              <button className='btn__sign-in'> Sign in</button>
-              <button className='btn__social'> <FcGoogle /> Sign in with Google</button>
-              <button className='btn__social'> <FaFacebook className='facebk'/> Sign in with Facebook</button>
+              <button type="submit" className='btn__sign-in'> Sign in</button>
 
+              {/*
+              <button type="submit" className='btn__social'> <FcGoogle /> Sign in with Google</button>
+              <button type="submit" className='btn__social'> <FaFacebook className='facebk'/> Sign in with Facebook</button>
+              */}
               </div>
             {/*
-            <Button className="lgBtn sBtn" content="Sign in" />
-
-            <ButtonIcon className="lgtransparent sBtn" content="Sign in with Google" icon={<FcGoogle />} />
-
-            <ButtonIcon className="lgtransparent sBtn" content="Sign in with Facebook" icon={<FaFacebook className='facebk'/>}/>
+           
   */}
-            <span className='acct'>Don't have an account? <Link to="Signup">Sign up</Link></span>
+            <span className='acct'>Don't have an account? <Link to="/signup">Sign up</Link></span>
           </form>
         </div>
       </div>

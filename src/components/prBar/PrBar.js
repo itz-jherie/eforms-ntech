@@ -8,7 +8,7 @@ const PrBar = (props) => {
     <div className='progressBar'>
       <ProgressBar
         percent={((props.step - 1) * 100)/2}
-        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+        filledBackground="linear-gradient(to right, #fefb72, var(--green))"
       >
         <Step transition="scale">
           {({ accomplished, index }) => (
