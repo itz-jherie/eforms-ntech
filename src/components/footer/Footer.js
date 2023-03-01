@@ -19,10 +19,10 @@ const Footer = ({logo, name, link1, link2, link3, link4, term1, term2, term3, te
 
       <div className='footer--link'>
           <h3 className='header'>Permalinks</h3>
-          <Link to="Home" id="lnks">{link1}</Link>
-          <Link to="Personal" id="lnks">{link2}</Link>
-          <Link to="Business" id="lnks">{link3}</Link>
-          <Link to="Official" id="lnks">{link4}</Link>
+          <Link to="/" id="lnks">{link1}</Link>
+          <Link to="personal" id="lnks">{link2}</Link>
+          <Link to="business" id="lnks">{link3}</Link>
+          <Link to="official" id="lnks">{link4}</Link>
       </div>
 
       <div className='footer--term'>
@@ -42,10 +42,10 @@ const Footer = ({logo, name, link1, link2, link3, link4, term1, term2, term3, te
         </div>
       </div>
      </div>
-    <hr className="horizontal_line"/>
+     <hr className='hr'/>
+     
     <div className='footer--content2'>
-    
-    <p>{copyright}</p>
+    <p className="cp__text">{copyright}</p>
     </div>
 
     </div>

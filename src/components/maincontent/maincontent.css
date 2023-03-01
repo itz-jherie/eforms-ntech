@@ -5,7 +5,7 @@
     font-family: var(--fontFamily);
     padding: 3rem 54px;
     flex-direction: column;
-    background-color: #fff;
+    background-color: VAR(--ash);
     gap: 3rem;
 }
 
@@ -37,6 +37,8 @@
 .icon--cont {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    align-items: center;
 }
 
 .inner--icon {
@@ -95,6 +97,8 @@
 .court--content1 {
      width: 391px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -108,10 +112,20 @@
 .selectButt {
     width: 70%;
 }
-
 .proceedBtn {
     width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    height: 54px;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 10px;
+    outline: none;
+    border: none;
 }
+
 
 @media screen and (max-width: 768px) {
 
@@ -140,6 +154,7 @@
 
     .icon--cont {
         display: flex;
+        width: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: row;
@@ -153,7 +168,7 @@
     }
     .icon--text {
         display:flex;
-        width: 50%;
+        width: 100px;
         align-items: center;
     }
 

@@ -1,7 +1,9 @@
 :root {
+    --white: #fff;
     --dark: #263238;
     --green: #20A352;  
     --fontFamily: 'Inter', sans-serif;
+    --transparent: transparent;
     --textDark: #111111;
     --light: #F7F7F7;
     --gold: #B5B500;
@@ -9,6 +11,8 @@
     --lightgrey: #D7D7D7;
     --orange: #EE4D1D;
     --deepdarkgrey: #757575;
+    --deepAsh: #D7D9E0;
+    --ash: #E4E9F7;
 }
 *{
     font-family: var(--fontFamily);
@@ -19,12 +23,15 @@ section {
     flex-direction: column;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
+.sectionPadding {
+    width: 100%;
+    padding: 3rem 54px;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+    
+    .sectionPadding {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
 }

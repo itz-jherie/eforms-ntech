@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom"
 import './adminsidebar.css'
 import eformLogo from '../../assets/svglogos/eform-logo-white.svg'
 import doubleArrowClose from '../../assets/svglogos/doubleArrowClose.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  user  from '../../assets/svglogos/user.svg'
 import  dashboard  from '../../assets/svglogos/dashboard.svg'
 import  document  from '../../assets/svglogos/document.svg'
@@ -10,6 +9,7 @@ import  payment  from '../../assets/svglogos/payment.svg'
 import  settings  from '../../assets/svglogos/settings.svg'
 import state from '../../assets/svglogos/state-logo.svg'
 import lock from '../../assets/svglogos/lock.svg'
+import folder from '../../assets/svglogos/folder.svg'
 
 const AdminSidebar = ({ isActive }) => {
     return (
@@ -18,7 +18,6 @@ const AdminSidebar = ({ isActive }) => {
                 <div className="admin-sidebar-title">
                     <img src={eformLogo} alt="logo" className="eform-logo"/>
                     <span>E-Form ng</span>
-                    {/* <img src={doubleArrowClose} className='double-arrow' alt="double backward arrow"/> */}
                 </div>
                 <NavLink to="/admin" className="nav-links">
                     <div className="icon-container">
@@ -42,17 +41,23 @@ const AdminSidebar = ({ isActive }) => {
                     <div className="icon-container">
                         <img src={lock} alt='payment icon'/>
                     </div>
+                    <span>Change Password</span>
+                </NavLink>
+                <NavLink to="manage-admin" className="nav-links">
+                    <div className="icon-container">
+                        <img src={user} alt='payment icon'/>
+                    </div>
                     <span>Manage Admin</span>
                 </NavLink>
                 <NavLink to="manage-court" className="nav-links">
                     <div className="icon-container">
                         <img src={settings} alt='settings icon'/>
                     </div>
-                    <span>Settings</span>
+                    <span>Manage Court</span>
                 </NavLink>
                 <NavLink to="manage-affidavit" className="nav-links">
                     <div className="icon-container">
-                        <img src={settings} alt='settings icon'/>
+                        <img src={folder} alt='settings icon'/>
                     </div>
                     <span>Manage Affidavit</span>
                 </NavLink>

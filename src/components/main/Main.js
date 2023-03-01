@@ -1,8 +1,10 @@
 import React from 'react';
 import "./main.css";
+import { Link } from 'react-router-dom';
 import Card from "../../components/cards/Card"
 import Button from "../../components/cta/Button"
 import data from "../../assets/dataFiles/dataCards"
+import Support from "../support/Support"
 
 const Main = () => {
  //SELECT BUTTON
@@ -25,6 +27,8 @@ const Main = () => {
   return (
     <div className="main1">
 
+      <Support />
+
         <div className='main--top-first'>
         <h3 className='main--header'>Create Your Legal Documents In Few Minutes</h3>
         <input type="text" className='inputBox' placeholder='Enter the name of your document' />
@@ -37,7 +41,12 @@ const Main = () => {
         {optionsElement}
         </select>
 
-        <Button className="mdBtn proceedBtn" content="Proceed"/>
+        
+      
+        <button className='proceedBtn'> 
+        <Link to="signin" style={{color: "var(--white)"}}>Proceed</Link>  
+       </button>
+        
         </div>
       
 

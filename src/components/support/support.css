@@ -1,0 +1,39 @@
+.support {
+    position: absolute;
+    bottom: 590px;
+    right: 50px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.message__icon {
+    color: var(--white);
+    width: 40px;
+    height: 35px;
+}
+
+.spt__text{
+    color: var(--white);
+    font-weight: 400px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .support {
+        right: 10px;
+        bottom: 1200px;
+        height: 70px;
+        width: 70px;
+    }
+
+    .spt__text {
+        font-size: 12px; 
+    }
+}

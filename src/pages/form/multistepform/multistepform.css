@@ -1,0 +1,97 @@
+.multiform {
+    width: 100%;
+    background-color: #E4E9F7;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.progressbar {
+    width: 80%;
+    margin: 3rem 0;
+}
+
+.createAccount__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.App {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4E9F7;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.App__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;  
+}
+
+.App__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    width: 50%;
+    padding: 3rem;
+    gap: 10rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.RSPBprogressBar {
+    position: absolute;
+    top: 6rem;
+    left: 25%;
+    width: 50%;
+    
+}
+
+.app__inner {
+    width: 100%;
+}
+
+#logo {
+    display: flex;
+    width: 100%;
+    height: 50px; 
+    margin-bottom: 1rem;  
+}
+
+.header__h1{
+    font-weight: 500;
+    font-size: 34px;
+}
+
+.header__content {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .App__body {
+        width: 100%;
+    }
+
+    .box2 {
+        flex-direction: column;
+    }
+
+}

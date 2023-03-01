@@ -1,6 +1,7 @@
 .main1 {
+    position: relative;
     font-family: var(--fontFamily);
-    background-color: #E4E9F7;
+    background-color: var(--deepAsh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,12 +28,13 @@
 .main--top-inner {
     width: 400px;
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 .main--bottom {
     display: flex;
+    flex-wrap: nowrap;
     padding: 1rem 54px;
     margin-top: 2rem;
     column-gap: 3rem;
@@ -50,6 +52,7 @@
 .inputBox {
     width: 400px;
     height: 54px;
+    background-color: var(--white);
 } 
 
 input.placeholder {
@@ -59,12 +62,30 @@ input.placeholder {
 .selectOption {
     width: 70%;
     height: 54px;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: none;
+    outline: none;
 }
 
-
-.proceedBtn {
-    
+.proceed__link {
     width: 30%;
+}
+.proceedBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    height: 54px;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+p {
+    color: var(--dark);
 }
 
 
@@ -97,8 +118,9 @@ input.placeholder {
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
 .proceedBtn {
-    width: 30%;
+    width: 100%;
 }
 .inputBox {
     width: 100%;
