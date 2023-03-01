@@ -22,6 +22,25 @@
     
 }
 
+.createAccount__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 4rem;
+    width: 50%;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .App {
     display: flex;
     height: auto;
@@ -55,12 +74,14 @@
     position: relative;
 }
 
-.RSPBprogressBar {
-    position: absolute;
-    top: 6rem;
-    left: 25%;
-    width: 50%;
-    
+.createAccount__footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.progressbar {
+    width: 300px;
 }
 
 .app__inner {
@@ -84,10 +105,21 @@
     font-size: 16px;
 }
 
+.btn {
+    width: 200px;
+    height: 50px;
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 768px) {
     
     .App__body {
         width: 100%;
+        color: green;
     }
 
     .box2 {

@@ -6,7 +6,7 @@ import "././uploadpassport/upload.css"
 import Webcam from 'react-webcam'
 import axios from 'axios'
 
-const Upload = () => {
+const Upload = ({updateData}) => {
     
     const [image, setImage] = useState('');
 
@@ -18,45 +18,32 @@ const Upload = () => {
     }
 
 
-    function handleApi(e) {
-        
-        const formData = new FormData();
-        formData.append('image', image)
-        axios.post('url', formData).then((res) => {
-            console.log(res)
-     })
-    }
-
-    function handleSubmit(e) {
-        e.preventDefault();
-
-        setSubmit(true);
-
-        setTimeout(() => {
-            setSubmit(false);
-        }, 3000)
-    }
+    
 
   return (
         
-        <div className="upload__body">
+     <div className='upload'>
 
-            <div className='image'>
-                <BsPersonPlus className='icon'/>
-            </div>
+<div className="upload__body">
 
-            <form className='buttons' onSubmit={handleSubmit}>
+<div className='image'>
+    <BsPersonPlus className='icon'/>
+</div>
 
-               <div className='btn__mini'>
-               
-               <button className='btn__red'> Take Photo </button>
-               <input className="btn__gray" type="file" name="file" onChange={handleImage} />
-               
-               </div>
+<div className='buttons'>
 
-                <button onClick={handleApi} className='btn__submit'> Save and continue </button>
-            </form>
-        </div>
+   <div className='btn__mini'>
+   
+   <button className='btn__red'> Take Photo </button>
+   <input className="btn__gray" type="file" name="file" onChange={handleImage} />
+   
+   </div>
+
+    {/* <button onClick={handleApi} className='btn__submit'> Save and continue </button> */}
+</div>
+</div>
+
+     </div>
 
   )
 }

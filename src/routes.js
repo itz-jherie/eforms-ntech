@@ -10,17 +10,21 @@ import Signup from "././pages/form/sign/Signup";
 
 
 
-/* form pages */ 
+/* form pages */
+import MultiStepForm from "./pages/form/multistepform/MultiStepForm"; 
 import Upload from "./pages/form/multistepform/Upload";
 import Verifyemail from "./pages/form/multistepform/Verifyemail";
 import Basicinfo from "./pages/form/multistepform/Basicinfo";
 import Success from "./pages/form/multistepform/Success";
 /* end */
 
+import CourtRoutes from "./pages/CourtRoutes";
+
 import Errorpage from "././pages/errorpage/Errorpage"
 import UserDashboardRoutes from "./pages/UserDashboardRoutes";
 import AdminDashboardRoutes from "./pages/admin/AdminDashboardRoutes";
-import MultiStepForm from "./pages/form/multistepform/MultiStepForm";
+
+    
 
 
 const AppRoutes = () => {
@@ -33,22 +37,26 @@ const AppRoutes = () => {
                 <Route path="official" element={<Official />} />
                 <Route path="personal" element={<Personal />} />
                 <Route path="signin" element={<Signin />} />
-                <Route path="multistepform" element={<MultiStepForm />} />
+
+                
                 <Route path="signup" element={<Signup />} />
 
-
+                
+                <Route path="multistepform" element={<MultiStepForm />} />
                 <Route path="upload" element={<Upload />} />
                 <Route path="verifyemail" element={<Verifyemail />} />
                 <Route path="basicinfo" element={<Basicinfo />} />
                 <Route path="success" element={<Success />} />
-
+    
 
                 <Route path="*" element={<Errorpage />} />
                 <Route path="user-dashboard/*" element={<UserDashboardRoutes />} />
+                <Route path="court/*" element={<CourtRoutes />} />
                 {/* <Route path="admin-dashboard/*" element={<AdminDashboardRoutes />} /> */}
                 <Route path="admin/*" element={<AdminDashboardRoutes />} />
             </Route>
           </Routes>
+        
         </BrowserRouter>
     )
 }

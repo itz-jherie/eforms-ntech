@@ -1,5 +1,8 @@
 import * as yup from "yup";
 
+const options = ["Ondo", "Oyo", "Ekiti"];
+const localGov = ["Akoko", "Akure north", "Akure South"];
+
 export const registerSchema = yup.object().shape({
 
     firstName: yup
@@ -39,6 +42,11 @@ export const registerSchema = yup.object().shape({
     .oneOf([yup.ref("password")])
     .required("confirm password is required"),
 
-    remember: yup.boolean().oneOf([true], "Please tick checkbox")
+    remember: yup
+    .boolean().oneOf([true], "Please tick checkbox"),
 
+    /** MultiStep Form 
+
+    
+    */
 });

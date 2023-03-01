@@ -75,6 +75,19 @@ label {
     outline: none;
 }
 
+.text-red {
+    color: red;
+}
+
+.btn--save {
+    padding: 1rem;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .halfInput {
         width: 100%;

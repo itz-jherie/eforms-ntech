@@ -8,25 +8,25 @@ const PrBar = (props) => {
     <div className='progressBar'>
       <ProgressBar
         percent={((props.step - 1) * 100)/2}
-        filledBackground="linear-gradient(to right, #fefb72, var(--green))"
+        filledBackground="rgb(0, 128, 0)"
       >
         <Step transition="scale">
-          {({ accomplished, index }) => (
-           <div className={`step ${accomplished ? "completed" : ""}`}>
+          {({ accomplished, page }) => (
+           <div className="step" id={`${accomplished ? "completed" : ""}`}>
             1
            </div>
           )}
         </Step>
         <Step transition="scale">
-          {({ accomplished, index }) => (
-             <div className={`step ${accomplished ? "completed" : ""}`}>
+          {({ accomplished, page }) => (
+             <div className= "step" id={`${accomplished ? "completed" : ""}`}>
              2
             </div>
           )}
         </Step>
         <Step transition="scale">
-          {({ accomplished, index }) => (
-             <div className={`step ${accomplished ? "completed" : ""}`}>
+          {({ accomplished, page }) => (
+             <div className="step" id={`${accomplished ? "completed" : ""}`}>
              3
             </div>
           )}
