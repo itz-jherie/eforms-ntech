@@ -1,0 +1,14 @@
+.sharedLayout {
+    height: 100%;
+    width: 100%;
+}
+
+.sideBar {
+    width: 20%;
+}
+
+.dashboard {
+    width: 80%;
+    position: absolute;
+    left: 20%;
+}

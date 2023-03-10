@@ -6,6 +6,8 @@ import SideBar from './court/SideBar';
 import PendingApplication from './court/PendingApplication';
 import ApprovedAffidavit from './court/ApprovedAffidavit';
 import CommissionerOath from './court/CommissionerOath';
+import SharedLayout from './court/SharedLayout';
+import Errorpage from './errorpage/Errorpage'
 
 
 const CourtRoutes = () => {
@@ -14,15 +16,16 @@ const CourtRoutes = () => {
       <div>
 
         <Routes>
-          <Route path="/" element={<Dashboard />}>
+          <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Dashboard />}/>
           <Route path='pendingapplication' element={<PendingApplication />} />
           <Route path='commisionerofoath' element={<CommissionerOath />} />
           <Route path='approvedaffidavit' element={<ApprovedAffidavit />} />
-          -
+          <Route path="*" element={<Errorpage />} />
           </Route>
         </Routes>
       </div>
   )
 }
 
-export default CourtRoutes
+export default CourtRoutes;

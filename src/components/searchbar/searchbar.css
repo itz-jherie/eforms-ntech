@@ -1,0 +1,26 @@
+.overview__title {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+
+#searchbar {
+    height: auto;
+    background-color: inherit;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    
+}
+
+.search{
+    height: 40px;
+    width: 390px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
