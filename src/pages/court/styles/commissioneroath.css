@@ -1,0 +1,58 @@
+.commission {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.commission__upper-head {
+  display: none;
+}
+
+.commission__head {
+  display: flex;
+}
+
+.commission__header {
+  font-weight: 600;
+  font-size: 28px;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .commission {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .commission {
+    gap: 2rem;
+  }
+
+  .commission__upper-head {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    background-color: #263238;
+  }
+
+  .commission__upper-head > h1 {
+    font-weight: 600;
+    color: white;
+  }
+  .commission__head {
+    margin-top: 4rem;
+    justify-content: center;
+  }
+  .commission__header {
+    display: none;
+  }
+  .searchbar {
+  }
+}

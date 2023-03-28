@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {FcGoogle} from 'react-icons/fc'
 import logo from '../../assets/images/Logo_black.png'
-import "./login.css"
+import loginForm from "././styles/loginForm.css"
 import { FaFacebook } from 'react-icons/fa'
 import { useAuth } from '../../utils/authentication/Auth'
 
-const Login = () => {
+const Login = ({onSaveForm = f => f}) => {
 
     const [formData, setFormData] = useState(
         {
@@ -17,9 +17,6 @@ const Login = () => {
     )
     const auth = useAuth();
     const navigate = useNavigate();
-    const location = useLocation();
-
-    const redirectPath = location.state?.path || '/'
 
     function handleFormData(event) {
         // setFormData(prevFormData => {
@@ -40,17 +37,7 @@ const Login = () => {
       event.preventDefault();
         
            auth.login(formData);
-
-           if (formData.role == "User"){
-              navigate('/user/');
-           } else if (formData.role == "Court") {
-              navigate('/court', {replace: true});
-           }else if (formData.role == "Admin") {
-            navigate('/admin', {replace: true});
-           } else {
-            navigate('/*');
-           }
-    
+        navigate('/court/')
         setFormData({
           email: "",
           password: ""
@@ -100,12 +87,7 @@ const Login = () => {
 
             <div className='Box'>
                     <label htmlFor='role' className="lbs">Role</label>
-                    <select 
-                    id="inBox"
-                    value={formData.role}
-                    onChange={handleFormData}
-                    name="role"
-                    >
+                    <select id="inBox">
                         <option>User</option>
                         <option>Admin</option>
                         <option>Court</option>

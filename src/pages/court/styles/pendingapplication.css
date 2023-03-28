@@ -1,0 +1,58 @@
+.pendingApplication {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.pending__upper-head {
+  display: none;
+}
+
+.pending__head {
+  display: flex;
+}
+
+.pending__header {
+  font-weight: 600;
+  font-size: 28px;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .pendingApplication {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pendingApplication {
+    gap: 2rem;
+  }
+
+  .pending__upper-head {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    background-color: #263238;
+  }
+
+  .pending__upper-head > h1 {
+    font-weight: 600;
+    color: white;
+  }
+  .dashboard__head {
+    margin-top: 4rem;
+    justify-content: center;
+  }
+  .dashboard__header {
+    display: none;
+  }
+  .searchbar {
+  }
+}

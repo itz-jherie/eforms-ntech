@@ -23,20 +23,24 @@ import CourtRoutes from "./pages/CourtRoutes";
 import Errorpage from "././pages/errorpage/Errorpage"
 import UserDashboardRoutes from "./pages/UserDashboardRoutes";
 import AdminDashboardRoutes from "./pages/admin/AdminDashboardRoutes";
+import { AuthProvider } from "./utils/authentication/Auth";
+import Login from "./components/login/Login";
+import ProtectAuth from "./components/protectauth/ProtectAuth";
 
     
 
 
 const AppRoutes = () => {
     return (
-        <BrowserRouter> 
+      <AuthProvider>
+                <BrowserRouter> 
           <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path="business" element={<Business />} />
                 <Route path="official" element={<Official />} />
                 <Route path="personal" element={<Personal />} />
-                <Route path="signin" element={<Signin />} />
+                <Route path="signin" element={<Login />} />
 
                 
                 <Route path="signup" element={<Signup />} />
@@ -50,14 +54,15 @@ const AppRoutes = () => {
     
 
                 <Route path="*" element={<Errorpage />} />
-                <Route path="user-dashboard/*" element={<UserDashboardRoutes />} />
-                <Route path="court/*" element={<CourtRoutes />} />
+                <Route path="user/*" element={<UserDashboardRoutes />} />
+                <Route path="court/*" element={<ProtectAuth><CourtRoutes /></ProtectAuth>} />
                 {/* <Route path="admin-dashboard/*" element={<AdminDashboardRoutes />} /> */}
-                <Route path="admin/*" element={<AdminDashboardRoutes />} />
+                <Route path="admin/*" element={<ProtectAuth><AdminDashboardRoutes /></ProtectAuth>} />
             </Route>
           </Routes>
         
         </BrowserRouter>
+      </AuthProvider>
     )
 }
 export default AppRoutes

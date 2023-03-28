@@ -21,7 +21,7 @@ const UserDashboardRoutes = () => {
         <div className='user-routes'>
             <NewSidebar isActive={isActive} />
             <Routes>
-                    <Route path='' element={<TheDashboard />} />
+                    <Route path="" element={<TheDashboard />} />
                     <Route path="settings" element={<NewSettings />} />
                     <Route path="account" element={<Account />} />
                     <Route path="payment" element={<Payment />} />

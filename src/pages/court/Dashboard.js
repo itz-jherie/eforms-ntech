@@ -1,29 +1,71 @@
-import React from 'react'
-import { Outlet } from 'react-router'
-import { ProSidebarProvider } from 'react-pro-sidebar'
-import SideBar from './SideBar'
+import React, { useState } from 'react'
+//import SideBar from './SideBar'
 import '../court/styles/dashbord.css'
 import Searchbar from '../../components/searchbar/Searchbar'
 import Data from "../../assets/court/overview_data.js";
-import parse from "html-react-parser"
+import TableRow from '../../components/table/TableRow';
 
 
+// Datas for table row
+import details from "../../data/dashboardData";
+import pending_data from "../../assets/court/pending_data"
+import approved_data from "../../assets/court/approved_data"
+import rejected_data from "../../assets/court/rejected_data"
+// BNJI0\[\]
 
-const Dashboard = () => {
 
-  //console.log(overView.icon);
+const Dashboard = ({menu, setMenu}) => {
 
-  const styles = {
-    color: Data.color
+  const [dash, setDash] = useState(0);
+
+  // const [menu, setMenu] = useState(false);
+
+  function categorize() {
+    if(Data.id == 1){
+      setDash(1);
+    }else if (Data.id == 2){
+      setDash(2);
+    }else if (Data.id == 3){
+      setDash(3);
+    }else{
+      setDash(0);
+    }
   }
-  
-  return (
-    <div className='dashboard'>
 
+  const DisplayTable = () => {
+    if(dash == 1){
+      return <TableRow data={pending_data}/>
+    }else if (dash == 2){
+      return <TableRow data={approved_data}/>
+    }else if (dash == 3){
+      return <TableRow data={rejected_data}/>
+    }else{
+      return <TableRow data={details}/>
+    }
+  }
+ 
+  // function collapseSidebar(){
+  //   setMenu((c) => !c);
+  // }
+
+  // function collapseSidebarUsingDashboard() {
+  //   if (menu == true){
+  //     setMenu(false);
+  //   }
+  // }
+
+  return (
+    // <div className='dashboard' onClick={collapseSidebarUsingDashboard}>
+    <div className='dashboard' >
+      <div className='dashboard__upper-head'> <h1>DASHBOARD</h1> </div>
       <div className='dashboard__head'>
-      <h1 className='dashboard__header'> DASHBOARD </h1>
+   
+    
+     <h1 className='dashboard__header'> DASHBOARD </h1>
+   
 
       <Searchbar className="searchbar"/>
+
       </div>
 
       <div className='dashboard__body'>
@@ -33,10 +75,10 @@ const Dashboard = () => {
       <div className="dashboard__overview">
 
         {Data.map((overView, i) => (
-            <div className='dashboard__box' key={i}>
+            <div className='dashboard__box' key={i} onClick={categorize}>
 
             <div className='comp component__1'>
-              <span className='circle__icon' style={{styles}}>{overView.icon}</span>
+              <span className='circle__icon' style={{backgroundColor: overView.color}}>{overView.icon}</span>
             </div>
             <div className='comp component__2'>
               <h1 className="result__h1">{overView.result}</h1>
@@ -48,28 +90,11 @@ const Dashboard = () => {
       </div>
       </div>
 
-      {/* SECOND BODY*/}
-      <div className='dashboard__applications'>
-        <h1 className='dash__application-h1'>Recent Applications</h1>
+            {<DisplayTable />}
+   
+         </div>
+)
+            }
 
-        <table style={{width: '100%'}}>
 
-          <tr>
-            <th>Username</th>
-            <th>Doc Name</th>
-            <th>Date Created</th>
-            <th>Tracking ID</th>
-            <th>Status</th>
-          </tr>
-
-          <tr>
-            
-          </tr>
-        </table>
-      </div>
-
-    </div>
-  )
-}
-
-export default Dashboard
+export default Dashboard;

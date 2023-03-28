@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  sidebar from "././styles/sidebar.css"
+import overlaysidebar from "../../components/overlaySideBar/overlaysidebar.css"
 import {FaBars} from "react-icons/fa";
 import logo from "../../assets/svglogos/eform-logo-white.svg";
 import { Link } from 'react-router-dom';
@@ -11,23 +11,9 @@ import {  SlReload } from "react-icons/sl";
 import {AiOutlineUserAdd} from "react-icons/ai";
 import {BsFolder2Open} from "react-icons/bs";
 
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../utils/authentication/Auth';
-
-const SideBar = () => {
-
-  const [isActive, setIsActive] = useState(false);
-
-  const auth = useAuth();
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    auth.logout();
-    navigate('/');
-  }
-
+const OverlaySideBar = () => {
   return (
-  <div className="sideBBar">
+    <div className='overSideBar'>
       <div className='sidebar__header'> 
         <img src={logo} className="logo" />
       </div>
@@ -61,10 +47,10 @@ const SideBar = () => {
           <img src="" className='profileImage'/>
           <span className="profile__text">Ntech Systems </span>
         </div>
-        <button className='logout__Button' onClick={handleLogout}><TbLogout /> Logout</button>
+        <button className='logout__Button'><TbLogout /> Logout</button>
       </div>
-  </div>     
+  </div> 
   )
 }
 
-export default SideBar;
+export default OverlaySideBar

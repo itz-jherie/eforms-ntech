@@ -56,4 +56,4 @@ const AdminDashboardRoutes = () => {
         </div>
     )
 }
-export default AdminDashboardRoutes
+export default AdminDashboardRoutes;

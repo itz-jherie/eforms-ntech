@@ -1,102 +1,114 @@
-.sidebar {
-    display: flex;
-    height: 100vh;
-    background: #263238;   
-    flex-direction: 'column';
+.sideBBar {
+  position: fixed;
+  height: 100%;
+  width: 270px;
+  background-color: #263238;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
 }
 
 .sidebar__menu {
-    width: 100%;
+  width: 100%;
 }
 
-.h1{
-    color: white;
+.h1 {
+  color: white;
 }
 
 .sidebar__menulist {
-    width: 100%;
+  width: 100%;
 }
 
 .text {
-    display: block;
-    z-index: 1000;
-    color: red;
+  display: block;
+  z-index: 1000;
+  color: red;
 }
 
 .sidebar__header {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .logo {
-    height: 37px;
-    width: 30px;
-    color: white;
+  height: 37px;
+  width: 30px;
+  color: white;
 }
 
 .sidebar__content {
-    margin-bottom: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .lnk {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .links {
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .links__icon {
-    color: white;
-    height: 20px;
-    width: 20px;
+  /* background-color: var(--green); */
+  color: white;
+  height: 20px;
+  width: 20px;
 }
 
 .link__cont {
-    font-family: var(fontFamily);
-    font-weight: 400;
-    size: 18px;
+  font-family: var(fontFamily);
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .sidebar__footer {
-    
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: flex-start;
+  justify-content: end;
 }
 
 .profile {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .profile__text {
-    color: white;
+  color: white;
 }
 
 .profileImage {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .logout__Button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background: inherit;
-    color: white;
-    cursor: pointer;
-    gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: inherit;
+  color: white;
+  cursor: pointer;
+  gap: 0.5rem;
 }
+
+/* @media screen and (max-width: 900px) {
+  
+} */

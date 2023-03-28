@@ -71,7 +71,7 @@
 #inBox {
   height: 54px;
   width: 100%;
-  background: white;
+  background: rgb(235, 233, 233);
   border: none;
   border-radius: 10px;
 }

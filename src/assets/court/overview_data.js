@@ -6,13 +6,17 @@ import {MdClose} from "react-icons/md";
 
 const Data = [
     {
+        id: 0,
         icon: <FiFolder />,
         result: 3,
         text: "Total Applied",
-        color: '#9747FF'
+        color: '#9747FF',
+        
+        
     },
 
     {
+        id: 1,
     icon: <SlReload />,    
     result: 2,
     text: "Pending",
@@ -21,6 +25,7 @@ const Data = [
     },
 
     {
+        id: 2,
         icon: <BsCheck />,
         result: 6,
         text: "Approved",
@@ -28,10 +33,11 @@ const Data = [
     },
 
     {
+        id: 3,
         icon: <MdClose />,
         result: 0,
         text: "Rejected",
-        color: '#fffff'
+        color: '#EE4D1D'
     }
 ]
  

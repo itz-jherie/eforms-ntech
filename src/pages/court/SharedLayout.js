@@ -1,17 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Outlet } from 'react-router'
-import Dashboard from './Dashboard'
 import "././styles/sharedlayout.css";
-import SideBar from './SideBar';
+import { FaTimes, FaBars } from 'react-icons/fa'
+import SideBar from './SideBar'
+import OverlaySideBar from '../../components/overlaySideBar/OverlaySideBar'
 
 
 const SharedLayout = () => {
+
+  const [menu, setMenu] = useState(false);
+
+  function collapseSidebar(){
+    setMenu((c) => !c);
+  }
+
+  function collapseSidebarUsingDashboard() {
+    if (menu == true){
+      setMenu(false);
+    }
+  }
+
   return (
-    <div className='sharedLayout'>
-      <SideBar className="sideBar"/>
+    <div className='sharedLayout' onClick={collapseSidebarUsingDashboard}>
+       <SideBar className="sharedSideBar"/> 
+       {menu ? <FaTimes className="menuButton" onClick={collapseSidebar}/> : <FaBars className='menuButton'  onClick={collapseSidebar} />}
+     {menu ? <OverlaySideBar className="overlaySideBar" /> : <></>}
       <Outlet />
     </div>
   )
 }
 
-export default SharedLayout
+export default SharedLayout;
