@@ -4,10 +4,6 @@ import Home from "././pages/home/Home";
 import Business from '././pages/business/Business';
 import Personal from '././pages/personal/Personal';
 import Official from "./pages/official/Official";
-import Signin from "././pages/form/sign/Signin";
-import Signup from "././pages/form/sign/Signup";
-
-
 
 
 /* form pages */
@@ -26,6 +22,7 @@ import AdminDashboardRoutes from "./pages/admin/AdminDashboardRoutes";
 import { AuthProvider } from "./utils/authentication/Auth";
 import Login from "./components/login/Login";
 import ProtectAuth from "./components/protectauth/ProtectAuth";
+import CreatAccount from "./components/login/CreatAccount";
 
     
 
@@ -43,7 +40,7 @@ const AppRoutes = () => {
                 <Route path="signin" element={<Login />} />
 
                 
-                <Route path="signup" element={<Signup />} />
+                <Route path="signup" element={<CreatAccount />} />
 
                 
                 <Route path="multistepform" element={<MultiStepForm />} />
@@ -55,9 +52,9 @@ const AppRoutes = () => {
 
                 <Route path="*" element={<Errorpage />} />
                 <Route path="user/*" element={<UserDashboardRoutes />} />
-                <Route path="court/*" element={<ProtectAuth><CourtRoutes /></ProtectAuth>} />
+                <Route path="court/*" element={<CourtRoutes />} />
                 {/* <Route path="admin-dashboard/*" element={<AdminDashboardRoutes />} /> */}
-                <Route path="admin/*" element={<ProtectAuth><AdminDashboardRoutes /></ProtectAuth>} />
+                <Route path="admin/*" element={<AdminDashboardRoutes />} />
             </Route>
           </Routes>
         

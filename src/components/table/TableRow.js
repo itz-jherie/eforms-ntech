@@ -4,6 +4,18 @@ import table from "./table.css"
 
 const TableRow = (props) => {
 
+  const totaLength = 10;
+
+//   if (props.data.id < 10) {
+//   const data =  props.data.map((data, i) => (
+
+//    if(data.id < 10) {
+    
+//    }
+    
+// ))
+
+//   }
 
   return (
 
@@ -24,18 +36,24 @@ const TableRow = (props) => {
           </thead>
   <tbody>
   {
-    props.data.map((data, i) => (
+   
+   props.data.map((data, i) => (
       
-         <tr key={i} className="tableRow" id="tbr" style={{borderLeft: '1px solid received'}}>
-        <td>{data.userName}</td>
-        <td>{data.docName}</td>
-        <td>{data.dateCreated}</td>
-        <td>{data.trackingID}</td>
-        <td>{data.status}</td>
-      </tr>
-       
-    ))
+    <tr key={i} className="tableRow" id="tbr" style={{borderLeft: '1px solid received'}}>
+   <td>{data.userName}</td>
+   <td>{data.docName}</td>
+   <td>{data.dateCreated}</td>
+   <td>{data.trackingID}</td>
+   <td>{data.status}</td>
+ </tr>
+  
+))
+
   }
+
+  <div className='paginatn'>
+   
+  </div>
   </tbody>
   </table>
           </div>

@@ -18,11 +18,11 @@ const SideBar = () => {
 
   const [isActive, setIsActive] = useState(false);
 
-  const auth = useAuth();
+  //const auth = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    auth.logout();
+    //auth.logout();
     navigate('/');
   }
 

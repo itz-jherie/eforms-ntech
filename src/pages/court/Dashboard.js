@@ -91,7 +91,10 @@ const Dashboard = ({menu, setMenu}) => {
       </div>
 
             {<DisplayTable />}
-   
+          
+          <div className='paginatn'>
+            
+          </div>
          </div>
 )
             }

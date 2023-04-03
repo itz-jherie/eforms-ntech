@@ -10,12 +10,11 @@ const Success = () => {
             <h1>Success</h1>
 
             <div className='success__icon'>
-              <IoMdCheckmark className="icon"/>
+              <IoMdCheckmark id="iconIo" color="white"/>
             </div>
 
             <p className='success__congrats'>Congratulations your account has been successfully created.</p>
 
-            <button className='btn__success'> Done </button>
         </div>
     </div>
   )

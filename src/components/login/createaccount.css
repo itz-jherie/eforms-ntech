@@ -1,0 +1,145 @@
+.bdy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.sign--up {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--fontFamily);
+}
+
+.sign--up-content1,
+.sign--up-content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign--up-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign--up-h1 {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41.15px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.sign--up-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--textDark);
+}
+
+.sign--up-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__sign--up {
+  background: var(--green);
+  color: var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  outline: none;
+  height: 54px;
+  cursor: pointer;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.form--body {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 4rem 0;
+  padding: 4rem;
+}
+
+.Box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.BoxCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.acct {
+  display: flex;
+  justify-content: center;
+}
+
+.inBox {
+  padding: 10px;
+}
+
+.redText {
+  display: flex;
+  justify-content: flex-start;
+  color: red;
+  font-size: 14px;
+  border-color: red;
+}
+.BoxCheck {
+  display: flex;
+  flex-direction: column;
+}
+
+.mvTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mvUnder {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .bdy {
+    padding: 2rem 1rem;
+  }
+
+  .sign--up {
+    width: 100%;
+  }
+
+  .form--body {
+    padding: 1rem;
+  }
+}
