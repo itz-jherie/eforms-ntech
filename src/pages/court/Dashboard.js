@@ -5,43 +5,75 @@ import Searchbar from '../../components/searchbar/Searchbar'
 import Data from "../../assets/court/overview_data.js";
 import TableRow from '../../components/table/TableRow';
 
+// import { faker } from '@faker-js/faker';
+const { faker } = require('@faker-js/faker');
 
-// Datas for table row
-import details from "../../data/dashboardData";
-import pending_data from "../../assets/court/pending_data"
-import approved_data from "../../assets/court/approved_data"
-import rejected_data from "../../assets/court/rejected_data"
+
 // BNJI0\[\]
 
 
-const Dashboard = ({menu, setMenu}) => {
+const Dashboard = () => {
 
-  const [dash, setDash] = useState(0);
+  // const [dash, setDash] = useState(Data);
 
   // const [menu, setMenu] = useState(false);
 
-  function categorize() {
-    if(Data.id == 1){
-      setDash(1);
-    }else if (Data.id == 2){
-      setDash(2);
-    }else if (Data.id == 3){
-      setDash(3);
-    }else{
-      setDash(0);
+   
+   
+
+     const fakeData = [];
+
+  const [hold, setHold] = useState("All");
+
+  function generateFakeData() {
+
+    const name = faker.name.findName();
+    const documentName = faker.lorem.words();
+    const date = faker.date.recent();
+    const trackingId = faker.datatype.uuid();
+    const status = faker.helpers.arrayElement(['Pending', 'Completed', 'Rejected']);
+
+    return {
+      name,
+      documentName,
+      date,
+      trackingId,
+      status
     }
   }
 
-  const DisplayTable = () => {
-    if(dash == 1){
-      return <TableRow data={pending_data}/>
-    }else if (dash == 2){
-      return <TableRow data={approved_data}/>
-    }else if (dash == 3){
-      return <TableRow data={rejected_data}/>
-    }else{
-      return <TableRow data={details}/>
+
+    const numberOfItems = 200;
+
+    for (let i=0; i< numberOfItems; i++){
+      const fkData = generateFakeData();
+      fakeData.push(fkData);
     }
+
+    console.log(fakeData);
+
+  function categorize(overView) {
+    console.log(overView.status);
+    if (overView.status === "Pending"){
+      setHold("Pending");
+    
+    } else if (overView.status === "Approved"){
+      setHold("Completed");
+    
+    }else if (overView.status === "Rejected"){
+      setHold("Rejected");
+    
+    } else {
+      setHold("All");
+    
+    }
+
+    
+  }
+
+
+  const DisplayTable = () => {
+    return  <TableRow fakeData={fakeData} hold={hold}/>
   }
  
   // function collapseSidebar(){
@@ -56,7 +88,7 @@ const Dashboard = ({menu, setMenu}) => {
 
   return (
     // <div className='dashboard' onClick={collapseSidebarUsingDashboard}>
-    <div className='dashboard' >
+    <div className='dashboard'>
       <div className='dashboard__upper-head'> <h1>DASHBOARD</h1> </div>
       <div className='dashboard__head'>
    
@@ -75,7 +107,7 @@ const Dashboard = ({menu, setMenu}) => {
       <div className="dashboard__overview">
 
         {Data.map((overView, i) => (
-            <div className='dashboard__box' key={i} onClick={categorize}>
+            <div className='dashboard__box' key={i} onClick={() => categorize(overView)}>
 
             <div className='comp component__1'>
               <span className='circle__icon' style={{backgroundColor: overView.color}}>{overView.icon}</span>
@@ -90,10 +122,10 @@ const Dashboard = ({menu, setMenu}) => {
       </div>
       </div>
 
-            {<DisplayTable />}
+
           
           <div className='paginatn'>
-            
+          {<DisplayTable />}
           </div>
          </div>
 )

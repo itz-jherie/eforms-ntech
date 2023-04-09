@@ -1,4 +1,59 @@
-const Data = [
+const details = [
+    {
+        id: 1,
+        userName: `Oluyode Oluwaseyi E.`,
+        docName: `Affidavit as to Loss of Vehicle Particulars including Driver's license`,
+        dateCreated: `Wed 21, Dec 2022 12:27pm`,
+        trackingID: `2212-2112-2784-31`,
+        status: `Completed`,
+        action: `VIEW`,
+    },
+    {
+        id: 2,
+        userName: `Oluyode Oluwaseyi E.`,
+        docName: `Affidavit as to Loss of Vehicle Particulars including Driver's license`,
+        dateCreated: `Wed 21, Dec 2022 12:27pm`,
+        trackingID: `2212-2112-2784-31`,
+        status: `Completed`,
+        action: `VIEW`,
+    },
+    {
+        id: 3,
+        userName: `Oluyode Oluwaseyi E.`,
+        docName: `Affidavit as to Loss of Vehicle Particulars including Driver's license`,
+        dateCreated: `Wed 21, Dec 2022 12:27pm`,
+        trackingID: `2212-2112-2784-31`,
+        status: `Completed`,
+        action: `VIEW`,
+    },
+    {
+        id: 4,
+        userName: `Oluyode Oluwaseyi E.`,
+        docName: `Affidavit as to Loss of Vehicle Particulars including Driver's license`,
+        dateCreated: `Wed 21, Dec 2022 12:27pm`,
+        trackingID: `2212-2112-2784-31`,
+        status: `Completed`,
+        action: `VIEW`,
+    },
+    {
+        id: 5,
+        userName: `Oluyode Oluwaseyi E.`,
+        docName: `Affidavit as to Loss of Vehicle Particulars including Driver's license`,
+        dateCreated: `Wed 21, Dec 2022 12:27pm`,
+        trackingID: `2212-2112-2784-31`,
+        status: `Completed`,
+        action: `VIEW`,
+    },
+    {
+        id: 6,
+        userName: `Oluyode Oluwaseyi E.`,
+        docName: `Affidavit as to Loss of Vehicle Particulars including Driver's license`,
+        dateCreated: `Wed 21, Dec 2022 12:27pm`,
+        trackingID: `2212-2112-2784-31`,
+        status: `Completed`,
+        action: `VIEW`,
+    },
+
     {
         id: 1,
         userName: `Oluyode Oluwaseyi E.`,
@@ -54,5 +109,5 @@ const Data = [
         action: `VIEW`,
     },
 ]
- 
-export default Data;
+
+export default details;

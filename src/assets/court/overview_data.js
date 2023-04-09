@@ -11,7 +11,7 @@ const Data = [
         result: 3,
         text: "Total Applied",
         color: '#9747FF',
-        
+        status: "All"
         
     },
 
@@ -20,8 +20,8 @@ const Data = [
     icon: <SlReload />,    
     result: 2,
     text: "Pending",
-    color: '#B5B500'
-
+    color: '#B5B500',
+    status: "Pending"
     },
 
     {
@@ -29,7 +29,8 @@ const Data = [
         icon: <BsCheck />,
         result: 6,
         text: "Approved",
-        color: '#20A352'
+        color: '#20A352',
+        status: "Approved"
     },
 
     {
@@ -37,7 +38,8 @@ const Data = [
         icon: <MdClose />,
         result: 0,
         text: "Rejected",
-        color: '#EE4D1D'
+        color: '#EE4D1D',
+        status: "Rejected"
     }
 ]
  

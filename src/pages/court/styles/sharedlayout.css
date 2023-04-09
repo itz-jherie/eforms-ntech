@@ -9,8 +9,8 @@
 .pendingApplication,
 .commission,
 .approvedAffidavit {
-  position: absolute;
-  left: 270px;
+  flex: 1;
+  margin-left: 270px;
   background-color: #d7d7d7;
 }
 
@@ -32,7 +32,7 @@
   .pendingApplication,
   .commission,
   .approvedAffidavit {
-    left: 0;
+    margin-left: 0;
     width: 100%;
   }
 

@@ -1,21 +1,20 @@
 import React from 'react'
 
 import table from "./table.css"
+import allData from '../../data/dashboardData';
 
 const TableRow = (props) => {
+  const {fakeData, hold} = props;
 
-  const totaLength = 10;
+  
 
-//   if (props.data.id < 10) {
-//   const data =  props.data.map((data, i) => (
-
-//    if(data.id < 10) {
-    
-//    }
-    
-// ))
-
-//   }
+  const filterData = () => {
+    if (hold === 'All') {
+      return fakeData;
+    } else {
+      return fakeData.filter(stat => stat.status === hold);
+    }
+  }
 
   return (
 
@@ -35,25 +34,19 @@ const TableRow = (props) => {
           </tr>
           </thead>
   <tbody>
-  {
-   
-   props.data.map((data, i) => (
+  {filterData().map((dt, i) => {
+  
+    return (
       
-    <tr key={i} className="tableRow" id="tbr" style={{borderLeft: '1px solid received'}}>
-   <td>{data.userName}</td>
-   <td>{data.docName}</td>
-   <td>{data.dateCreated}</td>
-   <td>{data.trackingID}</td>
-   <td>{data.status}</td>
+    <tr key={i} className="tableRow" id="tbr">
+   <td><p className='tableCont'>{dt.name}</p></td>
+   <td><p className='tableCont'>{dt.documentName}</p></td>
+   <td><p className='tableCont'>{dt.date.toLocaleDateString()}</p></td>
+   <td><p className='tableCont'>{dt.trackingId}</p></td>
+   <td><p className='tableCont'>{dt.status}</p></td>
  </tr>
   
-))
-
-  }
-
-  <div className='paginatn'>
-   
-  </div>
+) })}
   </tbody>
   </table>
           </div>
