@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Searchbar from '../../components/searchbar/Searchbar'
 import pendingapplication from "././styles/pendingapplication.css"
-import TableRow from '../../components/table/TableRow'
+
+import FakerData from '../../assets/dashboard/FackerJs'
+
+import TablePending from '../../components/table/TablePending'
 
 const PendingApplication = () => {
+
   return (
    <div className="pendingApplication">
 
@@ -13,12 +17,13 @@ const PendingApplication = () => {
    
    <h1 className='pending__header'> PENDING </h1>
 
-   <Searchbar className="searchbar"/>
+   {/* <Searchbar className="searchbar"/> */}
 
    </div>
 
    <div className='pending__body'>
-    <TableRow />
+    
+    <TablePending />
    </div>
    </div>
   )

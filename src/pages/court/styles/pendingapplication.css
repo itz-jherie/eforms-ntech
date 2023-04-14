@@ -18,6 +18,10 @@
   margin-right: auto;
 }
 
+.pending__body {
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 900px) {
   .pendingApplication {
     width: 100%;

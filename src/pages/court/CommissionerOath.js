@@ -13,12 +13,12 @@ const CommissionerOath = () => {
      
         <h1 className='commission__header'> COMMISSION </h1>
   
-        <Searchbar className="searchbar"/>
+        {/* <Searchbar className="searchbar"/> */}
   
          </div>
   
         <div className='commission__body'>
-          <TableRow />
+          {/* <TableRow /> */}
         </div>
     </div>
   )

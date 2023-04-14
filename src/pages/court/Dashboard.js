@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 //import SideBar from './SideBar'
 import '../court/styles/dashbord.css'
 import Searchbar from '../../components/searchbar/Searchbar'
-import Data from "../../assets/court/overview_data.js";
+ import Data from "../../assets/court/overview_data"
+
 import TableRow from '../../components/table/TableRow';
 
 // import { faker } from '@faker-js/faker';
@@ -20,40 +21,38 @@ const Dashboard = () => {
 
    
    
-
-     const fakeData = [];
-
+   //const fakeData = [];
+  const [fakeData, setFakeData] = useState([]);
+    
   const [hold, setHold] = useState("All");
 
-  function generateFakeData() {
+      const generateFakeData = useCallback(() => {
 
-    const name = faker.name.findName();
-    const documentName = faker.lorem.words();
-    const date = faker.date.recent();
-    const trackingId = faker.datatype.uuid();
-    const status = faker.helpers.arrayElement(['Pending', 'Completed', 'Rejected']);
-
-    return {
-      name,
-      documentName,
-      date,
-      trackingId,
-      status
-    }
-  }
-
-
-    const numberOfItems = 200;
-
-    for (let i=0; i< numberOfItems; i++){
-      const fkData = generateFakeData();
-      fakeData.push(fkData);
-    }
-
-    console.log(fakeData);
+        const name = faker.name.findName();
+        const documentName = faker.lorem.words();
+        const date = faker.date.recent();
+        const trackingId = faker.datatype.uuid();
+        const status = faker.helpers.arrayElement(['Pending', 'Completed', 'Rejected']);
+    
+        return {
+          name,
+          documentName,
+          date,
+          trackingId,
+          status
+        }
+      }, [])
+  
+      const numberOfItems = 200;
+  
+      for (let i=0; i< numberOfItems; i++){
+        const fkData = generateFakeData();
+        fakeData.push(fkData);
+      }
+  
 
   function categorize(overView) {
-    console.log(overView.status);
+
     if (overView.status === "Pending"){
       setHold("Pending");
     
@@ -95,8 +94,7 @@ const Dashboard = () => {
     
      <h1 className='dashboard__header'> DASHBOARD </h1>
    
-
-      <Searchbar className="searchbar"/>
+      {/* <Searchbar fakeData={fakeData} numberOfItems={numberOfItems} className="searchbar"/> */}
 
       </div>
 

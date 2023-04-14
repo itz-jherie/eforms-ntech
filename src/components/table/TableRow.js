@@ -6,8 +6,6 @@ import allData from '../../data/dashboardData';
 const TableRow = (props) => {
   const {fakeData, hold} = props;
 
-  
-
   const filterData = () => {
     if (hold === 'All') {
       return fakeData;
