@@ -1,52 +1,69 @@
-import React from 'react'
-import Button from '../../../components/cta/Button'
+import React, { useState, useEffect } from 'react'
 import "./basicinfo/basicinfo.css"
+import { Navigate, useNavigate } from 'react-router';
+import states from '../../../assets/form/states';
+import localGovt from '../../../assets/form/localGovt';
 
-const Basicinfo = ({values, saveAndContinue, handleFormData}) => {
 
-  const options = ["Ondo", "Oyo", "Ekiti"];
-  const localGov = ["Akoko", "Akure north", "Akure South"];
+const Basicinfo = (props) => {
 
-  const localGovElement = localGov.map((local, index) => {
-    return <option key={index}>{local}</option>
-  })
+    const {datta, handleInputChange} = props;
 
-  const optionsElement = options.map((option, index) => {
-    return <option key={index}> {option} </option>
-  });
+    let navigate = useNavigate();
 
-  const submitFormData = e => {
+    // const dummyName = nstate;
+        
+    
+       
+    
 
-    e.preventDefault();
 
-    saveAndContinue();
+
+  
+    const listStates = states.map((option, index) => {
+        return <option key={index}> {option} </option>  
+        
+      });
+    
+  const listLocalGovt=[];
+
+  if(datta.nstate != "") {
+    listLocalGovt = localGovt.find((local) => local.name === datta.nstate).lgas.map((local, index) => {
+        return <option key={index}>{local}</option>
+      })
   }
+
+ 
+
+   
+  
   return (
 
-        <form className='basicinfo__body' onSubmit={submitFormData}>
+        <div className='basicinfo__body'>
 
         <div className="box">
-  <label htmlFor="phone_no">Phone Numbers</label>
-  <input 
-    name="phoneNumber"
-    type="number"
-    className="fullInput"
-    defaultValue={values.phoneNumber}
-    onChange={handleFormData("phoneNumber")}
-    required
-  />
+        <label htmlFor="phone_no">Phone Numbers</label>
+        <input 
+          name="phoneNumber"
+          value={datta.phoneNumber}
+          type="number"
+          className="fullInput"
+          onChange={handleInputChange}
+          required
+        />
 </div>
 
 <div className="box">
   <label htmlFor="contact_address">Contact Address</label>
   <input
+    value={datta.contactAddress}
     name="contactAddress"
     type="text"
     className="fullInput"
-    defaultValue={values.contactAddress}
-    onChange={handleFormData("contactAddress")}
+    onChange={handleInputChange}
     required
   />
+  
 </div>
 
 
@@ -54,17 +71,31 @@ const Basicinfo = ({values, saveAndContinue, handleFormData}) => {
   
   <div className="states">
   <label htmlFor="states"> State </label>
-  <select className='selectInput'>
-    <option>select L.G.A</option>
-    <option>{optionsElement}</option>
+  <select 
+  name="states"
+  value={datta.nstate}
+  className='selectInput'
+  onChange={handleInputChange}
+  required
+    >
+    <option value="">Select state</option>
+    {listStates}
   </select>
+  
   </div>
+
 
   <div className="lga">
   <label htmlFor="lga"> LGA </label>
-  <select className='selectInput'>
-    <option>Select State</option>
-    <option>{localGovElement}</option>
+  <select
+  name="localGovt"
+  value={datta.lGovtment}
+  onChange={handleInputChange}
+  className='selectInput'
+  required
+  >
+    <option value="">Select local government</option>
+    {listLocalGovt}
   </select>
   </div>
 </div>
@@ -74,21 +105,13 @@ const Basicinfo = ({values, saveAndContinue, handleFormData}) => {
   <input
     name="zipCode"
     type="number"
-    defaultValue={values.zipCode}
-    onChange={handleFormData("zipCode")} 
-    className="fullInput"
-    required
+    value={datta.zipCode}
+    onChange={handleInputChange}
   />
 </div>
 
-
-  <button type="submit" className='btn__save'> Save and Continue</button>
-
-  {/*
-  <Button content="Save and Continue" className="btn" />
-  */}
-</form>
+</div>
   )
-}
+  }
 
-export default Basicinfo
+export default Basicinfo;

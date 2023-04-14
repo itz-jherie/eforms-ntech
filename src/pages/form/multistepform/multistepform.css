@@ -1,97 +1,130 @@
 .multiform {
-    width: 100%;
-    background-color: #E4E9F7;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  width: 100%;
+  background-color: #e4e9f7;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .progressbar {
-    width: 80%;
-    margin: 3rem 0;
+  width: 80%;
+  margin: 3rem 0;
 }
 
 .createAccount__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.createAccount__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  gap: 4rem;
+  width: 50%;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App {
-    display: flex;
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #E4E9F7;
-    padding: 2rem;
-    gap: 2rem;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e9f7;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .App__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .App__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    width: 50%;
-    padding: 3rem;
-    gap: 10rem;
-    border-radius: 10px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 50%;
+  padding: 3rem;
+  gap: 10rem;
+  border-radius: 10px;
+  position: relative;
 }
 
-.RSPBprogressBar {
-    position: absolute;
-    top: 6rem;
-    left: 25%;
-    width: 50%;
-    
+.createAccount__footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.progressbar {
+  width: 300px;
 }
 
 .app__inner {
-    width: 100%;
+  width: 100%;
 }
 
 #logo {
-    display: flex;
-    width: 100%;
-    height: 50px; 
-    margin-bottom: 1rem;  
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 1rem;
 }
 
-.header__h1{
-    font-weight: 500;
-    font-size: 34px;
+.header__h1 {
+  font-weight: 500;
+  font-size: 34px;
 }
 
 .header__content {
-    font-weight: 400;
-    font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  background-color: var(--green);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageButts {
+  display: flex;
 }
 
 @media screen and (max-width: 768px) {
-    
-    .App__body {
-        width: 100%;
-    }
+  .App__body {
+    width: 100%;
+    color: green;
+  }
 
-    .box2 {
-        flex-direction: column;
-    }
-
+  .box2 {
+    flex-direction: column;
+  }
 }

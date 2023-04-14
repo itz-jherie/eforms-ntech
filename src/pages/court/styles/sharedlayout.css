@@ -1,0 +1,54 @@
+.sharedLayout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.dashboard,
+.pendingApplication,
+.commission,
+.approvedAffidavit {
+  flex: auto;
+  margin-left: 270px;
+  overflow: hidden;
+  background-color: #d7d7d7;
+}
+
+.menuButton {
+  display: none;
+}
+/* @media screen and (max-width: 900px) {
+  .dashboard {
+    left: 0;
+  }
+} */
+
+@media screen and (max-width: 900px) {
+  .sideBBar {
+    display: none;
+  }
+
+  .dashboard,
+  .pendingApplication,
+  .commission,
+  .approvedAffidavit {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .menuButton {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    z-index: 5;
+    color: #263238;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuButton {
+    color: #ffffff;
+  }
+}

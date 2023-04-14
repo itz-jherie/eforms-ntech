@@ -1,0 +1,168 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.dashboard__upper-head {
+  display: none;
+}
+
+.dashboard__head {
+  width: 100%;
+  display: flex;
+}
+
+.dashboard__header {
+  font-weight: 600;
+  font-size: 28px;
+  margin-right: auto;
+}
+
+.dashboard__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard__overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.dashboard__box {
+  flex: 1;
+  max-width: 300px;
+  min-width: 150px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.dashboard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.icon {
+  height: 20px;
+  width: 20px;
+  color: black;
+}
+.overView__icon {
+  font-size: 16px;
+  color: white;
+}
+
+.circle__icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.comp {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component__2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 0.8rem;
+}
+
+.component__1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.result__h1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #111111;
+}
+
+.result__text {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 12px;
+  color: #111111;
+}
+
+.dash__application-h1 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111111;
+  text-align: center;
+}
+
+.dashboard__applications {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+/* .menuButton {
+  display: none;
+} */
+
+@media screen and (max-width: 900px) {
+  .dashboard {
+    width: 100%;
+  }
+  /* .menuButton {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    z-index: 5;
+  } */
+}
+@media screen and (max-width: 768px) {
+  .dashboard {
+    gap: 2rem;
+  }
+
+  .dashboard__upper-head {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    background-color: #263238;
+  }
+
+  .dashboard__upper-head > h1 {
+    font-weight: 600;
+    color: white;
+  }
+  .dashboard__head {
+    margin-top: 4rem;
+    justify-content: center;
+  }
+  .dashboard__header {
+    display: none;
+  }
+  .searchbar {
+  }
+}

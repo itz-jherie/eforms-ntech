@@ -10,11 +10,14 @@ import './App.css';
 // import DashBoard from './pages/TheDashboard';
 // import Settings from './pages/dashboard/settings/Settings';
 import AppRoutes from './routes';
+import { AuthProvider } from './utils/authentication/Auth';
 
 function App() {
 
   return (
-    <AppRoutes />
+
+      <AppRoutes />
+    
   );
 }
 

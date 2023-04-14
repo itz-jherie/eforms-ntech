@@ -1,7 +1,7 @@
 .step {
     color: var(--white);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 12px;
     background: rgba(32, 163, 82, 0.2);
     border-radius: 50%;
@@ -10,17 +10,29 @@
     align-items: center;
 }
 
-.step.completed {
+#completed {
     background-color: var(--green);
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
-}
-
-.progressBar {
-    width: 400px;
+    height: 60px;
+    width: 60px;
 }
 
 .RSPBprogression {
-    color: #02a82c
+    color: #02a82c;
+}
+
+.RSPBstep {
+    width: 60px;
+    height: 60px;
+}
+
+.progressbar {
+    width: 300px;
+}
+
+.bar {
+    width: 100%;
+}
+.RSPBprogressBar{
+    width: 400px;
 }

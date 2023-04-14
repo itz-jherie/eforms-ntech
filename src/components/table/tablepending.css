@@ -1,0 +1,88 @@
+table {
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+.pendCont {
+  font-size: 12px;
+  display: block;
+}
+
+.pendCont {
+  max-width: 500px;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sn {
+  font-weight: 400;
+  color: #111111;
+  font-size: 14px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111111;
+}
+
+.phone {
+  color: #ee4d1d;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.email {
+  color: #395ebf;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.description {
+  color: #111111;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.amnt {
+  color: #111111;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.status {
+  color: #ee4d1d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.action {
+  color: #20a352;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.circle-mdarrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid rgb(32, 183, 62, 1);
+  border-radius: 50%;
+}
+
+.mdarrow {
+  font-size: 10px;
+  color: rgb(32, 183, 62, 1);
+}
+
+.prev {
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
