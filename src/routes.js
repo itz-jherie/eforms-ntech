@@ -51,7 +51,7 @@ const AppRoutes = () => {
     
 
                 <Route path="*" element={<Errorpage />} />
-                <Route path="user/*" element={<UserDashboardRoutes />} />
+                <Route path="user-dashboard/*" element={<UserDashboardRoutes />} />
                 <Route path="court/*" element={<CourtRoutes />} />
                 {/* <Route path="admin-dashboard/*" element={<AdminDashboardRoutes />} /> */}
                 <Route path="admin/*" element={<AdminDashboardRoutes />} />
