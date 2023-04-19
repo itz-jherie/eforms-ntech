@@ -68,7 +68,7 @@ const Nav = () => {
 
       
 
-      <div className='menuButton' onClick={handleClick}>
+      <div className='menutButton' onClick={handleClick}>
         {click ? <FaTimes className='fa-times'/> : <FaBars className='fa-bars'/>}
       </div>
     </nav>

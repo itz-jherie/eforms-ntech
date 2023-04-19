@@ -4,7 +4,7 @@ import '../court/styles/dashbord.css'
 import Searchbar from '../../components/searchbar/Searchbar'
  import Data from "../../assets/court/overview_data"
 
-import TableRow from '../../components/table/TableRow';
+import TableRow from '../../components/table/tablerow/TableRow';
 
 // import { faker } from '@faker-js/faker';
 const { faker } = require('@faker-js/faker');

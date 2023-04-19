@@ -8,14 +8,16 @@
 .dashboard,
 .pendingApplication,
 .commission,
-.approvedAffidavit {
+.approvedAffidavit,
+.addCommissionOath {
   flex: auto;
   margin-left: 270px;
   overflow: hidden;
   background-color: #d7d7d7;
 }
 
-.menuButton {
+.menuSideButton-times,
+.menuSideButton-bars {
   display: none;
 }
 /* @media screen and (max-width: 900px) {
@@ -32,12 +34,13 @@
   .dashboard,
   .pendingApplication,
   .commission,
-  .approvedAffidavit {
+  .approvedAffidavit,
+  .addCommissionOath {
     margin-left: 0;
     width: 100%;
   }
 
-  .menuButton {
+  .menuSideButton-bars {
     display: block;
     position: absolute;
     top: 0px;
@@ -48,7 +51,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  .menuButton {
+  .menuSideButton-bars {
+    color: #263238;
+  }
+
+  .menuSideButton-times {
     color: #ffffff;
   }
 }

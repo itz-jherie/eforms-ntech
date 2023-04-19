@@ -1,0 +1,50 @@
+.addCommissionOath {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  max-width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.addcommission {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.labelBox {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.conmissioner-h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #111111;
+}
+
+.addButt {
+  padding: 10px 20px;
+  background-color: #20a352;
+  color: white;
+  width: 213px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  padding-top: 0.3rem;
+}

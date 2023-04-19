@@ -23,7 +23,7 @@ const SharedLayout = () => {
   return (
     <div className='sharedLayout' onClick={collapseSidebarUsingDashboard}>
        <SideBar className="sharedSideBar"/> 
-       {menu ? <FaTimes className="menuButton" onClick={collapseSidebar}/> : <FaBars className='menuButton'  onClick={collapseSidebar} />}
+       {menu ? <FaTimes className="menuSideButton-times" onClick={collapseSidebar}/> : <FaBars className='menuSideButton-bars'  onClick={collapseSidebar} />}
      {menu ? <OverlaySideBar className="overlaySideBar" /> : <></>}
       <Outlet />
     </div>

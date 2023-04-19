@@ -2,12 +2,12 @@ import React from 'react';
 import "./tablepending.css";
 // import "./table.css"
 import {MdArrowForwardIos} from "react-icons/md"
-import createDataArray from '../../assets/dashboard/FackerJs';
+import createDataArray from '../../../assets/dashboard/FackerJs';
 
 
 const TablePending = () => {
 
-  console.log(createDataArray);
+
 
   const filterData = () => {
       return createDataArray().filter(stat => stat.status === "Pending");
@@ -20,7 +20,7 @@ const TablePending = () => {
     <h1 className='dash__application-h1'>Recent Applications</h1>
 
     <div className='pend__cont'>
-    <table style={{width: '100%'}}>
+    <table>
 
     <thead>
     <tr className='tableHeader'>
@@ -28,7 +28,7 @@ const TablePending = () => {
       <th className='tableHeader__sub r2'>User Details</th>
       <th className='tableHeader__sub r3'>Descriptions</th>
       <th className='tableHeader__sub r4'>Amount</th>
-      <th className='tableHeader r5'>STATUS</th>
+      <th className='tableHeader__sub r5'>status</th>
       <th className='tableHeader__sub r6'>Action</th>
     </tr>
     </thead>
@@ -38,24 +38,24 @@ const TablePending = () => {
 return (
 
 <tr key={i} className="tableRow" id="tbr">
-<td className='pendRow'>
+<td >
   <p className='pendCont sn'>{dt.sn}</p>
 </td>
-<td className='pendRow'>
+<td >
 <p className='pendCont name'>{dt.user.name}</p>
 <p className="pendCont phone">{dt.user.phone}</p>
 <p className="pendCont email">{dt.user.email}</p>
 </td>
-<td className='pendRow'>
+<td >
   <p className='pendCont description'>{dt.description}</p>
 </td>
-<td className='pendRow'>
+<td >
   <p className='pendCont amnt'>₦{dt.amount}</p>
 </td>
-<td className='pendRow'>
+<td >
   <p className='pendCont status'>{dt.status}</p>
 </td>
-<td className='pendRow'>
+<td >
   <div className='prev'>
   <span className='action'>PREVIEW</span>
   <div className='circle-mdarrow'>

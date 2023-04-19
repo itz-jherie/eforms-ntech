@@ -1,5 +1,7 @@
 .pendingApplication {
   display: flex;
+  height: 100vh;
+  overflow: scroll;
   flex-direction: column;
   padding: 2rem;
 }
