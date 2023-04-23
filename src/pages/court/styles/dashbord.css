@@ -121,7 +121,7 @@
   display: none;
 } */
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .dashboard {
     width: 100%;
   }
@@ -131,9 +131,9 @@
     top: 0px;
     left: 30px;
     z-index: 5;
-  } */
-}
-@media screen and (max-width: 768px) {
+  } 
+} */
+@media screen and (max-width: 900px) {
   .dashboard {
     gap: 2rem;
   }

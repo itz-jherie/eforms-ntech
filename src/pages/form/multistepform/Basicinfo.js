@@ -2,40 +2,39 @@ import React, { useState, useEffect } from 'react'
 import "./basicinfo/basicinfo.css"
 import { Navigate, useNavigate } from 'react-router';
 import states from '../../../assets/form/states';
-import localGovt from '../../../assets/form/localGovt';
+import dataGovt from '../../../assets/form/localGovt.json'
 
 
 const Basicinfo = (props) => {
 
-    const {datta, handleInputChange} = props;
+    const {datta, handleInputChange, mulError} = props;
 
     let navigate = useNavigate();
 
-    // const dummyName = nstate;
-        
-    
-       
-    
-
-
-
   
     const listStates = states.map((option, index) => {
-        return <option key={index}> {option} </option>  
+        return <option key={index} value={option}> {option} </option>  
         
       });
-    
-  const listLocalGovt=[];
+   
+      const lCGovt = [];
 
-  if(datta.nstate != "") {
-    listLocalGovt = localGovt.find((local) => local.name === datta.nstate).lgas.map((local, index) => {
-        return <option key={index}>{local}</option>
-      })
+   const liss = dataGovt.filter((local, i) => local.name === datta.state);
+    
+   for(var i = 0; i < dataGovt.length; i++){
+      if(dataGovt[i].name === datta.state){
+
+    const govtList22 = dataGovt[i].lgas;
+    lCGovt.push(...govtList22);
+   }
   }
 
+const ListLocalGovernment = lCGovt.map((local, i) => (
+  <option key={i}>{local}</option>
+))
+  
+  
  
-
-   
   
   return (
 
@@ -46,11 +45,13 @@ const Basicinfo = (props) => {
         <input 
           name="phoneNumber"
           value={datta.phoneNumber}
-          type="number"
+          type="tel"
           className="fullInput"
           onChange={handleInputChange}
           required
         />
+
+        {mulError.phoneNumber && <span className="errorMsg">{mulError.phoneNumber}</span>}
 </div>
 
 <div className="box">
@@ -63,6 +64,7 @@ const Basicinfo = (props) => {
     onChange={handleInputChange}
     required
   />
+  {mulError.contactAddress && <span className="errorMsg">{mulError.contactAddress}</span>}
   
 </div>
 
@@ -72,8 +74,8 @@ const Basicinfo = (props) => {
   <div className="states">
   <label htmlFor="states"> State </label>
   <select 
-  name="states"
-  value={datta.nstate}
+  name="state"
+  value={datta.state}
   className='selectInput'
   onChange={handleInputChange}
   required
@@ -81,22 +83,23 @@ const Basicinfo = (props) => {
     <option value="">Select state</option>
     {listStates}
   </select>
-  
+  {mulError.state && <span className="errorMsg">{mulError.state}</span>}
   </div>
 
 
   <div className="lga">
   <label htmlFor="lga"> LGA </label>
   <select
-  name="localGovt"
-  value={datta.lGovtment}
+  name="localG"
+  value={datta.localG}
   onChange={handleInputChange}
   className='selectInput'
   required
   >
     <option value="">Select local government</option>
-    {listLocalGovt}
+      {ListLocalGovernment}
   </select>
+  {mulError.localG && <span className="errorMsg">{mulError.localG}</span>}
   </div>
 </div>
 
@@ -104,10 +107,11 @@ const Basicinfo = (props) => {
   <label htmlFor="zip">Zip Code</label>
   <input
     name="zipCode"
-    type="number"
+    type="text"
     value={datta.zipCode}
     onChange={handleInputChange}
   />
+  {mulError.zipCode && <span className="errorMsg">{mulError.zipCode}</span>}
 </div>
 
 </div>

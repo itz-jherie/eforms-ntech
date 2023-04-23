@@ -6,19 +6,11 @@ import "././uploadpassport/upload.css"
 import Webcam from 'react-webcam'
 import axios from 'axios'
 
-const Upload = ({updateData}) => {
-    
-    const [image, setImage] = useState('');
-
-    const [submit, setSubmit] = useState(false);
-
-    function handleImage(e) {
-        console.log(e.target.files)
-        setImage(e.target.files[0]);
-    }
+const Upload = (props) => {
+    const {datta, handleImageUpload, mulError} = props
 
 
-    
+    console.log(datta);
 
   return (
         
@@ -27,7 +19,7 @@ const Upload = ({updateData}) => {
 <div className="upload__body">
 
 <div className='image'>
-    <BsPersonPlus className='icon'/>
+    {datta ? <img src={URL.createObjectURL(datta)} alt="Selected Image" className='imgDisplay' /> : <BsPersonPlus className='icon'/> }
 </div>
 
 <div className='buttons'>
@@ -35,11 +27,11 @@ const Upload = ({updateData}) => {
    <div className='btn__mini'>
    
    <button className='btn__red'> Take Photo </button>
-   <input className="btn__gray" type="file" name="file" onChange={handleImage} />
-   
+   <input className="btn__gray" type="file" name="imgFile" onChange={handleImageUpload} />
    </div>
 
-    {/* <button onClick={handleApi} className='btn__submit'> Save and continue </button> */}
+   {mulError.imgFile && <span className='errorMsg'>{mulError.imgFile}</span>}
+   
 </div>
 </div>
 

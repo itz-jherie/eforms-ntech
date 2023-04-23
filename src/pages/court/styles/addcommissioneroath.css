@@ -48,3 +48,33 @@ input {
   font-size: 14px;
   padding-top: 0.3rem;
 }
+
+@media screen and (max-width: 900px) {
+  .addCommissionOath__upper-header {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    background-color: #263238;
+  }
+
+  .addCommissionOath__upper-header > h1 {
+    font-weight: 600;
+    color: white;
+  }
+
+  .addCommissionOath__head {
+    margin-top: 4rem;
+    justify-content: center;
+  }
+
+  .addCommissioner__header {
+    display: none;
+  }
+}

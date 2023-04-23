@@ -43,7 +43,7 @@ const Dashboard = () => {
         }
       }, [])
   
-      const numberOfItems = 200;
+      const numberOfItems = 10;
   
       for (let i=0; i< numberOfItems; i++){
         const fkData = generateFakeData();

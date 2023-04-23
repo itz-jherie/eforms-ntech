@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+ import React, {useState} from 'react'
 import { AiFillYoutube } from 'react-icons/ai';
 import { useNavigate} from 'react-router'
 import "./styles/addcommissioneroath.css"
@@ -132,7 +132,13 @@ console.log(users);
   return (
     <div className='addCommissionOath'>
       
+    <div className='addCommissionOath__upper-header'>
       <h1 className='commissioner-h1'>Add Commissioner of Oathe </h1>
+    </div>
+
+    <div className='addCommissionOath__head'>
+      <h1 className="addCommissioner__header">Add COmmissioner of Oathe</h1>
+    </div>
     
       <form className='addcommission' onSubmit={handleSubmit}>
 

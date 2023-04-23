@@ -80,11 +80,6 @@ tbody {
 @media screen and (max-width: 900px) {
   .commission {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .commission {
     gap: 2rem;
   }
 

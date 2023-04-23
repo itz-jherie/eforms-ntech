@@ -47,19 +47,19 @@ const CreatAccount = () => {
         // Perform validation checks here
 
         if (!formData.firstName) {
-          errors.name = "firstName is required"
+          errors.firstName = "firstName is required"
         } else if (!/^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/) {
           errors.firstName = "Invalid Name"
         }
 
         if (!formData.lastName) {
-          errors.name = "lastName is required"
+          errors.lastName = "lastName is required"
         } else if (!/^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/) {
           errors.lastName = "Invalid Name"
         }
 
         if (!formData.middleName) {
-          errors.name = "Name is required"
+          errors.middleName = "Name is required"
         } else if (!/^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/) {
           errors.middleName = "Invalid Name"
         }
@@ -76,11 +76,17 @@ const CreatAccount = () => {
           errors.password = "Password must be atleast 8 characters";
         }
 
-        if (formData.password != formData.confirmPassword) {
+        if(!formData.confirmPassword){
+          errors.confirmPassword = "Confirm password is required"
+        }else if (formData.password != formData.confirmPassword) {
           errors.confirmPassword = "Password do not match";
         }
 
-        setFormData(errors);
+        if (!formData.isChecked) {
+          errors.isChecked = "Required checkbox not checked"
+        }
+
+        setFormError(errors);
 
         // Submit form if there are no errors
 
@@ -141,10 +147,10 @@ const CreatAccount = () => {
         name="firstName" 
         value={formData.firstName}
         onChange={handleFormData}
-        required
+        
       />
 
-      {formError.firstName && <span>{formError.lastName}</span>}
+      {formError.firstName && <span className='errorMsg'>{formError.lastName}</span>}
       
       </div>
 
@@ -158,9 +164,9 @@ const CreatAccount = () => {
         name="middleName"
         value={formData.middleName}
         onChange={handleFormData}
-        required
+        
       />
-      {formError.middleName && <span>{formError.middleName}</span>}
+      {formError.middleName && <span className='errorMsg'>{formError.middleName}</span>}
       
       </div>
 
@@ -174,9 +180,9 @@ const CreatAccount = () => {
         name="lastName"
         value={formData.lastName}
         onChange={handleFormData}
-        required
+        
       />
-      {formError.lastName && <span>{formError.lastName}</span>}
+      {formError.lastName && <span className='errorMsg'>{formError.lastName}</span>}
 
       </div>
 
@@ -190,9 +196,9 @@ const CreatAccount = () => {
         name="email"
         value={formData.email}
         onChange={handleFormData}
-        required
+        
       />
-      {formError.email && <span>{formError.email}</span>}
+      {formError.email && <span className='errorMsg'>{formError.email}</span>}
 
       </div>
 
@@ -205,9 +211,9 @@ const CreatAccount = () => {
         name="password"
         value={formData.password}
         onChange={handleFormData}
-        required
+        
       />
-        {formError.password && <span>{formError.password}</span>}
+        {formError.password && <span className='errorMsg'>{formError.password}</span>}
      
       </div>
 
@@ -221,9 +227,9 @@ const CreatAccount = () => {
           name="confirmPassword"
           value={formData.confirmPassword}
           onChange={handleFormData}
-          required
+          
         />
-        {formError.confirmPassword && <span>{formError.confirmPassword}</span>}
+        {formError.confirmPassword && <span className='errorMsg'>{formError.confirmPassword}</span>}
 
       </div>
 
@@ -236,12 +242,13 @@ const CreatAccount = () => {
           name="isChecked"
           checked={formData.isChecked }
           onChange={handleFormData}
-          required    
+              
           />
         <label>I agree to the terms of <Link to="Term">terms of use &#38; privacy policy</Link></label>
+        
         </div>
         <div className="mvUnder">
-
+        {formError.isChecked && <span className='errorMsg'>{formError.isChecked}</span>}
         </div>
       </div>
 
