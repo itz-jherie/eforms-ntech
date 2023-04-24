@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import  sidebar from "././styles/sidebar.css"
 import {FaBars} from "react-icons/fa";
-import logo from "../../assets/svglogos/eform-logo-white.svg";
 import { Link } from 'react-router-dom';
+import logo from "../../assets/images/eform_green.png"
 
 // icons
 import {TbLogout} from "react-icons/tb"

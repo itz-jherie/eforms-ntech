@@ -20,11 +20,9 @@
 .menuSideButton-bars {
   display: none;
 }
-/* @media screen and (max-width: 900px) {
-  .dashboard {
-    left: 0;
-  }
-} */
+
+.hamBurgs {
+}
 
 @media screen and (max-width: 900px) {
   .sideBBar {
