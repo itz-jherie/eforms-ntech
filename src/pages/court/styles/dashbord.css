@@ -144,15 +144,18 @@
     top: 0;
     left: 0;
     width: 100%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 1rem;
+    max-width: 100%;
+    padding: 1rem 2rem;
     background-color: #263238;
   }
 
   .dashboard__upper-head > h1 {
+    max-width: 50%;
     font-weight: 600;
     color: white;
   }

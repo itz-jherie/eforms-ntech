@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {FaTimes, FaBars} from 'react-icons/fa';
-import logo from "../../assets/images/Logo_white.png";
+import logo from "../../assets/images/eform_green.png";
 import Button from "../cta/Button";
-import "./nav.css"
+import "./nav.css";
 
 const Nav = () => {
 
@@ -76,4 +76,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Nav;
