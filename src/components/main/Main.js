@@ -7,48 +7,19 @@ import data from "../../assets/dataFiles/dataCards"
 import Support from "../support/Support"
 
 const Main = () => {
- //SELECT BUTTON
-  const options = ['Ondo', 'Ekiti'];
-  const optionsElement = options.map((option, i) => (
-    
-      <option key={i}>
-        {option}
-      </option>
-    
-  ))
-  const onOptionChangeHandler = (event) => {
-    console.log(event.target.value);
-  }
 
   // CARDS
   const cardElements = data.map((card, i) => (
-    <Card key={i} title={card.title} content={card.content}/>
+    <Card key={i} img={card.img} title={card.title} content={card.content} klass={card.klass}/>
   ))
   return (
     <div className="main1">
 
-      <Support />
+    <div className="main--top">
+      <h1>Create Your Legal Document In Few Moments</h1>
+    </div>
 
-        <div className='main--top-first'>
-        <h3 className='main--header'>Create Your Legal Documents In Few Minutes</h3>
-        <input type="text" className='inputBox' placeholder='Enter the name of your document' />
-        </div>
-
-        <div className='main--top-inner'>
-
-        <select onChange={onOptionChangeHandler} className="selectOption">
-        <option>Select state</option>
-        {optionsElement}
-        </select>
-
-        
-      
-        <button className='proceedBtn'> 
-        <Link to="signin" style={{color: "var(--white)"}}>Proceed</Link>  
-       </button>
-        
-        </div>
-      
+      {/* <Support />       */}
 
       <div className="main--bottom">
         {cardElements}

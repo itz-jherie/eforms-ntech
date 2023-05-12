@@ -1,4 +1,4 @@
-import Logo_white from "../../assets/images/Logo_white.png"
+import Logo_white from "../../assets/images/eFROM.png"
 
 const data = {
    logo: Logo_white,
@@ -11,7 +11,7 @@ const data = {
    term2: "Terms and Conditions",
    term3: "Refund Policy",
    term4: "FAQS",
-   contact1: 2348022334444,
+   contact1: '234 802 233 4444',
    contact2: "info@eforms.com",
    copyright: "Copyright @ 2022 | All Rights Reserved"
 }

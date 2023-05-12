@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./footer.css"
-
+import "./footer.css";
+import {FiFacebook, FiInstagram, FiTwitter, FiYoutube} from "react-icons/fi";
 
 
 const Footer = ({logo, name, link1, link2, link3, link4, term1, term2, term3, term4, contact1, contact2, copyright}) => {
@@ -11,7 +11,7 @@ const Footer = ({logo, name, link1, link2, link3, link4, term1, term2, term3, te
      <div className='footer--content1'>
 
      <div className='footer--about'>
-        <img src={logo} className="logo" alt="logo"/>
+        <img src={logo} className="logoI" alt="logo"/>
 
             <span className='footer--content'>{name}</span>
     
@@ -34,11 +34,16 @@ const Footer = ({logo, name, link1, link2, link3, link4, term1, term2, term3, te
       </div>
 
       <div className='footer--contact'>
-        <h3 className='header'>Contact Us</h3>
+       <div className="contacts">
+       <h3 className='header'>Contact Us</h3>
         <p id="lnks">{contact1}</p>
         <p id="lnks">{contact2}</p>
+       </div>
         <div className='contact--icons'>
-
+          <FiFacebook className='icons' color="white"/>
+          <FiInstagram className='icons' color="white" />
+          <FiTwitter className='icons' color="white" />
+          <FiYoutube className='icons' color="white" />
         </div>
       </div>
      </div>

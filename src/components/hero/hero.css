@@ -1,64 +1,88 @@
 .hero {
-    display: flex;
-    padding: 5rem 54px 2rem;
+  display: flex;
+  padding: 5rem 54px 2rem;
+  background-color: var(--grey);
 }
 
-.hero--lhs, .hero--rhs {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.hero--lhs,
+.hero--rhs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
+.hero--lhs {
+}
 .hero--title {
-    font-family: var(--fontFamily);
-    color: var(--green);
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 58.09px;
-    letter-spacing: 0.01em;
+  width: 524px;
+  height: auto;
+  font-family: var(--fontFamily);
+  color: var(--green);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58.09px;
+  letter-spacing: 0.01em;
+}
+
+h1 > span {
+  color: var(--red);
 }
 
 .hero--text {
-    font-family: var(--fontFamily);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24.2px;
-    color: var(--dark);
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.2px;
+  color: var(--dark);
 }
 
 .hero--image {
-    width: 100%;
+  width: 100%;
 }
 
+.signup__btn {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: var(--green);
+  width: 176px;
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 768px) {
-    .hero {
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem 1rem;
-    }
+  .hero {
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
 
-    .hero--lhs, .hero--rhs {
-        width: 100%;
-    }
-    
-    .hero--title {
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 40px;
-        letter-spacing: 0.01em;
-    }
+  .hero--lhs,
+  .hero--rhs {
+    width: 100%;
+  }
 
-    .hero--text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-        padding-top: 1rem;
-        color: var(--dark);
-    }
+  .hero--title {
+    height: auto;
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+  }
 
-    .hero--image {
-        height: 261px;
-        padding-top: 2rem;
-    }
+  .hero--text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #111111;
+  }
+
+  .hero--image {
+    height: 261px;
+    padding-top: 2rem;
+  }
 }

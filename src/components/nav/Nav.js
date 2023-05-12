@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {FaTimes, FaBars} from 'react-icons/fa';
-import logo from "../../assets/images/eform_green.png";
+import logo from "../../assets/images/eFROMS.png";
 import Button from "../cta/Button";
 import "./nav.css";
 
@@ -51,24 +51,20 @@ const Nav = () => {
       
     <div className='nav__cta'>
         <Link to="/signin">
-          <button className='signin__btn'>Sign in</button>
-          {/*
-        <Button className="bn" buttonStyle="btn--outline" buttonColor="transparent" content="sign in" size="btn--medium" />
-  */}
+          <button className='signin__btn'>Log in</button>
+     
         </Link>
-        
+        <span className='longLine'></span>
         <Link to="/signup">
-        <button className='signup__btn'>Create Account</button>
-          {/*
-        <Button className="bn" buttonStyle="btn--success" buttonColor="green" content="sign up" size="btn--medium"/>
-  */}
+        <button className='signup__btn'>Register Now!</button>
+
         </Link>
       </div>
       </div>
 
       
 
-      <div className='menutButton' onClick={handleClick}>
+      <div className='menuButton' onClick={handleClick}>
         {click ? <FaTimes className='fa-times'/> : <FaBars className='fa-bars'/>}
       </div>
     </nav>
