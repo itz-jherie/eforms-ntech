@@ -9,7 +9,7 @@ import Swal from 'sweetalert2'
 
 const CreatAccount = () => {
 
-     const navigate = useNavigate();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         firstName: "",
         middleName: "",
