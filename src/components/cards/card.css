@@ -68,6 +68,7 @@ span.blue {
   .card {
     flex: 45%;
     height: 100%;
+    padding: 40px 40px;
   }
 }
 
