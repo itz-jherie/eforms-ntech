@@ -71,15 +71,17 @@ const TheDashboard = () => {
                 <div class="main">
                     <div class='dashboard-header'>
                         <span>Dashboard</span>
-                        <button>Create Document</button>
-                        <input  
-                            type='input'
-                            placeholder="Search..."
-                        />
+                        <div>
+                            <button>Create Document</button>
+                            <input  
+                                type='input'
+                                placeholder="Search..."
+                            />
+                        </div>
                     </div>
                     <div className="overviews">
                         <span>Overviews</span>
-                        <div>
+                        <div className='overview-container'>
                             <div className="total-documents" id="total-btn" onClick={handleViewDocumentDetails}>
                                 <img src={total}/>
                                 <span><span style={{fontWeight:'bold'}}>10</span> <br/> Total Documents</span> 
@@ -90,11 +92,11 @@ const TheDashboard = () => {
                             </div>
                             <div className="completed" id="completed-btn" onClick={handleViewCompleted}>
                                 <img src={completed}/>
-                                <span><span style={{fontWeight:'bold'}}>6</span> <br/> completed</span> 
+                                <span><span style={{fontWeight:'bold'}}>6</span> <br/> Completed</span> 
                             </div>
                             <div className="rejected" id="rejected-btn" onClick={handleViewRejected}>
                                 <img src={rejected}/>
-                                <span><span style={{fontWeight:'bold'}}>2</span> <br/> rejected</span> 
+                                <span><span style={{fontWeight:'bold'}}>2</span> <br/> Rejected</span> 
                             </div>
                         </div>
                     </div>
