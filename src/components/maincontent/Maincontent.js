@@ -3,18 +3,16 @@ import Bigbox from "../features/Bigbox"
 import Selectinput from "../cta/Selectinput";
 import { Link } from 'react-router-dom';
 import "./maincontent.css"
-import Button from "../cta/Button"
-import {BsFillCheckSquareFill, BsFillPersonPlusFill} from "react-icons/bs"
-import {AiFillFileText, AiFillPrinter} from "react-icons/ai"
+import data from '../../assets/dataFiles/dataCards2';
 import Smallbox from '../features/Smallbox'
 
 const Maincontent = () => {
   return (
     <div className='mainContent'>
 
-        <h3 className="mainContent--title">Get your filled and stamped court affidavit in 3 steps</h3>
+        <h3 className="mainContent--title">3 steps to get your court affidavit filled and stamped</h3>
         
-        <div className='mainContent--1'>
+        {/* <div className='mainContent--1'>
 
           <div className='icon--cont'>
             
@@ -48,6 +46,16 @@ const Maincontent = () => {
           
          </div>
 
+        </div> */}
+
+        <div className="selectBox">
+          {data.map((dt,i) => (
+            <div className="selectItem" key={i}>
+              <img src={dt.img} alt="imagi" className='selectImg' />
+              <span className='selectTitle'>{dt.title}</span>
+              <p className="selectContent">{dt.content}</p>
+            </div>
+          ))}
         </div>
 
         {/*  Popular Forms */}
@@ -58,7 +66,7 @@ const Maincontent = () => {
           </div>
         </div>
 
-        {/* Court */}
+        {/* Court 
         <div className='court'>
         <h1 className="court--title">Find the courts in your state</h1>
           <div className="court--content1">
@@ -69,14 +77,14 @@ const Maincontent = () => {
         <Link to="signin" style={{color: "var(--white)"}}>Proceed</Link>  
        </button>
 
-       {/*
+      
             <Button className="mdBtn proceedBtn" content="Proceed"/>
-  */}
+  
             </div>
           <div className="court--content2">
             <Smallbox />
           </div>
-        </div>        
+        </div>      */}  
     </div>
   )
 }

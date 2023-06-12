@@ -1,7 +1,7 @@
 import React from 'react'
 
 import table from "./table.css"
-import allData from '../../data/dashboardData';
+import allData from '../../../data/dashboardData';
 
 const TableRow = (props) => {
   const {fakeData, hold} = props;

@@ -1,5 +1,7 @@
 .pendingApplication {
   display: flex;
+  height: 100vh;
+  overflow: scroll;
   flex-direction: column;
   padding: 2rem;
 }
@@ -25,10 +27,6 @@
 @media screen and (max-width: 900px) {
   .pendingApplication {
     width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .pendingApplication {
     gap: 2rem;
   }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import overlaysidebar from "../../components/overlaySideBar/overlaysidebar.css"
 import {FaBars} from "react-icons/fa";
-import logo from "../../assets/svglogos/eform-logo-white.svg";
+import logo from "../../assets/images/eform_green.png"
 import { Link } from 'react-router-dom';
 
 // icons

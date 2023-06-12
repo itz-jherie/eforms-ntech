@@ -1,51 +1,90 @@
 .card {
-   display: flex;
-   width: auto;
-   column-gap: 2rem;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   height: 236px;
-   padding: 2rem;
-   font-family: var(--fontFamily);
-   background-color: #ffffff;
-   border-radius: 10px;
+  /* flex: 1; */
+  /* min-width: 184px;
+  min-height: 227px;
+  max-height: 360px;
+  max-width: 390px; */
+  flex: 30%;
+  max-width: 400px;
+  min-width: 184px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--fontFamily);
+  border-radius: 8px;
+  padding: 43px 85px;
+  gap: 10px;
 }
 
 .card--title {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 34px;
-    color: var(--green);
+  font-weight: 600;
+  font-size: 28px;
 }
 
 .card--content {
-    margin-top: 1rem;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.svgImg {
+  color: black;
+}
+
+.red {
+  background-color: rgba(238, 77, 29, 0.1);
+}
+
+.blue {
+  background-color: rgba(32, 163, 82, 0.1);
+}
+
+.bs--circle {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.red {
+  background-color: #e48669;
+}
+
+span.blue {
+  background-color: #5ce690;
+}
+
+.folder {
+  color: #111111;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    flex: 45%;
+    height: 100%;
+    padding: 40px 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    
-    .card {
-        width: 100%;
-        margin: 0;
-        flex-direction: column;
-        height: 236px;
-        font-family: var(--fontFamily);
-     }
-     
-     .card--title {
-         font-size: 28px;
-         font-weight: 500;
-         line-height: 34px;
-         color: var(--green);
-     }
-     
-     .card--content {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: var(--textDark);
-     }
+  .card {
+    flex: 45%;
+    max-width: 45%;
+    height: 100%;
+    /* padding: 33px 65px; */
+  }
+}
 
+@media screen and (max-width: 468px) {
+  .card {
+    flex: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
 }

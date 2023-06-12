@@ -1,6 +1,6 @@
 import React from 'react'
 import Searchbar from '../../components/searchbar/Searchbar'
-import TableRow from '../../components/table/TableRow'
+import TableApproved from '../../components/table/tableapproved/TableApproved';
 import approvedaffidavit from "././styles/approvedaffidavit.css"
 
 
@@ -13,12 +13,12 @@ const ApprovedAffidavit = () => {
  
     <h1 className='approvedAffidavit__header'> APPROVED </h1>
 
-    <Searchbar className="searchbar"/>
+    {/* <Searchbar className="searchbar"/> */}
 
      </div>
 
     <div className='approvedAffidavit__body'>
-      <TableRow />
+      <TableApproved />
     </div>
     </div>
   )

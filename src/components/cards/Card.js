@@ -1,17 +1,19 @@
 import React from 'react';
 import "./card.css";
+import {BsFolder} from "react-icons/bs"
+
 import data from "../../assets/dataFiles/dataCards";
 
-const Card = ({title, content}) => {
- 
-  return (
-    <div className="card">
-      <h3 className="card--title">{title}</h3>
+const Card = ({title, content, klass}) => (
+  <div className={`card ${klass}`}>
 
-      <p className="card--content">{content}</p>
+    <span className={`bs--circle ${klass}`}><BsFolder className='folder'/></span>
 
-    </div>
-  )
-}
+    <h3 className="card--title">{title}</h3>
+
+    <p className="card--content">{content}</p>
+
+  </div>
+)
 
 export default Card;

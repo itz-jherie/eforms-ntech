@@ -1,5 +1,6 @@
 .commission {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   padding: 2rem;
 }
@@ -18,13 +19,67 @@
   margin-right: auto;
 }
 
+.commission_button {
+  background: #20a352;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+td.commBox {
+  max-width: 500px;
+}
+
+.commission__body {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add_button {
+  color: white;
+  font-size: 30px;
+}
+
+.editButt {
+  width: 52px;
+  height: 36px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #757575;
+}
+
+.removeButt {
+  width: 52px;
+  height: 36px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #ee4d1d;
+}
+
+table {
+  max-width: 100%;
+}
+
+td {
+  max-width: 500px;
+}
+
+thead,
+tbody {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 900px) {
   .commission {
     width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .commission {
     gap: 2rem;
   }
 

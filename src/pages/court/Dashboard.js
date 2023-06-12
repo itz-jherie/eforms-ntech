@@ -4,7 +4,7 @@ import '../court/styles/dashbord.css'
 import Searchbar from '../../components/searchbar/Searchbar'
  import Data from "../../assets/court/overview_data"
 
-import TableRow from '../../components/table/TableRow';
+import TableRow from '../../components/table/tablerow/TableRow';
 
 // import { faker } from '@faker-js/faker';
 const { faker } = require('@faker-js/faker');
@@ -43,7 +43,7 @@ const Dashboard = () => {
         }
       }, [])
   
-      const numberOfItems = 200;
+      const numberOfItems = 10;
   
       for (let i=0; i< numberOfItems; i++){
         const fkData = generateFakeData();

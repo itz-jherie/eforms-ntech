@@ -1,19 +1,51 @@
+.pend__cont {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
 table {
-  table-layout: fixed;
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  /* max-width: 500px; */
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+th {
+  background-color: #eee;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 10px 0 0;
 }
 
 .pendCont {
   font-size: 12px;
-  display: block;
-}
-
-.pendCont {
+  /* display: block;
   max-width: 500px;
   word-wrap: break-word;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
 }
 
 .sn {

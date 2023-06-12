@@ -14,6 +14,7 @@ import folder from '../../assets/svglogos/folder.svg'
 const AdminSidebar = ({ isActive }) => {
     return (
         <div className={isActive ? 'sidebar__container--active' : 'sidebar__container'}>
+            {/* <div className="mobile-admin-sidebar"></div> */}
             <div className="admin-sidebar">
                 <div className="admin-sidebar-title">
                     <img src={eformLogo} alt="logo" className="eform-logo"/>

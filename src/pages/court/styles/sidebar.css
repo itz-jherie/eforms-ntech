@@ -28,12 +28,17 @@
 }
 
 .sidebar__header {
-  margin: 0 auto;
+  justify-content: flex-start;
 }
 
-.logo {
-  height: 37px;
-  width: 30px;
+img.logo {
+  height: 40px;
+  width: 120px;
+  color: white;
+}
+
+.logo-text {
+  font-size: 15px;
   color: white;
 }
 

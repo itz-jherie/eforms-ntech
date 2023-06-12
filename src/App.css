@@ -1,37 +1,37 @@
 :root {
-    --white: #fff;
-    --dark: #263238;
-    --green: #20A352;  
-    --fontFamily: 'Inter', sans-serif;
-    --transparent: transparent;
-    --textDark: #111111;
-    --light: #F7F7F7;
-    --gold: #B5B500;
-    --red: #EE4D1D;
-    --lightgrey: #D7D7D7;
-    --orange: #EE4D1D;
-    --deepdarkgrey: #757575;
-    --deepAsh: #D7D9E0;
-    --ash: #E4E9F7;
+  --grey: #fcf9f9;
+  --white: #fff;
+  --dark: #263238;
+  --green: #20a352;
+  --fontFamily: "Inter", sans-serif;
+  --transparent: transparent;
+  --textDark: #111111;
+  --light: #f7f7f7;
+  --gold: #b5b500;
+  --red: #ee4d1d;
+  --lightgrey: #d7d7d7;
+  --orange: #ee4d1d;
+  --deepdarkgrey: #757575;
+  --deepAsh: #d7d9e0;
+  --ash: #e4e9f7;
 }
-*{
-    font-family: var(--fontFamily);
+* {
+  font-family: var(--fontFamily);
 }
 
 section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionPadding {
-    width: 100%;
-    padding: 3rem 54px;
+  width: 100%;
+  padding: 3rem 54px;
 }
 
 @media screen and (max-width: 768px) {
-    
-    .sectionPadding {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
+  .sectionPadding {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }

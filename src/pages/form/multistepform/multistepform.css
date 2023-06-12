@@ -118,6 +118,9 @@
   display: flex;
 }
 
+.logo {
+}
+
 @media screen and (max-width: 768px) {
   .App__body {
     width: 100%;

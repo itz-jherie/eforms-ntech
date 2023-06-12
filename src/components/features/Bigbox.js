@@ -11,7 +11,9 @@ const Bigbox = ({icon, name}) => {
             <div className="circle">
                 {item.icon}
             </div>
-            <p className='bigBox--text'> {item.name} </p>
+            <h1 className='bigBox--text'> {item.title} </h1>
+            <div className='bigBox--content'>{item.content}</div>
+
         </div>
     ))
   return (

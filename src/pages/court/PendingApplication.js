@@ -4,7 +4,7 @@ import pendingapplication from "././styles/pendingapplication.css"
 
 import FakerData from '../../assets/dashboard/FackerJs'
 
-import TablePending from '../../components/table/TablePending'
+import TablePending from '../../components/table/tablepending/TablePending'
 
 const PendingApplication = () => {
 
