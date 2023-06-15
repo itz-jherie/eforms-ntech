@@ -1,12 +1,13 @@
 .biggerBox {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 30px;
+  padding: 30px;
 }
 
 .bigBox {
-  flex: 27%;
+  flex: 33.3%;
   display: flex;
   max-width: 400px;
   min-width: 184px;
